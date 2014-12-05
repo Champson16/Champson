@@ -210,9 +210,9 @@ function scene.createScene(self, event)
 	local playButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Play_up.png',
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Play_down.png',
-		width = 195,
-		height = 60,
-		x = -534 + button_xOffset,
+		width = 175,
+		height = 54,
+		x = -494 + button_xOffset,
 		y = 330,
 		onRelease = function()
 			if scene.buttonIsActive then return; end
@@ -228,9 +228,9 @@ function scene.createScene(self, event)
 	local createButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Create_up.png',
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Create_down.png',
-		width = 195,
-		height = 60,
-		x = -307 + button_xOffset,
+		width = 175,
+		height = 54,
+		x = -287 + button_xOffset,
 		y = 330,
 		onRelease = function()
 			scene.removeControls();
@@ -246,8 +246,8 @@ function scene.createScene(self, event)
 	local discoverButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Discover_up.png',
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Discover_down.png',
-		width = 195,
-		height = 60,
+		width = 175,
+		height = 54,
 		x = -80 + button_xOffset,
 		y = 330,
 		onRelease = function()
@@ -292,9 +292,9 @@ function scene.createScene(self, event)
 	local learnButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Learn_up.png',
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Learn_down.png',
-		width = 195,
-		height = 60,
-		x = 147 + button_xOffset,
+		width = 175,
+		height = 54,
+		x = 127 + button_xOffset,
 		y = 330,
  		onRelease = function()
  			local deviceWidth = ( display.contentWidth - (display.screenOriginX * 2) ) / display.contentScaleX
@@ -364,9 +364,9 @@ function scene.createScene(self, event)
 	local aboutButton = ui.button.new({
 	imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_About_up.png',
 	imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_About_down.png',
-	width = 195,
-	height = 60,
-	x = 374 + button_xOffset,
+	width = 175,
+	height = 54,
+	x = 334 + button_xOffset,
 	y = 330,
 	onRelease = function()
 		local screenRect = display.newRect(0, 0, screenW, screenH);

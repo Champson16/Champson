@@ -16,20 +16,20 @@
 		"headerHeight": 106,
 		"effects": [{
 			"name": "None",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectNone.jpg",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectNone.png",
 			"width": 282,
 			"height": 95
 		},
 		{
 			"name": "NightVision",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectNightVision.jpg",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectNightVision.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.grayscale"
 		},
 		{
 			"name": "FizzyFuzzle",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectFizzyFuzzle.jpg",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectFizzyFuzzle.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.pixelate",

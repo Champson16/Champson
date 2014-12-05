@@ -20,11 +20,11 @@ function scene.createScene(self, event)
 	local transArray = {}
 	local swingButtonLeft, swingButtonRight
 	function swingButtonLeft( button )
-		transArray[ #transArray + 1] = transition.to( button, { time = 1200 + math.random(1,400), rotation = 10, transition = easing.inOutQuad, onComplete = function() swingButtonRight( button ) end } )
+		transArray[ #transArray + 1] = transition.to( button, { time = 1200 + math.random(1,800), rotation = 10, transition = easing.inOutQuad, onComplete = function() swingButtonRight( button ) end } )
 	end
 
 	function swingButtonRight( button )
-		transArray[ #transArray + 1] = transition.to( button, { time = 1200 + math.random(1,400), rotation = -10, transition = easing.inOutQuad, onComplete = function() swingButtonLeft( button ) end } )
+		transArray[ #transArray + 1] = transition.to( button, { time = 1200 + math.random(1,800), rotation = -10, transition = easing.inOutQuad, onComplete = function() swingButtonLeft( button ) end } )
 	end
 
 	local bg = display.newGroup();
@@ -50,8 +50,8 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_Games_NavigationButton_JigsawPuzzles_down.png',
 		width = 363,
 		height = 94,
-		x = display.contentCenterX - 200,
-		y = display.contentCenterY,
+		x = display.contentCenterX - 100,
+		y = display.contentCenterY - 80,
 		onRelease = function()
 			--audio.pause(1);
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
@@ -66,8 +66,8 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_Games_NavigationButton_Concentration_down.png',
 		width = 363,
 		height = 94,
-		x = display.contentCenterX + 200,
-		y = display.contentCenterY,
+		x = display.contentCenterX + 100,
+		y = display.contentCenterY + 80,
 		onRelease = function()
 			--audio.pause(1);
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
