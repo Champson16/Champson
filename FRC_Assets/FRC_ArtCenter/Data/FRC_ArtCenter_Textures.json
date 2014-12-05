@@ -1,0 +1,46 @@
+{
+	"textures": [{
+		"id": "Blank",
+		"imageFile": "FRC_UX_ArtCenter_Texture_Blank.jpg"
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_Clouds",
+		"imageFile": "GENU_ArtCenter_global_Texture_Clouds.png",
+		"disableTint": false
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_Dirt",
+		"imageFile": "GENU_ArtCenter_global_Texture_Dirt.png",
+		"disableTint": false
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_Fence",
+		"imageFile": "GENU_ArtCenter_global_Texture_Fence.png",
+		"disableTint": false
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_FlowerPattern",
+		"imageFile": "GENU_ArtCenter_global_Texture_FlowerPattern.png",
+		"disableTint": false
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_GrassWithFlowers",
+		"imageFile": "GENU_ArtCenter_global_Texture_GrassWithFlowers.png",
+		"disableTint": false
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_LightLeaves",
+		"imageFile": "GENU_ArtCenter_global_Texture_LightLeaves.png",
+		"disableTint": false
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_Plaid",
+		"imageFile": "GENU_ArtCenter_global_Texture_Plaid.png",
+		"disableTint": false
+	},
+	{
+		"id": "GENU_ArtCenter_global_Texture_Trees",
+		"imageFile": "GENU_ArtCenter_global_Texture_Trees.png",
+		"disableTint": false
+	}]
+}

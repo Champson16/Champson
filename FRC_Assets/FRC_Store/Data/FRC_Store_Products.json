@@ -1,0 +1,40 @@
+{
+	"apple": {
+		"interface": "store",
+		"storeNameAsFirstArg": true,
+		"allowsRestore": false
+	},
+
+	"google": {
+		"interface": "store",
+		"storeNameAsFirstArg": true,
+		"allowsRestore": false
+	},
+
+	"amazon": {
+		"interface": "plugin.amazon.iap",
+		"storeNameAsFirstArg": false,
+		"allowsRestore": true
+	},
+
+	"nook": {
+		"interface": "plugin.fortumo",
+		"disableInit": true,
+		"allowsRestore": true
+	},
+
+	"products": [{
+		"identifier": "com.fatredcouch.charlie.charlieandshearlsacornhero",
+		"title": "Charlie and Shearl's Acorn Hero - Line Rider Game",
+		"description": "Draw the best route to help Shearl the Squirrel ride the line to get home with her gold acorns! A fun line rider game for all ages. Multiple levels and challenges.\n\nCharlie the Chocolate Chihuahua's best friend, Shearl the Tailless Squirrel, needs help gathering her many golden acorns and getting home safely. Draw the best route for her, and then let Shearl roll and slide her way home. When Charlie appears, he'll give Shearl a big boost!\n\nHelp Charlie and Shearl get her acorns home safely!",
+		"promoImage": "FRC_GENU_IAP_AcornHero.png",
+		"promoWidth": 230,
+		"promoHeight": 153,
+		"MSRP": "0.99",
+		"appleDirectURL": "https://itunes.apple.com/us/app/charlie-shearls-acorn-hero/id794741308?mt=8",
+		"googleDirectURL": "https://play.google.com/store/apps/details?id=com.fatredcouch.charlie.charlieandshearlsacornhero.android",
+		"productType": "direct",
+		"newPurchaseMessage": "Thank you for your purchase!",
+		"releaseDate": { "year": 2014, "month": 11, "day": 17 }
+	}]
+}

@@ -1,0 +1,84 @@
+{
+	"userImagesButtonImage": "GENU_JigsawPuzzle_Game_en_YourPuzzlesButton.png",
+	"userImagesButtonWidth": 100,
+	"userImagesButtonHeight": 58,
+	"systemImagesButtonImage": "GENU_JigsawPuzzle_Game_en_UofChewPuzzlesButton.png",
+	"systemImagesButtonWidth": 100,
+	"systemImagesButtonHeight": 58,
+	"startButton_up": "GENU_JigsawPuzzle_Game_global_StartPuzzle_up.png",
+	"startButton_down": "GENU_JigsawPuzzle_Game_global_StartPuzzle_up.png",
+	"startButtonWidth": 282,
+	"startButtonHeight": 95,
+	"handleColor": [ 0.490196078, 0.788235294, 0.047058824, 1.0 ],
+	"fxSection": {
+		"headerImage": "GENU_JigsawPuzzle_Game_global_SpecialFxHeader.png",
+		"headerWidth": 246,
+		"headerHeight": 106,
+		"effects": [{
+			"name": "None",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectNone.jpg",
+			"width": 282,
+			"height": 95
+		},
+		{
+			"name": "NightVision",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectNightVision.jpg",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.grayscale"
+		},
+		{
+			"name": "FizzyFuzzle",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectFizzyFuzzle.jpg",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.pixelate",
+			"filterProperties": {
+				"zoomInOut": true
+			}
+		}]
+	},
+	"sizes": [
+		{ "columns": 3, "rows": 2 },
+		{ "columns": 4, "rows": 3 },
+		{ "columns": 6, "rows": 4 },
+		{ "columns": 7, "rows": 5 },
+		{ "columns": 8, "rows": 6 }
+	],
+	"puzzles": [{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_Bodinator",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+		{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_Brainery",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_Map",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_TasteeGate",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_TasteeTown",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_UOfChew",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	}]
+}

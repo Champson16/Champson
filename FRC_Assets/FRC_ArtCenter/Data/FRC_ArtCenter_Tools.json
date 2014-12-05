@@ -1,0 +1,793 @@
+{
+	"tools": [{
+		"id": "BackgroundImage",
+		"images": {
+			"up": "FRC_ArtCenter_Icon_Backdrop_up.png",
+			"down": "FRC_ArtCenter_Icon_Backdrop_down.png",
+			"focused": "FRC_ArtCenter_Icon_Backdrop_focused.png"
+		},
+		"module": "FRC_ArtCenter_Tool_BackgroundImage",
+		"mode": "BACKGROUND_SELECTION",
+		"subToolSelection": false,
+		"noColorVisible": true,
+		"subtools": [{
+			"id": "Blank",
+			"imageFile": "MDSS_UX_ArtCenter_Backdrop_Blank.png",
+			"thumbFile": "MDSS_UX_ArtCenter_Backdrop_Blank.png",
+			"IAPBundleID" : "free"
+		},
+		{
+			"id": "GENU_ArtCenter_global_Underlay_Bodinator",
+			"imageFile": "GENU_ArtCenter_global_Underlay_Bodinator.png",
+			"thumbFile": "GENU_ArtCenter_global_Underlay_Bodinator_thumbnail.png",
+			"IAPBundleID" : "free",
+			"color": true
+		},
+		{
+			"id": "GENU_ArtCenter_global_Underlay_Brainery",
+			"imageFile": "GENU_ArtCenter_global_Underlay_Brainery.png",
+			"thumbFile": "GENU_ArtCenter_global_Underlay_Brainery_thumbnail.png",
+			"IAPBundleID" : "free",
+			"color": true
+		},
+		{
+			"id": "GENU_ArtCenter_global_Underlay_Map",
+			"imageFile": "GENU_ArtCenter_global_Underlay_Map.png",
+			"thumbFile": "GENU_ArtCenter_global_Underlay_Map_thumbnail.png",
+			"IAPBundleID" : "free",
+			"color": true
+		},
+		{
+			"id": "GENU_ArtCenter_global_Underlay_TasteeGate",
+			"imageFile": "GENU_ArtCenter_global_Underlay_TasteeGate.png",
+			"thumbFile": "GENU_ArtCenter_global_Underlay_TasteeGate_thumbnail.png",
+			"IAPBundleID" : "free",
+			"color": true
+		},
+		{
+			"id": "GENU_ArtCenter_global_Underlay_TasteeTown",
+			"imageFile": "GENU_ArtCenter_global_Underlay_TasteeTown.png",
+			"thumbFile": "GENU_ArtCenter_global_Underlay_TasteeTown_thumbnail.png",
+			"IAPBundleID" : "free",
+			"color": true
+		},
+		{
+			"id": "GENU_ArtCenter_global_Underlay_UOfChew",
+			"imageFile": "GENU_ArtCenter_global_Underlay_UOfChew.png",
+			"thumbFile": "GENU_ArtCenter_global_Underlay_UOfChew_thumbnail.png",
+			"IAPBundleID" : "free",
+			"color": true
+		}]
+	},
+	{
+		"id": "FreehandDraw",
+		"images": {
+			"up": "FRC_ArtCenter_Icon_FreehandDraw_up.png",
+			"down": "FRC_ArtCenter_Icon_FreehandDraw_down.png",
+			"focused": "FRC_ArtCenter_Icon_FreehandDraw_focused.png"
+		},
+		"module": "FRC_ArtCenter_Tool_FreehandDraw",
+		"mode": "FREEHAND_DRAW",
+		"subToolSelection": true,
+		"subtools": [{
+			"id": "Pencil",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_Pencil.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_Pencil.png",
+			"alpha": 0.1,
+			"arbRotate": true,
+			"brushSizes": [3, 5, 8],
+			"defaultSize": 3,
+			"minSize": 2,
+			"maxSize": 8
+		},
+		{
+			"id": "BallpointPen",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_BallpointPen.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_BallpointPen.png",
+			"alpha": 0.8,
+			"arbRotate": true,
+			"brushSizes": [3, 6, 9],
+			"defaultSize": 3,
+			"minSize": 2,
+			"maxSize": 9
+		},
+		{
+			"id": "FeltPen",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_FeltPen.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_FeltPen.png",
+			"alpha": 0.4,
+			"arbRotate": false,
+			"brushSizes": [5, 7, 9],
+			"defaultSize": 5,
+			"minSize": 4,
+			"maxSize": 9
+		},
+		{
+			"id": "DryEraseMarker",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_DryEraseMarker.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_DryEraseMarker.png",
+			"alpha": 0.4,
+			"arbRotate": false,
+			"brushSizes": [7, 10, 13],
+			"defaultSize": 7,
+			"minSize": 6,
+			"maxSize": 13
+		},
+		{
+			"id": "HiLiter",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_HiLiter.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_HiLiter.png",
+			"alpha": 0.1,
+			"arbRotate": false,
+			"brushSizes": [13, 16, 19],
+			"defaultSize": 13,
+			"minSize": 12,
+			"maxSize": 19
+		},
+		{
+			"id": "Pastel",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_Pastel.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_Pastel.png",
+			"alpha": 0.4,
+			"arbRotate": true,
+			"brushSizes": [7, 10, 13],
+			"defaultSize": 7,
+			"minSize": 6,
+			"maxSize": 13
+		},
+		{
+			"id": "Crayon",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_Crayon.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_Crayon.png",
+			"alpha": 0.4,
+			"arbRotate": true,
+			"brushSizes": [7, 10, 13],
+			"defaultSize": 7,
+			"minSize": 6,
+			"maxSize": 13
+		},
+		{
+			"id": "MagicMarker",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_MagicMarker.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_MagicMarker.png",
+			"alpha": 0.4,
+			"arbRotate": false,
+			"brushSizes": [7, 10, 13],
+			"defaultSize": 7,
+			"minSize": 6,
+			"maxSize": 13
+		},
+		{
+			"id": "Charcoal",
+			"imageFile": "FRC_UX_ArtCenter_FreehandDraw_Brush_Charcoal.png",
+			"iconFile": "FRC_UX_ArtCenter_FreehandDraw_Icon_Charcoal.png",
+			"alpha": 0.4,
+			"arbRotate": true,
+			"brushSizes": [7, 10, 13],
+			"defaultSize": 7,
+			"minSize": 6,
+			"maxSize": 13
+		}]
+	},
+	{
+		"id": "FreehandPaintFancy",
+		"images": {
+			"up": "FRC_ArtCenter_Icon_FreehandPaintbrushFancy_up.png",
+			"down": "FRC_ArtCenter_Icon_FreehandPaintbrushFancy_down.png",
+			"focused": "FRC_ArtCenter_Icon_FreehandPaintbrushFancy_focused.png"
+		},
+		"module": "FRC_ArtCenter_Tool_FreehandDraw",
+		"mode": "FREEHAND_DRAW",
+		"subToolSelection": true,
+		"subtools": [{
+			"id": "PaintBrush1",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush1.png",
+			"alpha": 0.04,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+		{
+			"id": "PaintBrush2",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush2.png",
+			"alpha": 0.05,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+		{
+			"id": "PaintBrush3",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush3.png",
+			"alpha": 0.05,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+		{
+			"id": "PaintBrush4",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush4.png",
+			"alpha": 0.5,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+		{
+			"id": "PaintBrush5",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush5.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+		{
+			"id": "PaintBrush6",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush6.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+		{
+			"id": "PaintBrush7",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush7.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+		{
+			"id": "PaintBrush8",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintBasic_Brush_PaintBrush8.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [40, 50, 60],
+			"defaultSize": 40,
+			"minSize": 39,
+			"maxSize": 60
+		},
+
+
+		{
+			"id": "Fancy1",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy1.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy2",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy2.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy3",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy3.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy4",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy4.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy5",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy5.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy6",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy6.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy7",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy7.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy8",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy8.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy9",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy9.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy10",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy10.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy11",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy11.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy12",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy12.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy13",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy13.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy14",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy14.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy15",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy15.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		},
+		{
+			"id": "Fancy16",
+			"imageFile": "FRC_UX_ArtCenter_FreehandPaintFancy_Brush_Fancy16.png",
+			"alpha": 0.08,
+			"arbRotate": true,
+			"brushSizes": [30, 50, 70],
+			"defaultSize": 30,
+			"minSize": 29,
+			"maxSize": 70
+		}]
+	},
+	{
+		"id": "ShapesPalette",
+		"images": {
+			"up": "FRC_ArtCenter_Icon_Shape_up.png",
+			"down": "FRC_ArtCenter_Icon_Shape_down.png",
+			"focused": "FRC_ArtCenter_Icon_Shape_focused.png"
+		},
+		"module": "FRC_ArtCenter_Tool_Shapes",
+		"mode": "SHAPE_PLACEMENT",
+		"subToolSelection": false,
+		"noColorVisible": true,
+		"colorSubTools": true,
+		"subtools": [{
+			"id": "triangle",
+			"vertices": [-1.0,1.0, 0,-1.0, 1.0,1.0]
+		},
+		{
+			"id": "square",
+			"vertices": [-0.90,0.90, -0.90,-0.90, 0.90,-0.90, 0.90, 0.90]
+		},
+		{
+			"id": "pentagon",
+			"vertices": [-0.5,1.0, -0.9,0, 0,-0.75, 0.9,0, 0.5,1.0]
+		},
+		{
+			"id": "hexagon",
+			"vertices": [-0.5,0.9, -1.0,0, -0.5,-0.9, 0.5,-0.9, 1.0,0, 0.5,0.9]
+		},
+		{
+			"id": "septagon",
+			"vertices": [-1.0,0.25, -0.75,-0.5, 0,-0.90, 0.75,-0.5, 1.0,0.25, 0.5,1.0, -0.5,1.0]
+		},
+		{
+			"id": "octagon",
+			"vertices": [-1.0,0.40, -1.0,-0.40, -0.40,-1.0, 0.40,-1.0, 1.0,-0.40, 1.0,0.40, 0.40,1.0, -0.40,1.0]
+		},
+		{
+			"id": "circle",
+			"vertices": [1]
+		},
+		{
+			"id": "star",
+			"vertices": [-0.5,0.25, -1.0,-0.2, -0.30,-0.30, 0,-0.90, 0.30,-0.30, 1.0,-0.2, 0.5,0.25, 0.60,0.90, 0,0.60, -0.60,0.90]
+		}]
+	},
+	{
+		"id": "StampsPalette",
+		"images": {
+		"up": "FRC_ArtCenter_Icon_Stamp_up.png",
+		"down": "FRC_ArtCenter_Icon_Stamp_down.png",
+		"focused": "FRC_ArtCenter_Icon_Stamp_focused.png"
+		},
+		"module": "FRC_ArtCenter_Tool_Stamps",
+		"mode": "STAMP_PLACEMENT",
+		"subToolSelection": false,
+		"noColorVisible": true,
+		"subtools": [
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Golly",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Golly.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Golly_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Golly_thumbnail.png",
+			"width": 202,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Prana",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Prana.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Prana_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Prana_thumbnail.png",
+			"width": 252,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Maxwell",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Maxwell.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Maxwell_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Maxwell_thumbnail.png",
+			"width": 152,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_ProfCornicus",
+			"imageFile": "GENU_ArtCenter_global_Stamp_ProfCornicus.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_ProfCornicus_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_ProfCornicus_thumbnail.png",
+			"width": 186,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Truce",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Truce.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Truce_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Truce_thumbnail.png",
+			"width": 234,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Nichelle",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Nichelle.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Nichelle_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Nichelle_thumbnail.png",
+			"width": 355,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Chanel",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Chanel.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Chanel_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Chanel_thumbnail.png",
+			"width": 280,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Macho",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Macho.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Macho_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Macho_thumbnail.png",
+			"width": 272,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Mascot",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Mascot.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Mascot_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Mascot_thumbnail.png",
+			"width": 412,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Wrapper",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Wrapper.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Wrapper_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Wrapper_thumbnail.png",
+			"width": 341,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Celray",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Celray.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Celray_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Celray_thumbnail.png",
+			"width": 194,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Chewie",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Chewie.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Chewie_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Chewie_thumbnail.png",
+			"width": 277,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Billie",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Billie.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Billie_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Billie_thumbnail.png",
+			"width": 297,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Banana",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Banana.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Banana_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Banana_thumbnail.png",
+		"width": 512,
+		"height": 374,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Bean",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Bean.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Bean_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Bean_thumbnail.png",
+		"width": 347,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Beef",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Beef.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Beef_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Beef_thumbnail.png",
+		"width": 419,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Bread",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Bread.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Bread_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Bread_thumbnail.png",
+		"width": 512,
+		"height": 369,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Celery",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Celery.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Celery_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Celery_thumbnail.png",
+		"width": 512,
+		"height": 359,
+		"defaultScale": 0.5
+		},
+
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Chicken",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Chicken.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Chicken_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Chicken_thumbnail.png",
+		"width": 448,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Corn",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Corn.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Corn_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Corn_thumbnail.png",
+		"width": 326,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Milk",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Milk.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Milk_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Milk_thumbnail.png",
+		"width": 291,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Mushroom",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Mushroom.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Mushroom_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Mushroom_thumbnail.png",
+		"width": 509,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Onion",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Onion.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Onion_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Onion_thumbnail.png",
+		"width": 450,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Orange",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Orange.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Orange_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Orange_thumbnail.png",
+		"width": 430,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_PeanutButter",
+		"imageFile": "GENU_ArtCenter_global_Stamp_PeanutButter.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_PeanutButter_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_PeanutButter_thumbnail.png",
+		"width": 383,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Peapod",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Peapod.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Peapod_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Peapod_thumbnail.png",
+			"width": 512,
+			"height": 340,
+			"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Raspberry",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Raspberry.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Raspberry_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Raspberry_thumbnail.png",
+		"width": 460,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_RedBellPepper",
+		"imageFile": "GENU_ArtCenter_global_Stamp_RedBellPepper.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_RedBellPepper_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_RedBellPepper_thumbnail.png",
+		"width": 412,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_Rice",
+		"imageFile": "GENU_ArtCenter_global_Stamp_Rice.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_Rice_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_Rice_thumbnail.png",
+		"width": 459,
+		"height": 512,
+		"defaultScale": 0.5
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Strawberry",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Strawberry.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Strawberry_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Strawberry_thumbnail.png",
+			"width": 352,
+			"height": 512,
+			"defaultScale": 0.5
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_Balloon",
+			"imageFile": "GENU_ArtCenter_global_Stamp_Balloon.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_Balloon_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_Balloon_thumbnail.png",
+			"width": 331,
+			"height": 512,
+			"defaultScale": 0.8
+		},
+		{
+			"id": "GENU_ArtCenter_global_Stamp_ChewChewTrain",
+			"imageFile": "GENU_ArtCenter_global_Stamp_ChewChewTrain.png",
+			"maskFile": "GENU_ArtCenter_global_Stamp_ChewChewTrain_mask.png",
+			"thumbFile": "GENU_ArtCenter_global_Stamp_ChewChewTrain_thumbnail.png",
+			"width": 512,
+			"height": 186,
+			"defaultScale": 0.8
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_RollsRoyce",
+		"imageFile": "GENU_ArtCenter_global_Stamp_RollsRoyce.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_RollsRoyce_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_RollsRoyce_thumbnail.png",
+		"width": 512,
+		"height": 281,
+		"defaultScale": 0.8
+		},
+		{
+		"id": "GENU_ArtCenter_global_Stamp_TowTruck",
+		"imageFile": "GENU_ArtCenter_global_Stamp_TowTruck.png",
+		"maskFile": "GENU_ArtCenter_global_Stamp_TowTruck_mask.png",
+		"thumbFile": "GENU_ArtCenter_global_Stamp_TowTruck_thumbnail.png",
+		"width": 512,
+		"height": 360,
+		"defaultScale": 0.8
+		}
+		]
+	}]
+}

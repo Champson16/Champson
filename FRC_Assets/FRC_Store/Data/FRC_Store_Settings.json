@@ -1,0 +1,93 @@
+{
+	"debugStore": "apple",
+	"appId": "com.fatredcouch.charlie.charlieandshearlsacornhero",
+	"saveDataFilename": "FRC_Store_Save.json",
+	"productDataPath": "FRC_Assets/FRC_Store/Data/FRC_Store_Products.json",
+
+	"lockImagePath": "FRC_Assets/FRC_Store/Images/FRC_IAP_Lock.png",
+	"lockImageWidth": 128,
+	"lockImageHeight": 128,
+
+	"headerImagePath": "FRC_Assets/FRC_Store/Images/FRC_GENU_IAP_Header.png",
+	"headerImageWidth": 1152,
+	"headerImageHeight": 77,
+	"headerColor": [ 0.454901961, 0.517647059, 0.309803922, 1.0 ],
+
+	"headerTitleText": "",
+	"headerTitleFont": "FrutigerLTStd-Bold",
+	"headerTitleFont_android": "FrutigerLTStd-Bold",
+	"headerTitleFontSize": 48,
+
+	"footerHeight": 70,
+	"footerText": "Thank you for your interest in U of Chew!",
+	"footerFont": "FrutigerLTStd-Bold",
+	"footerFont_android": "FrutigerLTStd-Bold",
+	"footerFontSize": "24",
+	"footerColor": [ 0.454901961, 0.517647059, 0.309803922, 1.0 ],
+
+	"closeButtonImage": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_Close.png",
+	"closeButtonWidth": 50,
+	"closeButtonHeight": 50,
+
+	"productTitleFont": "FrutigerLTStd-Bold",
+	"productTitleFont_android": "FrutigerLTStd-Bold",
+	"productTitleFontSize": 28,
+	"productTitleColor": [ 1.0, 1.0, 1.0, 1.0 ],
+	"productDescriptionFont": "FrutigerLTStd-Light",
+	"productDescriptionFont_android": "FrutigerLTStd-Light",
+	"productDescriptionFontSize": 16,
+	"productDescriptionColor": [ 1.0, 1.0, 1.0, 1.0],
+
+	"priceFont": "FrutigerLTStd-Italic",
+	"priceFont_android": "FrutigerLTStd-Italic",
+	"priceFontSize": 16,
+	"priceColor": [ 1.0, 1.0, 1.0, 1.0 ],
+
+	"defaultPromoPath": "FRC_Assets/FRC_Store/Images/FRC_Store_Promo.png",
+	"promoImageWidth": 230,
+	"promoImageHeight": 153,
+
+	"lockedMediaThumbMaxWidth": 200,
+	"lockedMediaThumbMaxHeight": 200,
+	"lockedMediaText": "Get this and more by purchasing this bundle!",
+	"lockedMediaFont": "FrutigerLTStd-Light",
+	"lockedMediaFont_android": "FrutigerLTStd-Light",
+	"lockedMediaFontSize": 24,
+	"lockedMediaFontColor": [ 1.0, 1.0, 1.0, 1.0 ],
+
+	"learnMore_up": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_LearnMore-up.png",
+	"learnMore_down": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_LearnMore-down.png",
+
+	"buyNow_up": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_BuyNow-up.png",
+	"buyNow_down": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_BuyNow-down.png",
+	"buyNowWidth": 153,
+	"buyNowHeight": 60,
+
+	"purchasedImage": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_Purchased-disabled.png",
+	"purchasedWidth": 142,
+	"purchasedHeight": 60,
+
+	"buyAll_up": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_BuyAllNow-up.png",
+	"buyAll_down": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_BuyAllNow-down.png",
+
+	"restore_up": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_RestorePurchases-up.png",
+	"restore_down": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_RestorePurchases-down.png",
+	"restore_disabled": "FRC_Assets/FRC_Store/Images/FRC_IAP_Button_RestorePurchases-disabled.png",
+	"restoreWidth": 237,
+	"restoreHeight": 60,
+
+	"blueBannerImage": "FRC_Assets/FRC_Store/Images/FRC_PUFF_IAP_BlueBanner.png",
+	"blueBannerWidth": 230,
+	"blueBannerHeight": 93,
+
+	"orangeBannerImage": "FRC_Assets/FRC_Store/Images/FRC_PUFF_IAP_OrangeBanner.png",
+	"orangeBannerWidth": 230,
+	"orangeBannerHeight": 93,
+
+	"orangeBannerFont": "FrutigerLTStd-Bold",
+	"orangeBannerFont_android": "FrutigerLTStd-Bold",
+	"orangeBannerFontSize": 27,
+	"orangeBannerFontColor": [ 1.0, 1.0, 1.0, 1.0 ],
+	"orangeBannerTextOffsetX": 0,
+	"orangeBannerTextOffsetY": -8
+}

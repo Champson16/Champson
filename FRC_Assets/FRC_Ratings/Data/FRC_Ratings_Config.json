@@ -1,0 +1,14 @@
+{
+	"dialog": {
+		"title": "Rate U of Chew",
+		"description": "If you enjoyed U of Chew, please take a moment to rate this app.",
+		"option_rateit": "Yes, rate it!",
+		"option_dontask": "Don't ask again",
+		"option_remindlater": "Remind me later",
+		"snooze": 5
+	},
+	"apple": "UNKNOWN",
+	"google": "com.fatredcouch.genuwinhealth.uofchew.android",
+	"nook": "",
+	"amazon": ""
+}
