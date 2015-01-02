@@ -2,11 +2,11 @@ local FRC_JigsawPuzzle_Settings = {};
 
 FRC_JigsawPuzzle_Settings.UI = {
 	IMAGE_PATH = "FRC_Assets/FRC_JigsawPuzzle/Images/",
-	TAP_TO_ROTATE_ON_IMAGE = "FRC_JigsawPuzzle_Game_global_TapToRotate_On.png",
-	TAP_TO_ROTATE_OFF_IMAGE = "FRC_JigsawPuzzle_Game_global_TapToRotate_Off.png",
+	TAP_TO_ROTATE_ON_IMAGE = "GENU_JigsawPuzzle_Game_global_TapToRotate_on.png",
+	TAP_TO_ROTATE_OFF_IMAGE = "GENU_JigsawPuzzle_Game_global_TapToRotate_off.png",
 	TAP_TO_ROTATE_WIDTH = 285,
 	TAP_TO_ROTATE_HEIGHT = 70,
-	SCENE_BACKGROUND = "FRC_Assets/FRC_JigsawPuzzle/Images/FRC_JigsawPuzzle_Background.jpg",
+	SCENE_BACKGROUND = "FRC_Assets/FRC_JigsawPuzzle/Images/GENU_JigsawPuzzle_Game_global_Background.png",
 	SCENE_BACKGROUND_WIDTH = 1152,
 	SCENE_BACKGROUND_HEIGHT = 768,
 	PUZZLE_WIDTH = 1152,
@@ -19,7 +19,7 @@ FRC_JigsawPuzzle_Settings.UI = {
 };
 
 FRC_JigsawPuzzle_Settings.DATA = {
-	PUZZLES = "FRC_Assets/FRC_JigsawPuzzle/Data/FRC_JigsawPuzzle.json"	
+	PUZZLES = "FRC_Assets/FRC_JigsawPuzzle/Data/FRC_JigsawPuzzle.json"
 };
 
 return FRC_JigsawPuzzle_Settings;

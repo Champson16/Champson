@@ -1,0 +1,119 @@
+<Animations>
+  <Animation name="Macho_Cheer_Loop" frameCount="73">
+    <Part name="MACHO_CHEER_LOOP_001">
+      <Frame x="-27.90" y="100.05" index="0"/>
+      <Frame x="-27.90" y="100.05" index="1"/>
+      <Frame x="-27.90" y="100.05" index="2"/>
+      <Frame x="-27.90" y="100.05" index="3"/>
+      <Frame x="-27.90" y="100.05" index="4"/>
+      <Frame x="-27.90" y="100.05" index="5"/>
+      <Frame x="-27.90" y="100.05" index="71"/>
+      <Frame x="-27.90" y="100.05" index="72"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_002">
+      <Frame x="-14.80" y="100.05" index="6"/>
+      <Frame x="-14.80" y="100.05" index="7"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_003">
+      <Frame x="-21.00" y="100.00" index="8"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_004">
+      <Frame x="-54.35" y="100.45" index="9"/>
+      <Frame x="-54.35" y="100.45" index="10"/>
+      <Frame x="-54.35" y="100.45" index="11"/>
+      <Frame x="-54.35" y="100.45" index="12"/>
+      <Frame x="-54.35" y="100.45" index="13"/>
+      <Frame x="-54.35" y="100.45" index="14"/>
+      <Frame x="-54.35" y="100.45" index="15"/>
+      <Frame x="-54.35" y="100.45" index="16"/>
+      <Frame x="-54.35" y="100.45" index="17"/>
+      <Frame x="-54.35" y="100.45" index="18"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_005">
+      <Frame x="-54.00" y="101.30" index="19"/>
+      <Frame x="-54.00" y="101.30" index="20"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_006">
+      <Frame x="-66.10" y="111.90" index="21"/>
+      <Frame x="-66.10" y="111.90" index="22"/>
+      <Frame x="-66.10" y="111.90" index="23"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_007">
+      <Frame x="-61.80" y="151.20" index="24"/>
+      <Frame x="-61.80" y="151.20" index="25"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_008">
+      <Frame x="-57.80" y="163.50" index="26"/>
+      <Frame x="-57.80" y="163.50" index="27"/>
+      <Frame x="-57.80" y="163.50" index="28"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_009">
+      <Frame x="-58.30" y="2.50" index="29"/>
+      <Frame x="-58.30" y="2.50" index="30"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_010">
+      <Frame x="-48.15" y="-29.70" index="31"/>
+      <Frame x="-48.15" y="-29.70" index="32"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_011">
+      <Frame x="-31.10" y="-94.55" index="33"/>
+      <Frame x="-31.10" y="-94.55" index="34"/>
+      <Frame x="-31.10" y="-94.55" index="35"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_012">
+      <Frame x="-19.80" y="-109.70" index="36"/>
+      <Frame x="-19.80" y="-109.70" index="37"/>
+      <Frame x="-19.80" y="-109.70" index="38"/>
+      <Frame x="-19.80" y="-109.70" index="39"/>
+      <Frame x="-19.80" y="-109.70" index="40"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_013">
+      <Frame x="-28.40" y="-71.55" index="41"/>
+      <Frame x="-28.40" y="-71.55" index="42"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_014">
+      <Frame x="-44.65" y="35.70" index="43"/>
+      <Frame x="-44.65" y="35.70" index="44"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_015">
+      <Frame x="-18.00" y="174.15" index="45"/>
+      <Frame x="-18.00" y="174.15" index="46"/>
+      <Frame x="-18.00" y="174.15" index="47"/>
+      <Frame x="-18.00" y="174.15" index="48"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_016">
+      <Frame x="-23.80" y="128.25" index="49"/>
+      <Frame x="-23.80" y="128.25" index="50"/>
+      <Frame x="-23.80" y="128.25" index="51"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_017">
+      <Frame x="-28.35" y="100.05" index="52"/>
+      <Frame x="-28.35" y="100.05" index="53"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_018">
+      <Frame x="-21.15" y="100.05" index="54"/>
+      <Frame x="-21.15" y="100.05" index="55"/>
+      <Frame x="-21.15" y="100.05" index="62"/>
+      <Frame x="-21.15" y="100.05" index="63"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_019">
+      <Frame x="-22.05" y="100.05" index="56"/>
+      <Frame x="-22.05" y="100.05" index="64"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_020">
+      <Frame x="-23.35" y="100.05" index="57"/>
+      <Frame x="-23.35" y="100.05" index="58"/>
+      <Frame x="-23.35" y="100.05" index="59"/>
+      <Frame x="-23.35" y="100.05" index="60"/>
+      <Frame x="-23.35" y="100.05" index="61"/>
+      <Frame x="-23.35" y="100.05" index="65"/>
+      <Frame x="-23.35" y="100.05" index="66"/>
+      <Frame x="-23.35" y="100.05" index="67"/>
+      <Frame x="-23.35" y="100.05" index="68"/>
+    </Part>
+    <Part name="MACHO_CHEER_LOOP_021">
+      <Frame x="-26.25" y="100.05" index="69"/>
+      <Frame x="-26.25" y="100.05" index="70"/>
+    </Part>
+  </Animation>
+</Animations>

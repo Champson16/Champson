@@ -254,7 +254,7 @@ FRC_JigsawPuzzle_OptionScreen.new = function(parent, onCompleteCallback)
 		end
 	end);
 
-	sizeSliderText = display.newText(group, 'Pieces', 0, 0, "FunnyBoneJF", 30);
+	sizeSliderText = display.newText(group, 'Pieces', 0, 0, "Freshman", 30);
 	sizeSliderText:setFillColor(1, 1, 1, 1.0);
 	sizeSliderText.y = sizeSlider.y - 7;
 
@@ -365,10 +365,14 @@ FRC_JigsawPuzzle_OptionScreen.new = function(parent, onCompleteCallback)
 
 							if (self.filterProperties) then
 								for k,v in pairs(self.filterProperties) do
-									if (k ~= "zoomInOut") then
+									if (k ~= "zoomInOut" and k ~= "swirlInOut") then
 										puzzlePreview.bg.fill.effect[k] = v;
-									else
+									end
+									if (k == "zoomInOut") then
 										zoomInOut = true;
+									end
+									if (k == "swirlInOut") then
+										swirlInOut = true;
 									end
 								end
 							end
@@ -392,6 +396,27 @@ FRC_JigsawPuzzle_OptionScreen.new = function(parent, onCompleteCallback)
 								puzzlePreview.pixelMoveDirection = 2;
 								puzzlePreview.effectTimer = timer.performWithDelay(100, onTimerComplete, 0);
 							end
+
+							--[[ if (swirlInOut) then
+								local function onTimerComplete()
+									puzzlePreview.bg.fill.effect.intensity = puzzlePreview.pixelIndex;
+									puzzlePreview.pixelIndex = puzzlePreview.pixelIndex + puzzlePreview.pixelMoveDirection;
+									if (puzzlePreview.pixelIndex <= 1) then
+										puzzlePreview.pixelMoveDirection = 2;
+										timer.cancel(puzzlePreview.effectTimer);
+										puzzlePreview.effectTimer = timer.performWithDelay(500, function()
+											puzzlePreview.effectTimer = timer.performWithDelay(100, onTimerComplete, 0);
+											end, 1);
+										end
+										if (puzzlePreview.pixelIndex >= 30) then
+											puzzlePreview.pixelMoveDirection = -2;
+										end
+									end
+									puzzlePreview.pixelIndex = 1;
+									puzzlePreview.pixelMoveDirection = 2;
+									puzzlePreview.effectTimer = timer.performWithDelay(100, onTimerComplete, 0);
+								end
+								--]]
 						else
 							puzzlePreview.bg.fill.effect = nil;
 						end

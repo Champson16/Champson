@@ -22,7 +22,7 @@ function scene.createScene(self, event)
 	view.timerVisible = timerVisible;
 	view.previewVisible = previewVisible;
 
-	display.setDrawMode("forceRender", false);
+	display.setDrawMode("forceRender"); --, false);
 
 	local screenW, screenH = FRC_Layout.getScreenDimensions();
 	local bg = display.newImageRect(view, FRC_JigsawPuzzle_Settings.UI.SCENE_BACKGROUND, FRC_JigsawPuzzle_Settings.UI.SCENE_BACKGROUND_WIDTH, FRC_JigsawPuzzle_Settings.UI.SCENE_BACKGROUND_HEIGHT);
@@ -328,7 +328,7 @@ function scene.exitScene(self, event)
 end
 
 function scene.didExitScene(self, event)
-	display.setDrawMode("forceRender", false);
+	display.setDrawMode("default"); -- display.setDrawMode("forceRender", false);
 	local view = self.view;
 
 	self.actionBarMenu:dispose();

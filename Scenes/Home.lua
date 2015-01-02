@@ -418,6 +418,17 @@ function scene.createScene(self, event)
 	--end
 	--]]
 
+	-- setup array of animation sequences
+	local titleAnimationFiles = {
+		"Macho_Cheer_Loop.xml"
+	};
+	-- preload the animation data (XML and images) early
+	titleAnimationSequences = FRC_AnimationManager.createAnimationClipGroup(titleAnimationFiles, animationXMLBase, animationImageBase);
+	FRC_Layout.scaleToFit(titleAnimationSequences, 400, -100);
+	-- titleAnimationSequences.y = titleAnimationSequences.y + bg.contentBounds.yMin;
+	view:insert(titleAnimationSequences);
+
+
 	-- create action bar menu at top left corner of screen
 	scene.actionBarMenu = FRC_ActionBar.new({
 		parent = view,
@@ -553,7 +564,21 @@ function scene.enterScene(self, event)
 	-- now let's animate everything!
 	-- this should only happen the first time that the application is launched
 	if (FRC_AppSettings.get("freshLaunch")) then
-
+		for i=1, titleAnimationSequences.numChildren do
+			titleAnimationSequences[i]:play({
+				showLastFrame = false,
+				playBackward = false,
+				autoLoop = true,
+				palindromicLoop = false,
+				delay = 3,
+				intervalTime = 30,
+				maxIterations = 1,
+				onCompletion = function ()
+					-- after the title animation, we will play the introduction sequences only
+					-- ambientAnimationSequences[i]:play({autoLoop = true, intervalTime = 30});
+				end
+			});
+		end
 	else
 
 	end

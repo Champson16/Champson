@@ -36,7 +36,103 @@
 			"filterProperties": {
 				"zoomInOut": true
 			}
-		}]
+		},
+		{
+			"name": "Emboss",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectEmboss.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.emboss",
+			"filterProperties": {
+				"intensity": 0.2
+			}
+		},
+		{
+			"name": "WoodCut",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectWoodcut.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.woodCut",
+			"filterProperties": {
+				"intensity": 0.3
+			}
+		},
+		{
+			"name": "PolkaDots",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectPolkaDots.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.polkaDots",
+			"filterProperties": {
+				"numPixels": 32,
+				"dotRadius": 1,
+				"aspectRatio": 1.25
+			}
+		},
+		{
+			"name": "Sepia",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectSepia.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.sepia",
+			"filterProperties": {
+				"intensity": 1
+			}
+		},
+		{
+			"name": "FrostedGlass",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectFrostedGlass.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.frostedGlass",
+			"filterProperties": {
+				"scale": 140
+			}
+		},
+		{
+			"name": "CrossHatch",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectCrossHatch.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.crosshatch",
+			"filterProperties": {
+				"grain": 4
+			}
+		},
+		{
+			"name": "Wobble",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectWobble.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.wobble",
+			"filterProperties": {
+				"zoomInOut": true,
+				"amplitude": 80
+			}
+		},
+		{
+			"name": "Swirl",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectSwirl.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.swirl",
+			"filterProperties": {
+				"swirlInOut": true,
+				"intensity": 0.4
+			}
+		},
+		{
+			"name": "Scatter",
+			"image": "GENU_JigsawPuzzle_Game_global_EffectScatter.png",
+			"width": 282,
+			"height": 95,
+			"filter": "filter.scatter",
+			"filterProperties": {
+				"zoomInOut": true,
+				"intensity": 0.3
+			}
+		}
+		]
 	},
 	"sizes": [
 		{ "columns": 3, "rows": 2 },
