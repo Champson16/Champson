@@ -2,21 +2,21 @@
 	"buttons": [
 		{
 			"id": "12card",
-			"imageUp": "FRC_Assets/FRC_MemoryGame/Images/PUFF_MemoryGame_global_Button_12cards.png",
-			"imageDown": "FRC_Assets/FRC_MemoryGame/Images/PUFF_MemoryGame_global_Button_12cards-down.png",
-			"imageDisabled": "FRC_Assets/FRC_MemoryGame/Images/PUFF_MemoryGame_global_Button_12cards-down.png",
-			"buttonWidth": 166,
-			"buttonHeight": 140,
+			"imageUp": "FRC_Assets/FRC_MemoryGame/Images/GENU_MemoryGame_global_12Set.png",
+			"imageDown": "FRC_Assets/FRC_MemoryGame/Images/GENU_MemoryGame_global_12Set_down.png",
+			"imageDisabled": "FRC_Assets/FRC_MemoryGame/Images/GENU_MemoryGame_global_12Set_down.png",
+			"buttonWidth": 404,
+			"buttonHeight": 213,
 			"columns": 4,
 			"rows": 3,
 		},
 		{
 			"id": "24card",
-			"imageUp": "FRC_Assets/FRC_MemoryGame/Images/PUFF_MemoryGame_global_Button_24cards.png",
-			"imageDown": "FRC_Assets/FRC_MemoryGame/Images/PUFF_MemoryGame_global_Button_24cards-down.png",
-			"imageDisabled": "FRC_Assets/FRC_MemoryGame/Images/PUFF_MemoryGame_global_Button_24cards-down.png",
-			"buttonWidth": 200,
-			"buttonHeight": 150,
+			"imageUp": "FRC_Assets/FRC_MemoryGame/Images/GENU_MemoryGame_global_24Set.png",
+			"imageDown": "FRC_Assets/FRC_MemoryGame/Images/GENU_MemoryGame_global_24Set_down.png",
+			"imageDisabled": "FRC_Assets/FRC_MemoryGame/Images/GENU_MemoryGame_global_24Set_down.png",
+			"buttonWidth": 426,
+			"buttonHeight": 213,
 			"columns": 6,
 			"rows": 4
 		}
