@@ -1,0 +1,76 @@
+<Animations>
+  <Animation name="GENU_Animation_global_Brainery_g" frameCount="60">
+    <Part name="GENU_Animation_global_SmokeGreen_001_010">
+      <Frame x="8.35" y="-209.60" scaleX="0.379" scaleY="0.379" index="44"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_002_010">
+      <Frame x="5.90" y="-231.20" scaleX="0.379" scaleY="0.379" index="45"/>
+      <Frame x="5.90" y="-231.20" scaleX="0.379" scaleY="0.379" index="46"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_003_010">
+      <Frame x="6.35" y="-238.45" scaleX="0.379" scaleY="0.379" index="47"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_004_010">
+      <Frame x="3.15" y="-238.05" scaleX="0.379" scaleY="0.379" index="48"/>
+      <Frame x="3.15" y="-238.05" scaleX="0.379" scaleY="0.379" index="49"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_005_010">
+      <Frame x="3.95" y="-244.85" scaleX="0.379" scaleY="0.379" index="50"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_006_010">
+      <Frame x="4.00" y="-260.35" scaleX="0.379" scaleY="0.379" index="51"/>
+      <Frame x="4.00" y="-260.35" scaleX="0.379" scaleY="0.379" index="52"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_007_010">
+      <Frame x="5.00" y="-265.10" scaleX="0.379" scaleY="0.379" index="53"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_008_010">
+      <Frame x="6.30" y="-268.30" scaleX="0.379" scaleY="0.379" index="54"/>
+      <Frame x="6.30" y="-268.30" scaleX="0.379" scaleY="0.379" index="55"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_009_010">
+      <Frame x="6.50" y="-270.75" scaleX="0.379" scaleY="0.379" index="56"/>
+      <Frame x="6.50" y="-270.75" scaleX="0.379" scaleY="0.379" index="57"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokeGreen_010_010">
+      <Frame x="-17.40" y="-280.45" scaleX="0.379" scaleY="0.379" index="58"/>
+      <Frame x="-17.40" y="-280.45" scaleX="0.379" scaleY="0.379" index="59"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_001_010">
+      <Frame x="8.35" y="-209.60" scaleX="0.379" scaleY="0.379" index="14"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_002_010">
+      <Frame x="5.90" y="-231.20" scaleX="0.379" scaleY="0.379" index="15"/>
+      <Frame x="5.90" y="-231.20" scaleX="0.379" scaleY="0.379" index="16"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_003_010">
+      <Frame x="6.35" y="-238.45" scaleX="0.379" scaleY="0.379" index="17"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_004_010">
+      <Frame x="3.15" y="-238.05" scaleX="0.379" scaleY="0.379" index="18"/>
+      <Frame x="3.15" y="-238.05" scaleX="0.379" scaleY="0.379" index="19"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_005_010">
+      <Frame x="3.95" y="-244.85" scaleX="0.379" scaleY="0.379" index="20"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_006_010">
+      <Frame x="4.00" y="-260.35" scaleX="0.379" scaleY="0.379" index="21"/>
+      <Frame x="4.00" y="-260.35" scaleX="0.379" scaleY="0.379" index="22"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_007_010">
+      <Frame x="5.00" y="-265.10" scaleX="0.379" scaleY="0.379" index="23"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_008_010">
+      <Frame x="6.30" y="-268.30" scaleX="0.379" scaleY="0.379" index="24"/>
+      <Frame x="6.30" y="-268.30" scaleX="0.379" scaleY="0.379" index="25"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_009_010">
+      <Frame x="6.50" y="-270.75" scaleX="0.379" scaleY="0.379" index="26"/>
+      <Frame x="6.50" y="-270.75" scaleX="0.379" scaleY="0.379" index="27"/>
+    </Part>
+    <Part name="GENU_Animation_global_SmokePink_010_010">
+      <Frame x="-17.40" y="-280.45" scaleX="0.379" scaleY="0.379" index="28"/>
+      <Frame x="-17.40" y="-280.45" scaleX="0.379" scaleY="0.379" index="29"/>
+    </Part>
+  </Animation>
+</Animations>

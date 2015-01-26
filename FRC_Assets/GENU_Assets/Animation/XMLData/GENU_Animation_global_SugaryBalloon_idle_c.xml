@@ -1,0 +1,25 @@
+<Animations>
+  <Animation name="GENU_Animation_global_SugaryBalloon_idle_c" frameCount="11">
+    <Part name="GENU_Animation_global_Candy_Balloon_001_014">
+      <Frame x="-207.75" y="19.05" scaleX="0.679" scaleY="0.679" index="0"/>
+      <Frame x="-207.75" y="19.05" scaleX="0.679" scaleY="0.679" index="1"/>
+      <Frame x="-207.75" y="19.05" scaleX="0.679" scaleY="0.679" index="10"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_002_014">
+      <Frame x="-208.35" y="19.05" scaleX="0.679" scaleY="0.679" index="2"/>
+      <Frame x="-208.35" y="19.05" scaleX="0.679" scaleY="0.679" index="3"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_003_014">
+      <Frame x="-206.95" y="19.05" scaleX="0.679" scaleY="0.679" index="4"/>
+      <Frame x="-206.95" y="19.05" scaleX="0.679" scaleY="0.679" index="5"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_004_014">
+      <Frame x="-205.95" y="19.05" scaleX="0.679" scaleY="0.679" index="6"/>
+      <Frame x="-205.95" y="19.05" scaleX="0.679" scaleY="0.679" index="7"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_005_014">
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="8"/>
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="9"/>
+    </Part>
+  </Animation>
+</Animations>

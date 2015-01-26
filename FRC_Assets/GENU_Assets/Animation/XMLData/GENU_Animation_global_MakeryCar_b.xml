@@ -1,0 +1,9 @@
+<Animations>
+  <Animation name="GENU_Animation_global_MakeryCar_b" frameCount="49">
+    <Part name="GENU_Animation_global_Makery_SpeechBubble">
+      <Frame x="193.35" y="102.25" scaleX="0.023" scaleY="0.145" index="46"/>
+      <Frame x="47.15" y="62.30" scaleX="0.411" scaleY="0.472" index="47"/>
+      <Frame x="-99.10" y="22.35" scaleX="0.799" scaleY="0.799" index="48"/>
+    </Part>
+  </Animation>
+</Animations>

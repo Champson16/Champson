@@ -1,0 +1,14 @@
+<Animations>
+  <Animation name="GENU_Animation_global_TowTruck_b" frameCount="83">
+    <Part name="GENU_Animation_en_Fishery_SpeechBubble">
+      <Frame x="-116.35" y="-31.95" scaleX="0.110" scaleY="0.110" index="75"/>
+      <Frame x="-132.55" y="-1.05" scaleX="0.256" scaleY="0.256" index="76"/>
+      <Frame x="-148.85" y="29.85" scaleX="0.401" scaleY="0.401" index="77"/>
+      <Frame x="-165.00" y="60.75" scaleX="0.547" scaleY="0.547" index="78"/>
+      <Frame x="-181.25" y="91.65" scaleX="0.693" scaleY="0.693" index="79"/>
+      <Frame x="-197.50" y="122.55" scaleX="0.839" scaleY="0.839" index="80"/>
+      <Frame x="-200.40" y="124.75" scaleX="0.819" scaleY="0.819" index="81"/>
+      <Frame x="-203.35" y="127.00" scaleX="0.799" scaleY="0.799" index="82"/>
+    </Part>
+  </Animation>
+</Animations>

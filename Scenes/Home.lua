@@ -58,16 +58,26 @@ function scene.playTheme2()
 	end
 end
 
+function scene.onCanvasTouch(self, event)
+
+	if (event.phase == "began") then
+		-- nothing yet
+	elseif (event.phase == "moved") then
+		-- enable pinch-scaling when one finger is on a shape/stamp and the other on the canvas
+		if (event.list and scene.currentlyPinchingObject and scene.initialTouchList) then
+			local list = {};
+			list[1] = scene.initialTouchList;
+			list[2] = event.list[1];
+			doPinchZoom(scene.currentlyPinchingObject, list);
+		end
+	end
+
+	return true;
+end
+
 function scene.removeControls(self)
 	local transArray = {};
 	scene.buttonIsActive = true;
-	-- transArray[ #transArray + 1 ] = transition.to( readButton, { time = 500, y = 460, alpha = 0 });
-	transArray[ #transArray + 1 ] = transition.to( playButton, { time = 500, y = 460, alpha = 0 });
-	transArray[ #transArray + 1 ] = transition.to( createButton, { time = 500, y = 460, alpha = 0 });
-	transArray[ #transArray + 1 ] = transition.to( learnButton, { time = 500, y = 460, alpha = 0 });
-	transArray[ #transArray + 1 ] = transition.to( discoverButton, { time = 500, y = 460, alpha = 0 });
-	transArray[ #transArray + 1 ] = transition.to( aboutButton, { time = 500, y = 460, alpha = 0 });
-	-- transArray[ #transArray + 1 ] = transition.to( shopButton, { time = 500, y = 460, alpha = 0 });
 end
 
 function scene.createScene(self, event)
@@ -79,178 +89,369 @@ function scene.createScene(self, event)
 	local imageBase = 'FRC_Assets/GENU_Assets/Images/';
 	local videoBase = 'FRC_Assets/GENU_Assets/Videos/';
 
+	local genericDialogBackground, sugaryCloseButton, sugaryBackground; -- forward declarations
+
 	-- animations for main navigation buttons at the bottom of the screen
 	local transArray = {};
-	local swingButtonLeft, swingButtonRight;
-	function swingButtonLeft( button )
-		transArray[ #transArray + 1] = transition.to( button, { time = 1200 + math.random(1,400), rotation = 10, transition = easing.inOutQuad, onComplete = function() swingButtonRight( button ) end } )
-	end
-
-	function swingButtonRight( button )
-		transArray[ #transArray + 1] = transition.to( button, { time = 1200 + math.random(1,400), rotation = -10, transition = easing.inOutQuad, onComplete = function() swingButtonLeft( button ) end } )
-	end
 
 	-- set up the display of the background image and logo
-	local bg = display.newGroup();
-	bg.anchorChildren = false;
-	bg.anchorX = 0.5;
-	bg.anchorY = 0.5;
+	local bgGroup = display.newGroup();
+	bgGroup.anchorChildren = false;
+	bgGroup.anchorX = 0.5;
+	bgGroup.anchorY = 0.5;
+
+	local function calculateDelta( previousTouches, event )
+
+		local id,touch = next( previousTouches )
+		if event.id == id then
+			id,touch = next( previousTouches, id )
+			assert( id ~= event.id )
+		end
+
+		local dx = touch.x - event.x
+		local dy = touch.y - event.y
+		return dx, dy
+
+	end
+
+	local function calculateCenter( previousTouches, event )
+
+		local id,touch = next( previousTouches )
+		if event.id == id then
+			id,touch = next( previousTouches, id )
+			assert( id ~= event.id )
+		end
+
+		local cx = math.floor( ( touch.x + event.x ) * 0.5 )
+		local cy = math.floor( ( touch.y + event.y ) * 0.5 )
+		return cx, cy
+
+	end
+
+	-- create a table listener object for the bkgd image
+	function bgGroup:touch( event )
+
+		local phase = event.phase
+		local eventTime = event.time
+		local previousTouches = self.previousTouches
+
+		if not self.xScaleStart then
+			self.xScaleStart, self.yScaleStart = self.xScale, self.yScale
+		end
+
+		local numTotalTouches = 1
+		if previousTouches then
+			-- add in total from previousTouches, subtract one if event is already in the array
+			numTotalTouches = numTotalTouches + self.numPreviousTouches
+			if previousTouches[event.id] then
+				numTotalTouches = numTotalTouches - 1
+			end
+		end
+
+		if "began" == phase then
+			-- Very first "began" event
+			if not self.isFocus then
+				-- Subsequent touch events will target button even if they are outside the contentBounds of button
+				display.getCurrentStage():setFocus( self )
+				self.isFocus = true
+
+				-- Store initial position
+				self.x0 = event.x - self.x
+				self.y0 = event.y - self.y
+
+				previousTouches = {}
+				self.previousTouches = previousTouches
+				self.numPreviousTouches = 0
+				self.firstTouch = event
+
+			elseif not self.distance then
+				local dx,dy
+				local cx,cy
+
+				if previousTouches and numTotalTouches >= 2 then
+					dx,dy = calculateDelta( previousTouches, event )
+					cx,cy = calculateCenter( previousTouches, event )
+				end
+
+				-- initialize to distance between two touches
+				if dx and dy then
+					local d = math.sqrt( dx*dx + dy*dy )
+					if d > 0 then
+						self.distance = d
+						self.xScaleOriginal = self.xScale
+						self.yScaleOriginal = self.yScale
+
+						self.x0 = cx - self.x
+						self.y0 = cy - self.y
+
+					end
+				end
+
+			end
+
+			if not previousTouches[event.id] then
+				self.numPreviousTouches = self.numPreviousTouches + 1
+			end
+			previousTouches[event.id] = event
+
+		elseif self.isFocus then
+			if "moved" == phase then
+				if self.distance then
+					local dx,dy
+					local cx,cy
+					if previousTouches and numTotalTouches == 2 then
+						dx,dy = calculateDelta( previousTouches, event )
+						cx,cy = calculateCenter( previousTouches, event )
+					end
+
+					if dx and dy then
+						local newDistance = math.sqrt( dx*dx + dy*dy )
+						local scale = newDistance / self.distance
+
+						if scale > 0 then
+							self.xScale = self.xScaleOriginal * scale
+							self.yScale = self.yScaleOriginal * scale
+
+							-- Make object move while scaling
+							self.x = cx - ( self.x0 * scale )
+							self.y = cy - ( self.y0 * scale )
+						end
+					end
+				else
+					if event.id == self.firstTouch.id then
+						-- don't move unless this is the first touch id.
+						-- Make object move (we subtract self.x0, self.y0 so that moves are
+						-- relative to initial grab point, rather than object "snapping").
+						-- TODO: we need to constrain the x and y to prevent the image move from exceeding display bounds!
+						self.x = event.x - self.x0
+						self.y = event.y - self.y0
+					end
+				end
+
+				if event.id == self.firstTouch.id then
+					self.firstTouch = event
+				end
+
+				if not previousTouches[event.id] then
+					self.numPreviousTouches = self.numPreviousTouches + 1
+				end
+				previousTouches[event.id] = event
+
+			elseif "ended" == phase or "cancelled" == phase then
+				-- check for taps
+				local dx = math.abs( event.xStart - event.x )
+				local dy = math.abs( event.yStart - event.y )
+				if eventTime - previousTouches[event.id].time < 150 and dx < 10 and dy < 10 then
+					if not self.tapTime then
+						-- single tap
+						self.tapTime = eventTime
+						self.tapDelay = timer.performWithDelay( 300, function() self.tapTime = nil end )
+					elseif eventTime - self.tapTime < 300 then
+						-- double tap
+						timer.cancel( self.tapDelay )
+						self.tapTime = nil
+						if self.xScale == self.xScaleStart and self.yScale == self.yScaleStart then
+							-- when double tap increases scale, scale goes to 2x
+							transition.to( self, { time=300, transition=easing.inOutQuad, xScale=self.xScale*2, yScale=self.yScale*2, x=event.x - self.x0*2, y=event.y - self.y0*2 } )
+						else
+							local factor = self.xScaleStart / self.xScale
+							-- alternatively double tap reduces image back to original 1x scale
+							transition.to( self, { time=300, transition=easing.inOutQuad, xScale=self.xScaleStart, yScale=self.yScaleStart, x=event.x - self.x0*factor, y=event.y - self.y0*factor } )
+						end
+					end
+				end
+
+				--
+				if previousTouches[event.id] then
+					self.numPreviousTouches = self.numPreviousTouches - 1
+					previousTouches[event.id] = nil
+				end
+
+				if self.numPreviousTouches == 1 then
+					-- must be at least 2 touches remaining to pinch/zoom
+					self.distance = nil
+					-- reset initial position
+					local id,touch = next( previousTouches )
+					self.x0 = touch.x - self.x
+					self.y0 = touch.y - self.y
+					self.firstTouch = touch
+
+				elseif self.numPreviousTouches == 0 then
+					-- previousTouches is empty so no more fingers are touching the screen
+					-- Allow touch events to be sent normally to the objects they "hit"
+					display.getCurrentStage():setFocus( nil )
+					self.isFocus = false
+					self.distance = nil
+					self.xScaleOriginal = nil
+					self.yScaleOriginal = nil
+
+					-- reset array
+					self.previousTouches = nil
+					self.numPreviousTouches = nil
+				end
+			end
+		end
+
+		return true
+	end
+
+	-- bgGroup:addEventListener('touch', bgGroup);
+
+	-- setup any overlays needed
+	local bgOverlayGroup = display.newGroup();
+	bgOverlayGroup.anchorChildren = false;
+	bgOverlayGroup.anchorX = 0.5;
+	bgOverlayGroup.anchorY = 0.5;
 
 	-- set up the background
-	local bgImage = display.newImageRect(animationImageBase .. 'GENU_Home_LandingPage_Background.png', 1152, 768);
-	bg:insert(bgImage);
+	local bgImage = display.newImageRect(imageBase .. 'GENU_Home_LandingPage_Background.png', 1152, 768);
+	bgGroup:insert(bgImage);
 	bgImage.alpha = 0;
 	FRC_Layout.scaleToFit(bgImage);
 	bgImage.x, bgImage.y = 0, 0;
 
 	transArray[ #transArray + 1 ] = transition.to( bgImage, { delay = 0, time = 300, alpha = 1, transition = easing.inOutQuad});
 	-- setup the logo animation
-	local bgLogo = display.newImageRect(animationImageBase .. 'GENU_Home_LandingPage_Logo.png', 1152, 768);
-	bg:insert(bgLogo);
+	local bgLogo = display.newImageRect(imageBase .. 'GENU_Home_LandingPage_Logo.png', 1152, 768);
+	bgOverlayGroup:insert(bgLogo);
 
 	bgLogo.xScale = 0.001;
 	bgLogo.yScale = 0.001;
 	bgLogo.rotation = math.random(-45, 45);
 	local rotation = bgLogo.rotation * 0.25;
 
+	--[[
 	-- set up the book logo
-	local bookLogo = display.newImageRect(animationImageBase .. 'GENU_LandingPage_TitleSpaced.png', 1152, 768);
-	bg:insert(bookLogo);
+	local bookLogo = display.newImageRect(imageBase .. 'GENU_LandingPage_TitleSpaced.png', 1152, 768);
+	bgOverlayGroup:insert(bookLogo);
 	bookLogo.alpha = 0;
 
-	transArray[ #transArray + 1 ] = transition.to( bgLogo, { delay = 0, time = 750, y = -120, rotation = rotation, xScale = 1.25, yScale = 1.25, transition = easing.inOutQuad, onComplete = function()
-		transArray[ #transArray + 1  ] = transition.to( bgLogo, { time = 250, rotation = 0, xScale = .75, yScale = .75, transition = easing.inExpo, onComplete = function()
-			transArray[ #transArray + 1  ] = transition.to( bgLogo, { delay = 3000, time = 1000, alpha = 0, transition = easing.inExpo });
-			transArray[ #transArray + 1  ] = transition.to( bookLogo, { delay = 3750, time = 1000, alpha = 1, transition = easing.inExpo })
+	 transArray[ #transArray + 1 ] = transition.to( bgLogo, { delay = 0, time = 200, y = -120, rotation = rotation, xScale = 1.25, yScale = 1.25, transition = easing.inOutQuad, onComplete = function()
+		transArray[ #transArray + 1  ] = transition.to( bgLogo, { time = 200, rotation = 0, xScale = .75, yScale = .75, transition = easing.inExpo, onComplete = function()
+			transArray[ #transArray + 1  ] = transition.to( bgLogo, { time = 200, alpha = 0, transition = easing.inExpo });
+			transArray[ #transArray + 1  ] = transition.to( bookLogo, { delay = 400, time = 200, alpha = 1, transition = easing.inExpo,
+			onComplete = function()
+				transArray[ #transArray + 1  ] = transition.to( bookLogo, { delay = 200, time = 200, alpha = 0, transition = easing.inExpo })
+				end })
 		end })
 	end
  })
+--]]
 
-
-	local button_xOffset = 96;
-
-  -- this version of readButton plays a video
-
---	if (_G.APP_Settings.storybookOn) then
-		-- play the storybook
-
---	end
-	-- else
-	--
-	-- 	-- play the video
-	-- 	local readButton = ui.button.new({
-	-- 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Read_up.png',
-	-- 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Read_down.png',
-	-- 		width = 128,
-	-- 		height = 64,
-	-- 		x = -416 + button_xOffset,
-	-- 		y = 340,
-	-- 		onRelease = function()
-	-- --			native.showAlert("U of Chew", "Coming Soon!", { "OK" });
-	-- 			local deviceWidth = ( display.contentWidth - (display.screenOriginX * 2) ) / display.contentScaleX
-	-- 			local scaleFactor = math.floor( deviceWidth / display.contentWidth )
-	-- 			local videoDidPlay = false;
-	-- 			local videoFile, learnVideo, videoDuration, onComplete;
-	--
-	-- 			local videoBg = display.newRect(0, 0, screenW, screenH);
-	-- 			videoBg:setFillColor(0, 0, 0, 1.0);
-	-- 			videoBg.x, videoBg.y = display.contentCenterX, display.contentCenterY;
-	-- 			--videoBg:addEventListener('tap', function() return true; end);
-	-- 			videoBg:addEventListener('touch', function()
-	-- 				videoDidPlay = true;
-	-- 				onComplete();
-	-- 				return true;
-	-- 			end);
-	--
-	-- 			if (_G.ANDROID_DEVICE) then
-	-- 				videoFile = videoBase .. 'GENU_Promo_640x360iPad.mp4';
-	-- 				videoDuration = 31798;
-	-- 			else
-	-- 				if scaleFactor == 2 then
-	-- 					videoFile = videoBase .. 'GENU_Promo_1280x72024fps.mp4';
-	-- 					videoDuration = 31792;
-	-- 				else
-	-- 					videoFile = videoBase .. 'GENU_Promo_640x360iPad.mp4';
-	-- 					videoDuration = 31798;
-	-- 				end
-	-- 			end
-	-- 			onComplete = function(event)
-	-- 				audio.stop(1);
-	-- 				if (videoBg) then
-	-- 					videoBg:removeSelf();
-	-- 					videoBg = nil;
-	-- 				end
-	-- 				if (learnVideo) then
-	-- 					learnVideo:pause();
-	-- 					learnVideo:removeSelf();
-	-- 					learnVideo = nil;
-	-- 				end
-	-- 			end
-	--			FRC_AudioManager:findGroup("ambientMusic"):pause();
-	-- 			--media.playVideo(videoFile, true, onComplete);
-	--
-	-- 			if (system.getInfo("environment") == "simulator") then
-	-- 				onComplete();
-	-- 			end
-	--
-	-- 			learnVideo = native.newVideo(0, 0, screenW, screenH);
-	-- 			learnVideo.x = display.contentWidth * 0.5;
-	-- 			learnVideo.y = display.contentHeight * 0.5;
-	-- 			learnVideo:addEventListener("video", function(event)
-	-- 				if (event.phase == "ready") and (not videoDidPlay) then
-	-- 					videoDidPlay = true;
-	-- 					learnVideo:play();
-	-- 					timer.performWithDelay(videoDuration, onComplete, 1);
-	-- 				end
-	-- 			end);
-	-- 			learnVideo:load(videoFile);
-	-- 		end
-	-- 	});
-
-	local playButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Play_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Play_down.png',
-		width = 175,
-		height = 54,
-		x = -494 + button_xOffset,
-		y = 330,
+	-- lay in all of the map overlay buttons
+	local sugaryButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheSugary_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheSugary_down.png',
+		width = 328,
+		height = 239,
+		x = 223 - 576;
+		y = 295 - 384;
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
-			storyboard.gotoScene('Scenes.Games');
+			storyboard.gotoScene('Scenes.Sugary');
 		end
 	});
-	bg:insert(playButton);
-	transArray[ #transArray + 1 ] = transition.from( playButton, { delay = math.random(1,500), time = 500, y = 420, alpha = 0, rotation = math.random( -15, 15 ) });
-	swingButtonRight(playButton);
-	-- transArray[ #transArray + 1 ] = transition.to( playButton, { delay = math.random(1,1500), onComplete = function() swingButtonRight(playButton) end } );
+	sugaryButton.anchorX = 0.5;
+	sugaryButton.anchorY = 0.5;
+	bgGroup:insert(sugaryButton);
 
-	local createButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Create_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Create_down.png',
-		width = 175,
-		height = 54,
-		x = -287 + button_xOffset,
-		y = 330,
+	local makeryButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheMakery_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheMakery_down.png',
+		width = 359,
+		height = 221,
+		x = 335 - 576;
+		y = 176 - 384;
 		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			storyboard.gotoScene('Scenes.Makery');
+		end
+	});
+	makeryButton.anchorX = 0.5;
+	makeryButton.anchorY = 0.5;
+	bgGroup:insert(makeryButton);
+
+	local fisheryButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_down.png',
+		width = 434,
+		height = 179,
+		x = 576 - 576;
+		y = 154 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			storyboard.gotoScene('Scenes.Fishery');
+		end
+	});
+	fisheryButton.anchorX = 0.5;
+	fisheryButton.anchorY = 0.5;
+	bgGroup:insert(fisheryButton);
+
+	local puzzlesButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Puzzles_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Puzzles_down.png',
+		width = 163,
+		height = 107,
+		x = 661 - 576;
+		y = 292 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
-			timer.performWithDelay(600, function() storyboard.gotoScene('Scenes.ArtCenter'); end, 1);
-			-- storyboard.gotoScene('Scenes.ArtCenter');
+			storyboard.gotoScene('Scenes.JigsawPuzzle', { effect="crossFade", time="250" });
 		end
 	});
-	bg:insert(createButton);
-	transArray[ #transArray + 1 ] = transition.from( createButton, { delay = math.random(1,500), time = 500, y = 420, alpha = 0, rotation = math.random( -15, 15 ) });
-	swingButtonLeft(createButton);
+	puzzlesButton.anchorX = 0.5;
+	puzzlesButton.anchorY = 0.5;
+	bgGroup:insert(puzzlesButton);
 
-	local discoverButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Discover_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Discover_down.png',
-		width = 175,
-		height = 54,
-		x = -80 + button_xOffset,
-		y = 330,
+	local braineryButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_down.png',
+		width = 294,
+		height = 200,
+		x = 893 - 576;
+		y = 260 - 384;
 		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			storyboard.gotoScene('Scenes.Brainery');
+		end
+	});
+	braineryButton.anchorX = 0.5;
+	braineryButton.anchorY = 0.5;
+	bgGroup:insert(braineryButton);
+
+	local tasteeTownButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_down.png',
+		width = 232,
+		height = 130,
+		x = 813 - 576;
+		y = 339 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			storyboard.gotoScene('Scenes.TasteeTown');
+		end
+	});
+	tasteeTownButton.anchorX = 0.5;
+	tasteeTownButton.anchorY = 0.5;
+	bgGroup:insert(tasteeTownButton);
+
+	local recipesButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Recipes_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Recipes_down.png',
+		width = 181,
+		height = 129,
+		x = 574 - 576;
+		y = 417 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
 			local screenRect = display.newRect(0, 0, screenW, screenH);
 			screenRect.x = display.contentCenterX;
 			screenRect.y = display.contentCenterY;
@@ -261,12 +462,7 @@ function scene.createScene(self, event)
 			local webView = native.newWebView(0, 0, screenW - 100, screenH - 55);
 			webView.x = display.contentCenterX;
 			webView.y = display.contentCenterY + 20;
-			local devicePlatformName = import("platform").detected;
-			-- DEBUG
-			-- native.showAlert("Platform", devicePlatformName);
-			-- webView:request("http://fatredcouch.com/page.php?t=products&p=" .. devicePlatformName);
-			webView:request("http://genuwinhealth.com");
-
+			webView:request("Help/GENU_FRC_WebOverlay_Recipes.html", system.DocumentsDirectory);
 
 			local closeButton = ui.button.new({
 				imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
@@ -285,128 +481,89 @@ function scene.createScene(self, event)
 			webView.closeButton = closeButton;
 		end
 	});
-	bg:insert(discoverButton);
-	transArray[ #transArray + 1 ] = transition.from( discoverButton, { delay = math.random(1,500), time = 500, y = 420, alpha = 0, rotation = math.random( -15, 15 ) });
-	swingButtonRight(discoverButton);
+	recipesButton.anchorX = 0.5;
+	recipesButton.anchorY = 0.5;
+	bgGroup:insert(recipesButton);
 
-	local learnButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Learn_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Learn_down.png',
-		width = 175,
-		height = 54,
-		x = 127 + button_xOffset,
-		y = 330,
- 		onRelease = function()
- 			local deviceWidth = ( display.contentWidth - (display.screenOriginX * 2) ) / display.contentScaleX
- 			local scaleFactor = math.floor( deviceWidth / display.contentWidth )
- 			local videoDidPlay = false;
-			local videoFile, learnVideo, videoDuration, onComplete;
- 			local videoBg = display.newRect(0, 0, screenW, screenH);
- 			videoBg:setFillColor(0, 0, 0, 1.0);
- 			videoBg.x, videoBg.y = display.contentCenterX, display.contentCenterY;
- 			--videoBg:addEventListener('tap', function() return true; end);
- 			videoBg:addEventListener('touch', function()
- 				videoDidPlay = true;
- 				onComplete();
- 				return true;
- 			end);
-
- 			if (_G.ANDROID_DEVICE) then
- 				videoFile = videoBase .. 'GENU_Learn_LetsMove_SD.mp4';
- 				videoDuration = 172000;
- 			else
- 				if scaleFactor == 2 then
- 					videoFile = videoBase .. 'GENU_Learn_LetsMove_HD.mp4';
- 					videoDuration = 172000;
- 				else
- 					videoFile = videoBase .. 'GENU_Learn_LetsMove_SD.mp4';
- 					videoDuration = 172000;
- 				end
- 			end
- 			onComplete = function(event)
- 				audio.stop(1);
- 				if (videoBg) then
- 					videoBg:removeSelf();
- 					videoBg = nil;
- 				end
- 				if (learnVideo) then
- 					learnVideo:pause();
- 					learnVideo:removeSelf();
- 					learnVideo = nil;
- 				end
- 			end
-			FRC_AudioManager:findGroup("ambientMusic"):pause();
- 			--media.playVideo(videoFile, true, onComplete);
-
- 			if (system.getInfo("environment") == "simulator") then
- 				onComplete();
- 			end
-
- 			learnVideo = native.newVideo(0, 0, screenW, screenH);
- 			learnVideo.x = display.contentWidth * 0.5;
- 			learnVideo.y = display.contentHeight * 0.5;
- 			learnVideo:addEventListener("video", function(event)
- 				if (event.phase == "ready") and (not videoDidPlay) then
- 					videoDidPlay = true;
- 					learnVideo:play();
- 					timer.performWithDelay(videoDuration, onComplete, 1);
- 				end
- 			end);
- 			learnVideo:load(videoFile);
- 		end
-
-	});
-	bg:insert(learnButton);
-	transArray[ #transArray + 1 ] = transition.from( learnButton, { delay = math.random(1,500), time = 500, y = 420, alpha = 0, rotation = math.random( -15, 15 ) });
-	swingButtonRight(learnButton);
-
-
-	local aboutButton = ui.button.new({
-	imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_About_up.png',
-	imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_About_down.png',
-	width = 175,
-	height = 54,
-	x = 334 + button_xOffset,
-	y = 330,
-	onRelease = function()
-		local screenRect = display.newRect(0, 0, screenW, screenH);
-		screenRect.x = display.contentCenterX;
-		screenRect.y = display.contentCenterY;
-		screenRect:setFillColor(0, 0, 0, 0.75);
-		screenRect:addEventListener('touch', function() return true; end);
-		screenRect:addEventListener('tap', function() return true; end);
-		local webView = native.newWebView(0, 0, screenW - 100, screenH - 55);
-		webView.x = display.contentCenterX;
-		webView.y = display.contentCenterY + 20;
-		webView:request("Help/GENU_FRC_WebOverlay_Learn_Credits.html", system.DocumentsDirectory);
-
-		local closeButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
-		imageDown = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
-		width = 50,
-		height = 50,
-		onRelease = function(event)
-			local self = event.target;
-			webView:removeSelf(); webView = nil;
-			self:removeSelf();
-			screenRect:removeSelf(); screenRect = nil;
+	local mainBuildingButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_MainBuilding_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_MainBuilding_down.png',
+		width = 283,
+		height = 125,
+		x = 348 - 576;
+		y = 453 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			storyboard.gotoScene('Scenes.MainBuilding', { effect="crossFade", time="250" });
 		end
-		});
-		closeButton.x = 5 + (closeButton.contentWidth * 0.5) - ((screenW - display.contentWidth) * 0.5);
-		closeButton.y = 5 + (closeButton.contentHeight * 0.5) - ((screenH - display.contentHeight) * 0.5);
-		webView.closeButton = closeButton;
-	end
 	});
-	bg:insert(aboutButton);
-	transArray[ #transArray + 1 ] = transition.from( aboutButton, { delay = math.random(1,500), time = 500, y = 420, alpha = 0, rotation = math.random( -15, 15 ) });
-	swingButtonLeft(aboutButton);
+	mainBuildingButton.anchorX = 0.5;
+	mainBuildingButton.anchorY = 0.5;
+	bgGroup:insert(mainBuildingButton);
 
+	local bodinatorButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Bodinator_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Bodinator_down.png',
+		width = 141,
+		height = 93,
+		x = 549 - 576;
+		y = 470 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			storyboard.gotoScene('Scenes.Bodinator', { effect="crossFade", time="250" });
+		end
+	});
+	bodinatorButton.anchorX = 0.5;
+	bodinatorButton.anchorY = 0.5;
+	bgGroup:insert(bodinatorButton);
+
+	local memoryGameButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Concentration_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Concentration_down.png',
+		width = 241,
+		height = 101,
+		x = 810 - 576;
+		y = 505 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
+			storyboard.gotoScene('Scenes.MemoryGame', { effect="crossFade", time="250" });
+		end
+	});
+	memoryGameButton.anchorX = 0.5;
+	memoryGameButton.anchorY = 0.5;
+	bgGroup:insert(memoryGameButton);
+
+	local artDepartmentButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_ArtDepartment_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_ArtDepartment_down.png',
+		width = 235,
+		height = 110,
+		x = 608 - 576;
+		y = 596 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
+			timer.performWithDelay(600, function() storyboard.gotoScene('Scenes.ArtCenter'); end, 1);
+		end
+	});
+	artDepartmentButton.anchorX = 0.5;
+	artDepartmentButton.anchorY = 0.5;
+	bgGroup:insert(artDepartmentButton);
 
 	-- position background image at correct location
-	bg.x = display.contentCenterX;
-	bg.y = display.contentCenterY;
+	bgGroup.x = display.contentCenterX;
+	bgGroup.y = display.contentCenterY;
+	view:insert(bgGroup);
 
-	view:insert(bg);
+	-- position background image at correct location
+	bgOverlayGroup.x = display.contentCenterX;
+	bgOverlayGroup.y = display.contentCenterY;
+	view:insert(bgOverlayGroup);
 
 	--if (not buildText) then
 		local buildText = display.newEmbossedText(view, FRC_AppSettings.get("version") .. ' (' .. system.getInfo('build') .. ')', 0, 0, native.systemFontBold, 11);
@@ -418,6 +575,8 @@ function scene.createScene(self, event)
 	--end
 	--]]
 
+	--[[
+
 	-- setup array of animation sequences
 	local titleAnimationFiles = {
 		"Macho_Cheer_Loop.xml"
@@ -427,7 +586,7 @@ function scene.createScene(self, event)
 	FRC_Layout.scaleToFit(titleAnimationSequences, 400, -100);
 	-- titleAnimationSequences.y = titleAnimationSequences.y + bg.contentBounds.yMin;
 	view:insert(titleAnimationSequences);
-
+--]]
 
 	-- create action bar menu at top left corner of screen
 	scene.actionBarMenu = FRC_ActionBar.new({
@@ -442,6 +601,40 @@ function scene.createScene(self, event)
 		alwaysVisible = true,
 		bgColor = { 1, 1, 1, .95 },
 		buttons = {
+			{
+				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Discover_up.png',
+				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Discover_down.png',
+				onRelease = function(e)
+					local screenRect = display.newRect(0, 0, screenW, screenH);
+					screenRect.x = display.contentCenterX;
+					screenRect.y = display.contentCenterY;
+					screenRect:setFillColor(0, 0, 0, 0.75);
+					screenRect:addEventListener('touch', function() return true; end);
+					screenRect:addEventListener('tap', function() return true; end);
+
+					local webView = native.newWebView(0, 0, screenW - 100, screenH - 55);
+					webView.x = display.contentCenterX;
+					webView.y = display.contentCenterY + 20;
+					local devicePlatformName = import("platform").detected;
+					webView:request("http://genuwinhealth.com/?p=" .. devicePlatformName);
+
+					local closeButton = ui.button.new({
+						imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						imageDown = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						width = 50,
+						height = 50,
+						onRelease = function(event)
+							local self = event.target;
+							webView:removeSelf(); webView = nil;
+							self:removeSelf(); closeButton = nil;
+							screenRect:removeSelf(); screenRect = nil;
+						end
+					});
+					closeButton.x = 5 + (closeButton.contentWidth * 0.5) - ((screenW - display.contentWidth) * 0.5);
+					closeButton.y = 5 + (closeButton.contentHeight * 0.5) - ((screenH - display.contentHeight) * 0.5);
+					webView.closeButton = closeButton;
+				end
+			},
 			{
 				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_FRC_down.png',
 				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_FRC_up.png',
@@ -458,6 +651,40 @@ function scene.createScene(self, event)
 					webView.y = display.contentCenterY + 20;
 					local devicePlatformName = import("platform").detected;
 					webView:request("http://fatredcouch.com/page.php?t=products&p=" .. devicePlatformName);
+
+					local closeButton = ui.button.new({
+						imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						imageDown = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						width = 50,
+						height = 50,
+						onRelease = function(event)
+							local self = event.target;
+							webView:removeSelf(); webView = nil;
+							self:removeSelf(); closeButton = nil;
+							screenRect:removeSelf(); screenRect = nil;
+						end
+					});
+					closeButton.x = 5 + (closeButton.contentWidth * 0.5) - ((screenW - display.contentWidth) * 0.5);
+					closeButton.y = 5 + (closeButton.contentHeight * 0.5) - ((screenH - display.contentHeight) * 0.5);
+					webView.closeButton = closeButton;
+				end
+			},
+			{
+				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_About_up.png',
+				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_About_down.png',
+				onRelease = function(e)
+					local screenRect = display.newRect(0, 0, screenW, screenH);
+					screenRect.x = display.contentCenterX;
+					screenRect.y = display.contentCenterY;
+					screenRect:setFillColor(0, 0, 0, 0.75);
+					screenRect:addEventListener('touch', function() return true; end);
+					screenRect:addEventListener('tap', function() return true; end);
+
+					local webView = native.newWebView(0, 0, screenW - 100, screenH - 55);
+					webView.x = display.contentCenterX;
+					webView.y = display.contentCenterY + 20;
+					local devicePlatformName = import("platform").detected;
+					webView:request("Help/GENU_FRC_WebOverlay_Learn_Credits.html", system.DocumentsDirectory);
 
 					local closeButton = ui.button.new({
 						imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
@@ -564,20 +791,22 @@ function scene.enterScene(self, event)
 	-- now let's animate everything!
 	-- this should only happen the first time that the application is launched
 	if (FRC_AppSettings.get("freshLaunch")) then
-		for i=1, titleAnimationSequences.numChildren do
-			titleAnimationSequences[i]:play({
-				showLastFrame = false,
-				playBackward = false,
-				autoLoop = true,
-				palindromicLoop = false,
-				delay = 3,
-				intervalTime = 30,
-				maxIterations = 1,
-				onCompletion = function ()
-					-- after the title animation, we will play the introduction sequences only
-					-- ambientAnimationSequences[i]:play({autoLoop = true, intervalTime = 30});
-				end
-			});
+		if titleAnimationSequences then
+			for i=1, titleAnimationSequences.numChildren do
+				titleAnimationSequences[i]:play({
+					showLastFrame = false,
+					playBackward = false,
+					autoLoop = true,
+					palindromicLoop = false,
+					delay = 3,
+					intervalTime = 30,
+					maxIterations = 1,
+					onCompletion = function ()
+						-- after the title animation, we will play the introduction sequences only
+						-- ambientAnimationSequences[i]:play({autoLoop = true, intervalTime = 30});
+					end
+				});
+			end
 		end
 	else
 

@@ -1,0 +1,11 @@
+<Animations>
+  <Animation name="GENU_Animation_global_MakeryCar_idle_a" frameCount="5">
+    <Part name="GENU_Animation_ComingSoonDialogueFrame">
+      <Frame index="0"/>
+      <Frame index="1"/>
+      <Frame index="2"/>
+      <Frame index="3"/>
+      <Frame index="4"/>
+    </Part>
+  </Animation>
+</Animations>

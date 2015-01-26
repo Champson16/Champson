@@ -1,0 +1,106 @@
+<Animations>
+  <Animation name="GENU_Animation_global_SugaryBalloon_b" frameCount="74">
+    <Part name="GENU_Animation_global_Candy_Balloon_001_014">
+      <Frame x="-207.75" y="-424.55" scaleX="0.679" scaleY="0.679" index="0"/>
+      <Frame x="-207.75" y="-255.00" scaleX="0.679" scaleY="0.679" index="14"/>
+      <Frame x="-207.55" y="-13.50" scaleX="0.679" scaleY="0.679" index="47"/>
+      <Frame x="-207.75" y="19.25" scaleX="0.679" scaleY="0.679" index="59"/>
+      <Frame x="-207.75" y="19.25" scaleX="0.679" scaleY="0.679" index="60"/>
+      <Frame x="-207.75" y="19.05" scaleX="0.679" scaleY="0.679" index="68"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_002_014">
+      <Frame x="-208.15" y="-411.10" scaleX="0.679" scaleY="0.679" index="1"/>
+      <Frame x="-208.35" y="-244.40" scaleX="0.679" scaleY="0.679" index="15"/>
+      <Frame x="-208.35" y="-125.40" scaleX="0.679" scaleY="0.679" index="28"/>
+      <Frame x="-208.15" y="-9.65" scaleX="0.679" scaleY="0.679" index="48"/>
+      <Frame x="-208.35" y="19.05" scaleX="0.679" scaleY="0.679" index="69"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_003_014">
+      <Frame x="-207.15" y="-397.90" scaleX="0.679" scaleY="0.679" index="2"/>
+      <Frame x="-207.15" y="-234.05" scaleX="0.679" scaleY="0.679" index="16"/>
+      <Frame x="-206.95" y="-117.70" scaleX="0.679" scaleY="0.679" index="29"/>
+      <Frame x="-207.15" y="-6.00" scaleX="0.679" scaleY="0.679" index="49"/>
+      <Frame x="-206.95" y="17.65" scaleX="0.679" scaleY="0.679" index="58"/>
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="70"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_004_014">
+      <Frame x="-205.95" y="-384.85" scaleX="0.679" scaleY="0.679" index="3"/>
+      <Frame x="-205.95" y="-223.85" scaleX="0.679" scaleY="0.679" index="17"/>
+      <Frame x="-205.95" y="-110.15" scaleX="0.679" scaleY="0.679" index="30"/>
+      <Frame x="-205.95" y="-69.30" scaleX="0.679" scaleY="0.679" index="36"/>
+      <Frame x="-206.00" y="-2.55" scaleX="0.679" scaleY="0.679" index="50"/>
+      <Frame x="-205.95" y="13.80" scaleX="0.679" scaleY="0.679" index="56"/>
+      <Frame x="-205.95" y="19.05" scaleX="0.679" scaleY="0.679" index="71"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_005_014">
+      <Frame x="-206.75" y="-372.05" scaleX="0.679" scaleY="0.679" index="4"/>
+      <Frame x="-206.75" y="-213.85" scaleX="0.679" scaleY="0.679" index="18"/>
+      <Frame x="-206.75" y="-102.85" scaleX="0.679" scaleY="0.679" index="31"/>
+      <Frame x="-206.95" y="-63.20" scaleX="0.679" scaleY="0.679" index="37"/>
+      <Frame x="-206.80" y="0.70" scaleX="0.679" scaleY="0.679" index="51"/>
+      <Frame x="-206.75" y="15.85" scaleX="0.679" scaleY="0.679" index="57"/>
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="72"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_006_014">
+      <Frame x="-207.75" y="-359.40" scaleX="0.679" scaleY="0.679" index="5"/>
+      <Frame x="-207.55" y="-204.15" scaleX="0.679" scaleY="0.679" index="19"/>
+      <Frame x="-207.75" y="-95.70" scaleX="0.679" scaleY="0.679" index="32"/>
+      <Frame x="-207.75" y="-57.30" scaleX="0.679" scaleY="0.679" index="38"/>
+      <Frame x="-207.55" y="3.75" scaleX="0.679" scaleY="0.679" index="52"/>
+      <Frame x="-207.55" y="19.05" scaleX="0.679" scaleY="0.679" index="73"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_007_014">
+      <Frame x="-207.55" y="-347.00" scaleX="0.679" scaleY="0.679" index="6"/>
+      <Frame x="-207.55" y="-194.55" scaleX="0.679" scaleY="0.679" index="20"/>
+      <Frame x="-207.75" y="-88.85" scaleX="0.679" scaleY="0.679" index="33"/>
+      <Frame x="-207.55" y="-51.65" scaleX="0.679" scaleY="0.679" index="39"/>
+      <Frame x="-207.55" y="6.55" scaleX="0.679" scaleY="0.679" index="53"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_008_014">
+      <Frame x="-208.35" y="-334.75" scaleX="0.679" scaleY="0.679" index="7"/>
+      <Frame x="-208.35" y="-185.20" scaleX="0.679" scaleY="0.679" index="21"/>
+      <Frame x="-208.35" y="-82.10" scaleX="0.679" scaleY="0.679" index="34"/>
+      <Frame x="-208.15" y="-46.15" scaleX="0.679" scaleY="0.679" index="40"/>
+      <Frame x="-207.95" y="9.15" scaleX="0.679" scaleY="0.679" index="54"/>
+      <Frame x="-208.35" y="19.05" scaleX="0.679" scaleY="0.679" index="61"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_009_014">
+      <Frame x="-207.15" y="-322.80" scaleX="0.679" scaleY="0.679" index="8"/>
+      <Frame x="-206.95" y="-176.05" scaleX="0.679" scaleY="0.679" index="22"/>
+      <Frame x="-206.95" y="-75.60" scaleX="0.679" scaleY="0.679" index="35"/>
+      <Frame x="-207.15" y="-40.90" scaleX="0.679" scaleY="0.679" index="41"/>
+      <Frame x="-206.95" y="11.60" scaleX="0.679" scaleY="0.679" index="55"/>
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="62"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_010_014">
+      <Frame x="-207.15" y="-310.95" scaleX="0.679" scaleY="0.679" index="9"/>
+      <Frame x="-206.95" y="-167.10" scaleX="0.679" scaleY="0.679" index="23"/>
+      <Frame x="-206.95" y="-35.80" scaleX="0.679" scaleY="0.679" index="42"/>
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="63"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_011_014">
+      <Frame x="-205.95" y="-299.35" scaleX="0.679" scaleY="0.679" index="10"/>
+      <Frame x="-206.15" y="-158.35" scaleX="0.679" scaleY="0.679" index="24"/>
+      <Frame x="-206.15" y="-30.95" scaleX="0.679" scaleY="0.679" index="43"/>
+      <Frame x="-205.95" y="19.05" scaleX="0.679" scaleY="0.679" index="64"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_012_014">
+      <Frame x="-206.75" y="-287.95" scaleX="0.679" scaleY="0.679" index="11"/>
+      <Frame x="-206.95" y="-149.80" scaleX="0.679" scaleY="0.679" index="25"/>
+      <Frame x="-206.95" y="-26.25" scaleX="0.679" scaleY="0.679" index="44"/>
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="65"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_013_014">
+      <Frame x="-206.75" y="-276.75" scaleX="0.679" scaleY="0.679" index="12"/>
+      <Frame x="-206.75" y="-141.50" scaleX="0.679" scaleY="0.679" index="26"/>
+      <Frame x="-206.75" y="-21.80" scaleX="0.679" scaleY="0.679" index="45"/>
+      <Frame x="-206.75" y="19.05" scaleX="0.679" scaleY="0.679" index="66"/>
+    </Part>
+    <Part name="GENU_Animation_global_Candy_Balloon_014_014">
+      <Frame x="-207.75" y="-265.75" scaleX="0.679" scaleY="0.679" index="13"/>
+      <Frame x="-207.75" y="-133.35" scaleX="0.679" scaleY="0.679" index="27"/>
+      <Frame x="-207.75" y="-17.55" scaleX="0.679" scaleY="0.679" index="46"/>
+      <Frame x="-207.75" y="19.05" scaleX="0.679" scaleY="0.679" index="67"/>
+    </Part>
+  </Animation>
+</Animations>

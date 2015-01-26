@@ -74,8 +74,8 @@ local function beginNewGame(event)
 	scene.triesText.isVisible = triesVisible;
 
   -- enable the Options and Startover buttons
-	scene.actionBarMenu.menuItems[4]:setDisabledState(false);
-	scene.actionBarMenu.menuItems[6]:setDisabledState(false);
+	scene.actionBarMenu.menuItems[3]:setDisabledState(false);
+	scene.actionBarMenu.menuItems[5]:setDisabledState(false);
 
 	if (triesVisible) then
 		-- enabled the Tries settings button
@@ -97,8 +97,8 @@ local function showDifficultyChooser(event)
 	end
 
   -- disable the Options and Startover buttons
-	scene.actionBarMenu.menuItems[4]:setDisabledState(true);
-	scene.actionBarMenu.menuItems[6]:setDisabledState(true);
+	scene.actionBarMenu.menuItems[3]:setDisabledState(true);
+	scene.actionBarMenu.menuItems[5]:setDisabledState(true);
 	scene.settingsBarMenu.menuItems[3]:setDisabledState(true);
 	scene.settingsBarMenu.menuItems[3]:setFocusState(false);
 
@@ -171,13 +171,6 @@ alwaysVisible = true,
 				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Home_down.png',
 				onRelease = function()
 					goHome();
-				end
-			},
-			{
-				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Games_up.png',
-				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Games_down.png',
-				onRelease = function()
-					storyboard.gotoScene('Scenes.Games', { effect="crossFade", time="250" });
 				end
 			},
 			{

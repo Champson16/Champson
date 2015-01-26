@@ -1,0 +1,17 @@
+<Animations>
+  <Animation name="GENU_Animation_global_SugaryBalloon_idle_a" frameCount="11">
+    <Part name="GENU_Animation_ComingSoonDialogueFrame">
+      <Frame index="0"/>
+      <Frame index="1"/>
+      <Frame index="2"/>
+      <Frame index="3"/>
+      <Frame index="4"/>
+      <Frame index="5"/>
+      <Frame index="6"/>
+      <Frame index="7"/>
+      <Frame index="8"/>
+      <Frame index="9"/>
+      <Frame index="10"/>
+    </Part>
+  </Animation>
+</Animations>

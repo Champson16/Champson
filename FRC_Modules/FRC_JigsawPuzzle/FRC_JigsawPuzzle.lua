@@ -552,7 +552,17 @@ local createPuzzlePieces = function(parent, grid, hideTexture, filter)
 				piece.isHitTestable = true;
 				piece.isMovable = false;
 			else
-				piece:setFillColor(0.88);
+				if not filter then
+					-- slightly dim the piece when it has no effect so the user sees a change when the piece snaps into position
+					piece:setFillColor(0.88);
+				else
+					-- don't dim the piece if it has a texture and a filter effect
+					if (filter == "filter.woodCut") then
+						piece:setFillColor(0.0, 0.0, 0.0, 1.0);
+					else
+						piece:setFillColor(1.0, 1.0, 1.0, 1.0);
+					end
+				end
 			end
 
 			local xScale, yScale = calculateOffset(puzzleW, puzzleH, pieceWidth, pieceHeight);
@@ -913,7 +923,8 @@ FRC_JigsawPuzzle.newPreview = function(puzzleIndex, columns, rows, puzzleW, puzz
 	createPuzzlePieces(group.pieces, group.joinerData, true);
 
 	local bgRect = display.newRect(0, 0, puzzleW + 10, puzzleH + 10);
-	bgRect:setFillColor(0, 0, 0, 0.25);
+	local bgColor = FRC_JigsawPuzzle_Settings.UI.PUZZLE_BACKGROUND_COLOR;
+	bgRect:setFillColor(bgColor[1], bgColor[2], bgColor[3], bgColor[4]);
 	group:insert(1, bgRect);
 	bgRect.x = 0;
 	bgRect.y = 0;

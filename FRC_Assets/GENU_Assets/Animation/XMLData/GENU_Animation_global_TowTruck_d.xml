@@ -1,0 +1,133 @@
+<Animations>
+  <Animation name="GENU_Animation_global_TowTruck_d" frameCount="83">
+    <Part name="GENU_Animation_global_TowTruck_001_048">
+      <Frame x="-632.15" y="-86.25" scaleX="0.799" scaleY="0.799" index="0"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="48"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_002_048">
+      <Frame x="-615.10" y="-85.10" scaleX="0.799" scaleY="0.799" index="1"/>
+      <Frame x="-329.05" y="-68.85" scaleX="0.799" scaleY="0.799" index="18"/>
+      <Frame x="-148.45" y="-57.75" scaleX="0.799" scaleY="0.799" index="29"/>
+      <Frame x="-23.55" y="-50.80" scaleX="0.799" scaleY="0.799" index="40"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="49"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_003_048">
+      <Frame x="-598.90" y="-84.95" scaleX="0.799" scaleY="0.799" index="2"/>
+      <Frame x="-311.85" y="-68.60" scaleX="0.799" scaleY="0.799" index="19"/>
+      <Frame x="-132.15" y="-57.75" scaleX="0.799" scaleY="0.799" index="30"/>
+      <Frame x="-17.30" y="-50.95" scaleX="0.799" scaleY="0.799" index="41"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_004_048">
+      <Frame x="-581.80" y="-83.15" scaleX="0.799" scaleY="0.799" index="3"/>
+      <Frame x="-295.20" y="-65.80" scaleX="0.799" scaleY="0.799" index="20"/>
+      <Frame x="-117.25" y="-55.95" scaleX="0.799" scaleY="0.799" index="31"/>
+      <Frame x="-11.90" y="-50.15" scaleX="0.799" scaleY="0.799" index="42"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_005_048">
+      <Frame x="-564.70" y="-82.40" scaleX="0.799" scaleY="0.799" index="4"/>
+      <Frame x="-279.05" y="-65.00" scaleX="0.799" scaleY="0.799" index="21"/>
+      <Frame x="-101.85" y="-54.20" scaleX="0.799" scaleY="0.799" index="32"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="50"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="51"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="54"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="55"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="58"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="59"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="62"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="63"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="68"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="69"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="70"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="71"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="76"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="77"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="78"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="79"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_006_048">
+      <Frame x="-547.55" y="-80.85" scaleX="0.799" scaleY="0.799" index="5"/>
+      <Frame x="-261.60" y="-64.30" scaleX="0.799" scaleY="0.799" index="22"/>
+      <Frame x="-89.70" y="-54.30" scaleX="0.799" scaleY="0.799" index="33"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="52"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="53"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="56"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="57"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="60"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="61"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="64"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="65"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="66"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="67"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="72"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="73"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="74"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="75"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="80"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="81"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="82"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_007_048">
+      <Frame x="-531.30" y="-79.45" scaleX="0.799" scaleY="0.799" index="6"/>
+      <Frame x="-245.55" y="-62.80" scaleX="0.799" scaleY="0.799" index="23"/>
+      <Frame x="-78.00" y="-53.55" scaleX="0.799" scaleY="0.799" index="34"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_008_048">
+      <Frame x="-515.05" y="-78.20" scaleX="0.799" scaleY="0.799" index="7"/>
+      <Frame x="-228.15" y="-61.45" scaleX="0.799" scaleY="0.799" index="24"/>
+      <Frame x="-66.80" y="-51.85" scaleX="0.799" scaleY="0.799" index="35"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_009_048">
+      <Frame x="-497.85" y="-78.00" scaleX="0.799" scaleY="0.799" index="8"/>
+      <Frame x="-213.05" y="-61.10" scaleX="0.799" scaleY="0.799" index="25"/>
+      <Frame x="-56.95" y="-52.95" scaleX="0.799" scaleY="0.799" index="36"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_010_048">
+      <Frame x="-480.65" y="-77.00" scaleX="0.799" scaleY="0.799" index="9"/>
+      <Frame x="-195.75" y="-59.00" scaleX="0.799" scaleY="0.799" index="26"/>
+      <Frame x="-44.85" y="-51.25" scaleX="0.799" scaleY="0.799" index="37"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_011_048">
+      <Frame x="-463.40" y="-75.25" scaleX="0.799" scaleY="0.799" index="10"/>
+      <Frame x="-177.95" y="-58.80" scaleX="0.799" scaleY="0.799" index="27"/>
+      <Frame x="-36.85" y="-50.50" scaleX="0.799" scaleY="0.799" index="38"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_012_048">
+      <Frame x="-446.20" y="-73.65" scaleX="0.799" scaleY="0.799" index="11"/>
+      <Frame x="-160.70" y="-57.75" scaleX="0.799" scaleY="0.799" index="28"/>
+      <Frame x="-28.90" y="-50.65" scaleX="0.799" scaleY="0.799" index="39"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_013_048">
+      <Frame x="-430.70" y="-75.00" scaleX="0.799" scaleY="0.799" index="12"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_014_048">
+      <Frame x="-414.35" y="-72.70" scaleX="0.799" scaleY="0.799" index="13"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_015_048">
+      <Frame x="-397.00" y="-73.40" scaleX="0.799" scaleY="0.799" index="14"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_016_048">
+      <Frame x="-380.60" y="-71.45" scaleX="0.799" scaleY="0.799" index="15"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_017_048">
+      <Frame x="-362.25" y="-69.60" scaleX="0.799" scaleY="0.799" index="16"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_018_048">
+      <Frame x="-345.85" y="-68.25" scaleX="0.799" scaleY="0.799" index="17"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_044_048">
+      <Frame x="-7.50" y="-50.25" scaleX="0.799" scaleY="0.799" index="43"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_045_048">
+      <Frame x="-3.95" y="-49.40" scaleX="0.799" scaleY="0.799" index="44"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_046_048">
+      <Frame x="-2.30" y="-49.45" scaleX="0.799" scaleY="0.799" index="45"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_047_048">
+      <Frame x="-2.10" y="-49.50" scaleX="0.799" scaleY="0.799" index="46"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_048_048">
+      <Frame x="-0.50" y="-49.55" scaleX="0.799" scaleY="0.799" index="47"/>
+    </Part>
+  </Animation>
+</Animations>

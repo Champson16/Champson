@@ -16,20 +16,20 @@
 		"headerHeight": 106,
 		"effects": [{
 			"name": "None",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectNone.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectNone.png",
 			"width": 282,
 			"height": 95
 		},
 		{
 			"name": "NightVision",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectNightVision.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectNightVision.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.grayscale"
 		},
 		{
 			"name": "FizzyFuzzle",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectFizzyFuzzle.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectFizzyFuzzle.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.pixelate",
@@ -39,7 +39,7 @@
 		},
 		{
 			"name": "Emboss",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectEmboss.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectEmboss.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.emboss",
@@ -49,7 +49,7 @@
 		},
 		{
 			"name": "WoodCut",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectWoodcut.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectSketch.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.woodCut",
@@ -59,7 +59,7 @@
 		},
 		{
 			"name": "PolkaDots",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectPolkaDots.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectPolkaDot.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.polkaDots",
@@ -71,7 +71,7 @@
 		},
 		{
 			"name": "Sepia",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectSepia.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectVintage.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.sepia",
@@ -80,28 +80,8 @@
 			}
 		},
 		{
-			"name": "FrostedGlass",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectFrostedGlass.png",
-			"width": 282,
-			"height": 95,
-			"filter": "filter.frostedGlass",
-			"filterProperties": {
-				"scale": 140
-			}
-		},
-		{
-			"name": "CrossHatch",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectCrossHatch.png",
-			"width": 282,
-			"height": 95,
-			"filter": "filter.crosshatch",
-			"filterProperties": {
-				"grain": 4
-			}
-		},
-		{
 			"name": "Wobble",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectWobble.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectWobble.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.wobble",
@@ -112,7 +92,7 @@
 		},
 		{
 			"name": "Swirl",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectSwirl.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectSwirl.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.swirl",
@@ -123,7 +103,7 @@
 		},
 		{
 			"name": "Scatter",
-			"image": "GENU_JigsawPuzzle_Game_global_EffectScatter.png",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectScatter.png",
 			"width": 282,
 			"height": 95,
 			"filter": "filter.scatter",

@@ -1,0 +1,12 @@
+<Animations>
+  <Animation name="GENU_Animation_global_SugaryBalloon_d" frameCount="74">
+    <Part name="GENU_Animation_en_Sugary_SpeechBubble">
+      <Frame x="-23.60" y="-47.85" scaleX="0.324" scaleY="0.324" index="68"/>
+      <Frame x="43.20" y="-80.75" scaleX="0.476" scaleY="0.502" index="69"/>
+      <Frame x="110.00" y="-113.70" scaleX="0.629" scaleY="0.680" index="70"/>
+      <Frame x="176.80" y="-146.55" scaleX="0.782" scaleY="0.858" index="71"/>
+      <Frame x="180.35" y="-146.10" scaleX="0.790" scaleY="0.829" index="72"/>
+      <Frame x="183.85" y="-145.75" scaleX="0.799" scaleY="0.799" index="73"/>
+    </Part>
+  </Animation>
+</Animations>

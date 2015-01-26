@@ -1,0 +1,222 @@
+<Animations>
+  <Animation name="GENU_Bodinator_Macho_a" frameCount="488">
+    <Part name="GENU_Bodinator_Monitor_BodyMassIndex">
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="425"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="426"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="427"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="428"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="429"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="430"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="431"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="432"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="433"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="434"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="435"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="436"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="437"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="438"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="439"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="440"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="441"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="442"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="443"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="444"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="445"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="446"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="447"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="448"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="449"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="450"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="451"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="452"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="453"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="454"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="455"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="456"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="457"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="458"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="459"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="460"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="461"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="462"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="463"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="464"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="465"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="466"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="467"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="468"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="469"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="470"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="471"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="472"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="473"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="474"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="475"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="476"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="477"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="478"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="479"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="480"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="481"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="482"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="483"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="484"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="485"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="486"/>
+      <Frame x="189.45" y="-179.85" scaleX="0.633" scaleY="0.944" index="487"/>
+    </Part>
+    <Part name="GENU_Bodinator_Monitor_MachoBMINumber">
+      <Frame x="174.60" y="25.40" index="251"/>
+      <Frame x="174.60" y="25.40" index="252"/>
+      <Frame x="174.60" y="25.40" index="253"/>
+      <Frame x="174.60" y="25.40" index="254"/>
+      <Frame x="174.60" y="25.40" index="255"/>
+      <Frame x="174.60" y="25.40" index="256"/>
+      <Frame x="174.60" y="25.40" index="257"/>
+      <Frame x="174.60" y="25.40" index="258"/>
+      <Frame x="174.60" y="25.40" index="259"/>
+      <Frame x="174.60" y="25.40" index="260"/>
+      <Frame x="174.60" y="25.40" index="261"/>
+      <Frame x="174.60" y="25.40" index="262"/>
+      <Frame x="174.60" y="25.40" index="263"/>
+      <Frame x="174.60" y="25.40" index="264"/>
+      <Frame x="174.60" y="25.40" index="265"/>
+      <Frame x="174.60" y="25.40" index="266"/>
+      <Frame x="174.60" y="25.40" index="267"/>
+      <Frame x="174.60" y="25.40" index="268"/>
+      <Frame x="174.60" y="25.40" index="269"/>
+      <Frame x="174.60" y="25.40" index="270"/>
+      <Frame x="174.60" y="25.40" index="271"/>
+      <Frame x="174.60" y="25.40" index="272"/>
+      <Frame x="174.60" y="25.40" index="273"/>
+      <Frame x="174.60" y="25.40" index="274"/>
+      <Frame x="174.60" y="25.40" index="275"/>
+      <Frame x="174.60" y="25.40" index="276"/>
+      <Frame x="174.60" y="25.40" index="277"/>
+      <Frame x="174.60" y="25.40" index="278"/>
+      <Frame x="174.60" y="25.40" index="279"/>
+      <Frame x="174.60" y="25.40" index="280"/>
+      <Frame x="174.60" y="25.40" index="281"/>
+      <Frame x="174.60" y="25.40" index="282"/>
+      <Frame x="174.60" y="25.40" index="283"/>
+      <Frame x="174.60" y="25.40" index="284"/>
+      <Frame x="174.60" y="25.40" index="285"/>
+      <Frame x="174.60" y="25.40" index="286"/>
+      <Frame x="174.60" y="25.40" index="287"/>
+      <Frame x="174.60" y="25.40" index="288"/>
+      <Frame x="174.60" y="25.40" index="289"/>
+      <Frame x="174.60" y="25.40" index="290"/>
+      <Frame x="174.60" y="25.40" index="291"/>
+      <Frame x="174.60" y="25.40" index="292"/>
+      <Frame x="174.60" y="25.40" index="293"/>
+      <Frame x="174.60" y="25.40" index="294"/>
+      <Frame x="174.60" y="25.40" index="295"/>
+      <Frame x="174.60" y="25.40" index="296"/>
+      <Frame x="174.60" y="25.40" index="297"/>
+      <Frame x="174.60" y="25.40" index="298"/>
+      <Frame x="174.60" y="25.40" index="299"/>
+      <Frame x="174.60" y="25.40" index="300"/>
+      <Frame x="174.60" y="25.40" index="301"/>
+      <Frame x="174.60" y="25.40" index="302"/>
+      <Frame x="174.60" y="25.40" index="303"/>
+      <Frame x="174.60" y="25.40" index="304"/>
+      <Frame x="174.60" y="25.40" index="305"/>
+      <Frame x="174.60" y="25.40" index="306"/>
+      <Frame x="174.60" y="25.40" index="307"/>
+      <Frame x="174.60" y="25.40" index="308"/>
+      <Frame x="174.60" y="25.40" index="309"/>
+      <Frame x="174.60" y="25.40" index="310"/>
+      <Frame x="174.60" y="25.40" index="311"/>
+      <Frame x="174.60" y="25.40" index="312"/>
+      <Frame x="174.60" y="25.40" index="313"/>
+      <Frame x="174.60" y="25.40" index="314"/>
+      <Frame x="174.60" y="25.40" index="315"/>
+      <Frame x="174.60" y="25.40" index="316"/>
+      <Frame x="174.60" y="25.40" index="317"/>
+      <Frame x="174.60" y="25.40" index="318"/>
+      <Frame x="174.60" y="25.40" index="319"/>
+      <Frame x="174.60" y="25.40" index="320"/>
+      <Frame x="174.60" y="25.40" index="321"/>
+      <Frame x="174.60" y="25.40" index="322"/>
+      <Frame x="174.60" y="25.40" index="323"/>
+      <Frame x="174.60" y="25.40" index="324"/>
+      <Frame x="174.60" y="25.40" index="325"/>
+      <Frame x="174.60" y="25.40" index="326"/>
+      <Frame x="174.60" y="25.40" index="327"/>
+      <Frame x="174.60" y="25.40" index="328"/>
+      <Frame x="174.60" y="25.40" index="329"/>
+      <Frame x="174.60" y="25.40" index="330"/>
+      <Frame x="174.60" y="25.40" index="331"/>
+      <Frame x="174.60" y="25.40" index="332"/>
+      <Frame x="174.60" y="25.40" index="333"/>
+      <Frame x="174.60" y="25.40" index="334"/>
+      <Frame x="174.60" y="25.40" index="335"/>
+      <Frame x="174.60" y="25.40" index="336"/>
+      <Frame x="174.60" y="25.40" index="337"/>
+      <Frame x="174.60" y="25.40" index="338"/>
+      <Frame x="174.60" y="25.40" index="339"/>
+      <Frame x="174.60" y="25.40" index="340"/>
+      <Frame x="174.60" y="25.40" index="341"/>
+      <Frame x="174.60" y="25.40" index="342"/>
+      <Frame x="174.60" y="25.40" index="343"/>
+      <Frame x="174.60" y="25.40" index="344"/>
+      <Frame x="174.60" y="25.40" index="345"/>
+      <Frame x="174.60" y="25.40" index="346"/>
+      <Frame x="174.60" y="25.40" index="347"/>
+      <Frame x="174.60" y="25.40" index="348"/>
+      <Frame x="174.60" y="25.40" index="349"/>
+      <Frame x="174.60" y="25.40" index="350"/>
+      <Frame x="174.60" y="25.40" index="351"/>
+      <Frame x="174.60" y="25.40" index="352"/>
+      <Frame x="174.60" y="25.40" index="353"/>
+      <Frame x="174.60" y="25.40" index="354"/>
+      <Frame x="174.60" y="25.40" index="355"/>
+      <Frame x="174.60" y="25.40" index="356"/>
+      <Frame x="174.60" y="25.40" index="357"/>
+      <Frame x="174.60" y="25.40" index="358"/>
+      <Frame x="174.60" y="25.40" index="359"/>
+      <Frame x="174.60" y="25.40" index="360"/>
+      <Frame x="174.60" y="25.40" index="361"/>
+      <Frame x="174.60" y="25.40" index="362"/>
+      <Frame x="174.60" y="25.40" index="363"/>
+      <Frame x="174.60" y="25.40" index="364"/>
+      <Frame x="174.60" y="25.40" index="365"/>
+      <Frame x="174.60" y="25.40" index="366"/>
+      <Frame x="174.60" y="25.40" index="367"/>
+      <Frame x="174.60" y="25.40" index="368"/>
+      <Frame x="174.60" y="25.40" index="369"/>
+      <Frame x="174.60" y="25.40" index="370"/>
+      <Frame x="174.60" y="25.40" index="371"/>
+      <Frame x="174.60" y="25.40" index="372"/>
+      <Frame x="174.60" y="25.40" index="373"/>
+      <Frame x="174.60" y="25.40" index="374"/>
+      <Frame x="174.60" y="25.40" index="375"/>
+      <Frame x="174.60" y="25.40" index="376"/>
+      <Frame x="174.60" y="25.40" index="377"/>
+      <Frame x="174.60" y="25.40" index="378"/>
+      <Frame x="174.60" y="25.40" index="379"/>
+      <Frame x="174.60" y="25.40" index="380"/>
+      <Frame x="174.60" y="25.40" index="381"/>
+      <Frame x="174.60" y="25.40" index="382"/>
+      <Frame x="174.60" y="25.40" index="383"/>
+      <Frame x="174.60" y="25.40" index="384"/>
+      <Frame x="174.60" y="25.40" index="385"/>
+      <Frame x="174.60" y="25.40" index="386"/>
+      <Frame x="174.60" y="25.40" index="387"/>
+      <Frame x="174.60" y="25.40" index="388"/>
+      <Frame x="174.60" y="25.40" index="389"/>
+      <Frame x="174.60" y="25.40" index="390"/>
+      <Frame x="174.60" y="25.40" index="391"/>
+      <Frame x="174.60" y="25.40" index="392"/>
+      <Frame x="174.60" y="25.40" index="393"/>
+      <Frame x="174.60" y="25.40" index="394"/>
+      <Frame x="174.60" y="25.40" index="395"/>
+      <Frame x="174.60" y="25.40" index="396"/>
+      <Frame x="174.60" y="25.40" index="397"/>
+      <Frame x="174.60" y="25.40" index="398"/>
+      <Frame x="174.60" y="25.40" index="399"/>
+      <Frame x="174.60" y="25.40" index="400"/>
+      <Frame x="174.60" y="25.40" index="401"/>
+    </Part>
+  </Animation>
+</Animations>

@@ -1,0 +1,13 @@
+<Animations>
+  <Animation name="GENU_Animation_global_TowTruck_idle_d" frameCount="5">
+    <Part name="GENU_Animation_global_TowTruck_005_048">
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="0"/>
+      <Frame x="0.30" y="-50.35" scaleX="0.799" scaleY="0.799" index="1"/>
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="4"/>
+    </Part>
+    <Part name="GENU_Animation_global_TowTruck_006_048">
+      <Frame x="0.30" y="-49.55" scaleX="0.799" scaleY="0.799" index="2"/>
+      <Frame x="0.30" y="-48.75" scaleX="0.799" scaleY="0.799" index="3"/>
+    </Part>
+  </Animation>
+</Animations>

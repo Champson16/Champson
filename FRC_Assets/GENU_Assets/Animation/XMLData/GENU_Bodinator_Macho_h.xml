@@ -1,0 +1,177 @@
+<Animations>
+  <Animation name="GENU_Bodinator_Macho_h" frameCount="488">
+    <Part name="GENU_Bodinator_Background">
+      <Frame index="0"/>
+      <Frame index="1"/>
+      <Frame index="2"/>
+      <Frame index="3"/>
+      <Frame index="4"/>
+      <Frame index="5"/>
+      <Frame index="6"/>
+      <Frame index="7"/>
+      <Frame index="8"/>
+      <Frame index="9"/>
+      <Frame index="10"/>
+      <Frame index="11"/>
+      <Frame index="12"/>
+      <Frame index="13"/>
+      <Frame index="14"/>
+      <Frame index="15"/>
+      <Frame index="16"/>
+      <Frame index="17"/>
+      <Frame index="18"/>
+      <Frame index="19"/>
+      <Frame index="20"/>
+      <Frame index="21"/>
+      <Frame index="22"/>
+      <Frame index="23"/>
+      <Frame index="24"/>
+      <Frame index="25"/>
+      <Frame index="26"/>
+      <Frame index="27"/>
+      <Frame index="28"/>
+      <Frame index="29"/>
+      <Frame index="30"/>
+      <Frame index="31"/>
+      <Frame index="32"/>
+      <Frame index="33"/>
+      <Frame index="34"/>
+      <Frame index="35"/>
+      <Frame index="36"/>
+      <Frame index="37"/>
+      <Frame index="38"/>
+      <Frame index="39"/>
+      <Frame index="40"/>
+      <Frame index="41"/>
+      <Frame index="42"/>
+      <Frame index="43"/>
+      <Frame index="44"/>
+      <Frame index="45"/>
+      <Frame index="46"/>
+      <Frame index="47"/>
+      <Frame index="48"/>
+      <Frame index="49"/>
+      <Frame index="50"/>
+      <Frame index="51"/>
+      <Frame index="52"/>
+      <Frame index="53"/>
+      <Frame index="54"/>
+      <Frame index="55"/>
+      <Frame index="56"/>
+      <Frame index="57"/>
+      <Frame index="58"/>
+      <Frame index="59"/>
+      <Frame index="60"/>
+      <Frame index="61"/>
+      <Frame index="62"/>
+      <Frame index="63"/>
+      <Frame index="64"/>
+      <Frame index="65"/>
+      <Frame index="66"/>
+      <Frame index="67"/>
+      <Frame index="68"/>
+      <Frame index="69"/>
+      <Frame index="70"/>
+      <Frame index="71"/>
+      <Frame index="72"/>
+      <Frame index="73"/>
+      <Frame index="74"/>
+      <Frame index="75"/>
+      <Frame index="76"/>
+      <Frame index="77"/>
+      <Frame index="78"/>
+      <Frame index="79"/>
+      <Frame index="80"/>
+      <Frame index="81"/>
+      <Frame index="82"/>
+      <Frame index="83"/>
+      <Frame index="84"/>
+      <Frame index="85"/>
+      <Frame index="86"/>
+      <Frame index="87"/>
+      <Frame index="88"/>
+      <Frame index="89"/>
+      <Frame index="90"/>
+      <Frame index="91"/>
+      <Frame index="92"/>
+      <Frame index="93"/>
+      <Frame index="94"/>
+      <Frame index="95"/>
+      <Frame index="96"/>
+      <Frame index="97"/>
+      <Frame index="98"/>
+      <Frame index="99"/>
+      <Frame index="100"/>
+      <Frame index="101"/>
+      <Frame index="102"/>
+      <Frame index="103"/>
+      <Frame index="104"/>
+      <Frame index="105"/>
+      <Frame index="106"/>
+      <Frame index="107"/>
+      <Frame index="108"/>
+      <Frame index="109"/>
+      <Frame index="110"/>
+      <Frame index="111"/>
+      <Frame index="112"/>
+      <Frame index="113"/>
+      <Frame index="114"/>
+      <Frame index="115"/>
+      <Frame index="116"/>
+      <Frame index="117"/>
+      <Frame index="118"/>
+      <Frame index="119"/>
+      <Frame index="120"/>
+      <Frame index="121"/>
+      <Frame index="122"/>
+      <Frame index="123"/>
+      <Frame index="124"/>
+      <Frame index="125"/>
+      <Frame index="126"/>
+      <Frame index="127"/>
+      <Frame index="128"/>
+      <Frame index="129"/>
+      <Frame index="130"/>
+      <Frame index="131"/>
+      <Frame index="132"/>
+      <Frame index="133"/>
+      <Frame index="134"/>
+      <Frame index="135"/>
+      <Frame index="136"/>
+      <Frame index="137"/>
+      <Frame index="138"/>
+      <Frame index="139"/>
+      <Frame index="140"/>
+      <Frame index="141"/>
+      <Frame index="142"/>
+      <Frame index="143"/>
+      <Frame index="144"/>
+      <Frame index="145"/>
+      <Frame index="146"/>
+      <Frame index="147"/>
+      <Frame index="148"/>
+      <Frame index="149"/>
+      <Frame index="150"/>
+      <Frame index="151"/>
+      <Frame index="152"/>
+      <Frame x="1.15" y="3.55" scaleX="1.012" scaleY="1.012" index="153"/>
+      <Frame x="2.30" y="7.10" scaleX="1.025" scaleY="1.025" index="154"/>
+      <Frame x="3.50" y="10.65" scaleX="1.037" scaleY="1.037" index="155"/>
+      <Frame x="4.65" y="14.20" scaleX="1.050" scaleY="1.050" index="156"/>
+      <Frame x="5.85" y="17.75" scaleX="1.062" scaleY="1.062" index="157"/>
+      <Frame x="7.00" y="21.30" scaleX="1.074" scaleY="1.074" index="158"/>
+      <Frame x="8.20" y="24.85" scaleX="1.087" scaleY="1.087" index="159"/>
+      <Frame x="9.35" y="28.40" scaleX="1.099" scaleY="1.099" index="160"/>
+      <Frame x="10.55" y="31.95" scaleX="1.111" scaleY="1.111" index="161"/>
+      <Frame x="11.70" y="35.50" scaleX="1.124" scaleY="1.124" index="162"/>
+      <Frame x="12.90" y="39.05" scaleX="1.136" scaleY="1.136" index="163"/>
+      <Frame x="14.05" y="42.60" scaleX="1.149" scaleY="1.149" index="164"/>
+      <Frame x="15.25" y="46.15" scaleX="1.161" scaleY="1.161" index="165"/>
+      <Frame x="16.40" y="49.70" scaleX="1.173" scaleY="1.173" index="166"/>
+      <Frame x="17.60" y="53.25" scaleX="1.186" scaleY="1.186" alpha="0.80" index="167"/>
+      <Frame x="18.75" y="56.80" scaleX="1.198" scaleY="1.198" alpha="0.59" index="168"/>
+      <Frame x="19.95" y="60.35" scaleX="1.211" scaleY="1.211" alpha="0.39" index="169"/>
+      <Frame x="21.10" y="63.90" scaleX="1.223" scaleY="1.223" alpha="0.19" index="170"/>
+    </Part>
+  </Animation>
+</Animations>

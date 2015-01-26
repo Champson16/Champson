@@ -1,0 +1,71 @@
+<Animations>
+  <Animation name="GENU_Animation_global_MakeryCar_c" frameCount="49">
+    <Part name="GENU_Animation_global_RollsRoyce_001_010">
+      <Frame x="580.65" y="-78.45" scaleX="0.546" scaleY="0.546" rotation="-25.292" index="0"/>
+      <Frame x="711.65" y="-84.50" scaleX="0.692" scaleY="0.692" rotation="-24.581" index="1"/>
+      <Frame x="214.35" y="148.30" scaleX="0.799" scaleY="0.799" index="44"/>
+      <Frame x="213.75" y="148.30" scaleX="0.799" scaleY="0.799" index="45"/>
+      <Frame x="213.15" y="148.30" scaleX="0.799" scaleY="0.799" index="46"/>
+      <Frame x="212.55" y="148.30" scaleX="0.799" scaleY="0.799" index="47"/>
+      <Frame x="211.95" y="148.30" scaleX="0.799" scaleY="0.799" index="48"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_002_010">
+      <Frame x="556.70" y="-56.95" scaleX="0.558" scaleY="0.558" rotation="-24.057" index="2"/>
+      <Frame x="363.05" y="93.80" scaleX="0.670" scaleY="0.670" rotation="-12.804" index="21"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_003_010">
+      <Frame x="545.00" y="-46.60" scaleX="0.564" scaleY="0.564" rotation="-23.533" index="3"/>
+      <Frame x="530.60" y="-34.05" scaleX="0.570" scaleY="0.570" rotation="-22.824" index="4"/>
+      <Frame x="516.25" y="-21.65" scaleX="0.576" scaleY="0.576" rotation="-22.300" index="5"/>
+      <Frame x="478.30" y="9.85" scaleX="0.599" scaleY="0.599" rotation="-19.831" index="9"/>
+      <Frame x="465.20" y="20.45" scaleX="0.605" scaleY="0.605" rotation="-19.309" index="10"/>
+      <Frame x="452.20" y="30.70" scaleX="0.611" scaleY="0.611" rotation="-18.784" index="11"/>
+      <Frame x="417.65" y="56.65" scaleX="0.634" scaleY="0.634" rotation="-16.316" index="15"/>
+      <Frame x="405.75" y="65.20" scaleX="0.640" scaleY="0.640" rotation="-15.795" index="16"/>
+      <Frame x="394.05" y="73.50" scaleX="0.646" scaleY="0.646" rotation="-15.270" index="17"/>
+      <Frame x="354.55" y="99.05" scaleX="0.675" scaleY="0.675" rotation="-12.281" index="22"/>
+      <Frame x="344.20" y="105.30" scaleX="0.682" scaleY="0.682" rotation="-11.750" index="23"/>
+      <Frame x="333.95" y="111.25" scaleX="0.687" scaleY="0.687" rotation="-11.050" index="24"/>
+      <Frame x="307.00" y="125.00" scaleX="0.711" scaleY="0.711" rotation="-8.770" index="28"/>
+      <Frame x="297.80" y="129.25" scaleX="0.717" scaleY="0.717" rotation="-8.060" index="29"/>
+      <Frame x="288.80" y="133.15" scaleX="0.722" scaleY="0.722" rotation="-7.538" index="30"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_004_010">
+      <Frame x="510.90" y="-17.20" scaleX="0.583" scaleY="0.583" rotation="-21.750" index="6"/>
+      <Frame x="497.05" y="-5.60" scaleX="0.588" scaleY="0.588" rotation="-21.063" index="7"/>
+      <Frame x="483.50" y="5.70" scaleX="0.594" scaleY="0.594" rotation="-20.541" index="8"/>
+      <Frame x="447.20" y="34.45" scaleX="0.617" scaleY="0.617" rotation="-18.074" index="12"/>
+      <Frame x="434.70" y="43.95" scaleX="0.622" scaleY="0.622" rotation="-17.549" index="13"/>
+      <Frame x="422.40" y="53.25" scaleX="0.628" scaleY="0.628" rotation="-17.029" index="14"/>
+      <Frame x="389.60" y="76.40" scaleX="0.652" scaleY="0.652" rotation="-14.559" index="18"/>
+      <Frame x="378.35" y="83.95" scaleX="0.658" scaleY="0.658" rotation="-14.039" index="19"/>
+      <Frame x="367.25" y="91.25" scaleX="0.664" scaleY="0.664" rotation="-13.517" index="20"/>
+      <Frame x="330.05" y="113.20" scaleX="0.693" scaleY="0.693" rotation="-10.525" index="25"/>
+      <Frame x="320.25" y="118.45" scaleX="0.699" scaleY="0.699" rotation="-9.815" index="26"/>
+      <Frame x="310.65" y="123.40" scaleX="0.705" scaleY="0.705" rotation="-9.292" index="27"/>
+      <Frame x="285.50" y="134.40" scaleX="0.728" scaleY="0.728" rotation="-7.015" index="31"/>
+      <Frame x="276.95" y="137.60" scaleX="0.734" scaleY="0.734" rotation="-6.305" index="32"/>
+      <Frame x="268.55" y="140.60" scaleX="0.740" scaleY="0.740" rotation="-5.782" index="33"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_006_010">
+      <Frame x="265.50" y="141.40" scaleX="0.746" scaleY="0.746" rotation="-5.262" index="34"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_007_010">
+      <Frame x="259.20" y="143.20" scaleX="0.752" scaleY="0.752" rotation="-4.552" index="35"/>
+      <Frame x="251.50" y="145.15" scaleX="0.758" scaleY="0.758" rotation="-4.028" index="36"/>
+      <Frame x="244.00" y="146.70" scaleX="0.764" scaleY="0.764" rotation="-3.505" index="37"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_008_010">
+      <Frame x="241.20" y="147.00" scaleX="0.770" scaleY="0.770" rotation="-2.796" index="38"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_009_010">
+      <Frame x="235.60" y="147.70" scaleX="0.775" scaleY="0.775" rotation="-2.275" index="39"/>
+      <Frame x="228.75" y="148.20" scaleX="0.781" scaleY="0.781" rotation="-1.753" index="40"/>
+    </Part>
+    <Part name="GENU_Animation_global_RollsRoyce_010_010">
+      <Frame x="224.75" y="148.35" scaleX="0.787" scaleY="0.787" rotation="-1.042" index="41"/>
+      <Frame x="218.25" y="148.30" scaleX="0.793" scaleY="0.793" rotation="-0.520" index="42"/>
+      <Frame x="212.00" y="147.95" scaleX="0.799" scaleY="0.799" index="43"/>
+    </Part>
+  </Animation>
+</Animations>

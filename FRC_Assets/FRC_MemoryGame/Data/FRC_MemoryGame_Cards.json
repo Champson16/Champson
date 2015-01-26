@@ -28,10 +28,6 @@
 		"imageFile": "GENU_MemoryGame_global_Tile_Chanel.png"
 	},
 	{
-		"id": "GENU_MemoryGame_global_Tile_ChewChewTrain",
-		"imageFile": "GENU_MemoryGame_global_Tile_ChewChewTrain.png"
-	},
-	{
 		"id": "GENU_MemoryGame_global_Tile_Chewie",
 		"imageFile": "GENU_MemoryGame_global_Tile_Chewie.png"
 	},
@@ -104,20 +100,12 @@
 		"imageFile": "GENU_MemoryGame_global_Tile_Rice.png"
 	},
 	{
-		"id": "GENU_MemoryGame_global_Tile_RollsRoyce",
-		"imageFile": "GENU_MemoryGame_global_Tile_RollsRoyce.png"
-	},
-	{
 		"id": "GENU_MemoryGame_global_Tile_Strawberry",
 		"imageFile": "GENU_MemoryGame_global_Tile_Strawberry.png"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_SugarHigh",
 		"imageFile": "GENU_MemoryGame_global_Tile_SugarHigh.png"
-	},
-	{
-		"id": "GENU_MemoryGame_global_Tile_TowTruck",
-		"imageFile": "GENU_MemoryGame_global_Tile_TowTruck.png"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Truce",

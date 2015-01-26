@@ -52,9 +52,9 @@ function scene.createScene(self, event)
 	view.optionScreen:addEventListener('disposed', function(e)
 		scene.inPuzzle = true;
 		-- This re-enables the Options button in the ActionBar
-		self.actionBarMenu.menuItems[4]:setDisabledState(false);
+		self.actionBarMenu.menuItems[3]:setDisabledState(false);
 		-- This re-enables the Startover button in the ActionBar
-		self.actionBarMenu.menuItems[6]:setDisabledState(false);
+		self.actionBarMenu.menuItems[5]:setDisabledState(false);
 	end);
 
 	local function goHome()
@@ -89,13 +89,6 @@ alwaysVisible = true,
 				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Home_down.png',
 				onRelease = function()
 					goHome();
-				end
-			},
-			{
-				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Games_up.png',
-				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Games_down.png',
-				onRelease = function()
-					storyboard.gotoScene('Scenes.Games', { effect="crossFade", time="250" });
 				end
 			},
 			{
