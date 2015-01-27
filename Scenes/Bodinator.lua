@@ -270,11 +270,11 @@ alwaysVisible = true,
 					if (FRC_AppSettings.get("ambientSoundOn")) then
 						self:setFocusState(false);
 						FRC_AppSettings.set("ambientSoundOn", false);
-						AudioManager:findGroup("ambientMusic"):pause();
+						FRC_AudioManager:findGroup("ambientMusic"):pause();
 					else
 						self:setFocusState(true);
 						FRC_AppSettings.set("ambientSoundOn", true);
-						AudioManager:findGroup("ambientMusic"):resume();
+						FRC_AudioManager:findGroup("ambientMusic"):resume();
 					end
 				end
 			}
@@ -303,6 +303,10 @@ function scene.exitScene(self, event)
 			end
 		end
 		introAnimationSequences = nil;
+	end
+	ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
+	if ambientMusic then
+		ambientMusic:stop();
 	end
 	ui:dispose();
 end

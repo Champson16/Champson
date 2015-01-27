@@ -53,12 +53,12 @@ function scene.createScene(self, event)
 
 	FRC_AudioManager:newHandle({
 		name = "SugaryIntro",
-		path = "FRC_Assets/GENU_Assets/Audio/ZAZOOTIME_Alarm_Bugle-MilitaryCavalryCall.mp3",
+		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_Balloon.mp3",
 		group = "ambientMusic"
 	});
 	FRC_AudioManager:newHandle({
 		name = "SugaryIdle",
-		path = "FRC_Assets/GENU_Assets/Audio/ZAZOOTIME_Alarm_Kids-Bloobblubblub1.mp3",
+		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_Balloon_idle.mp3",
 		group = "ambientMusic"
 	});
 
@@ -172,11 +172,11 @@ alwaysVisible = true,
 					if (FRC_AppSettings.get("ambientSoundOn")) then
 						self:setFocusState(false);
 						FRC_AppSettings.set("ambientSoundOn", false);
-						AudioManager:findGroup("ambientMusic"):pause();
+						FRC_AudioManager:findGroup("ambientMusic"):pause();
 					else
 						self:setFocusState(true);
 						FRC_AppSettings.set("ambientSoundOn", true);
-						AudioManager:findGroup("ambientMusic"):resume();
+						FRC_AudioManager:findGroup("ambientMusic"):resume();
 					end
 				end
 			}

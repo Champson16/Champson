@@ -3,7 +3,7 @@ local FRC_ArtCenter = require('FRC_Modules.FRC_ArtCenter.FRC_ArtCenter');
 local FRC_ActionBar = require('FRC_Modules.FRC_ActionBar.FRC_ActionBar');
 local FRC_SettingsBar = require('FRC_Modules.FRC_SettingsBar.FRC_SettingsBar');
 local FRC_Layout = require('FRC_Modules.FRC_Layout.FRC_Layout');
-local AudioManager = require('FRC_Modules.FRC_AudioManager.FRC_AudioManager');
+local FRC_AudioManager = require('FRC_Modules.FRC_AudioManager.FRC_AudioManager');
 local FRC_AppSettings = require('FRC_Modules.FRC_AppSettings.FRC_AppSettings');
 local FRC_ArtCenter_Settings = require('FRC_Modules.FRC_ArtCenter.FRC_ArtCenter_Settings');
 local storyboard = require('storyboard');
@@ -255,11 +255,11 @@ alwaysVisible = true,
 					if (FRC_AppSettings.get("ambientSoundOn")) then
 						self:setFocusState(false);
 						FRC_AppSettings.set("ambientSoundOn", false);
-						AudioManager:findGroup("ambientMusic"):pause();
+						FRC_AudioManager:findGroup("ambientMusic"):pause();
 					else
 						self:setFocusState(true);
 						FRC_AppSettings.set("ambientSoundOn", true);
-						AudioManager:findGroup("ambientMusic"):resume();
+						FRC_AudioManager:findGroup("ambientMusic"):resume();
 					end
 				end
 			}

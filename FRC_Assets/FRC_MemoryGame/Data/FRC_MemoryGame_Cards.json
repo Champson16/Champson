@@ -40,12 +40,28 @@
 		"imageFile": "GENU_MemoryGame_global_Tile_Corn.png"
 	},
 	{
+		"id": "GENU_MemoryGame_global_Tile_Cucumber",
+		"imageFile": "GENU_MemoryGame_global_Tile_Cucumber.png"
+	},
+	{
 		"id": "GENU_MemoryGame_global_Tile_Golly",
 		"imageFile": "GENU_MemoryGame_global_Tile_Golly.png"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_KidneyBean",
 		"imageFile": "GENU_MemoryGame_global_Tile_KidneyBean.png"
+	},
+	{
+		"id": "GENU_MemoryGame_global_Tile_Kiwi",
+		"imageFile": "GENU_MemoryGame_global_Tile_Kiwi.png"
+	},
+	{
+		"id": "GENU_MemoryGame_global_Tile_Lemon",
+		"imageFile": "GENU_MemoryGame_global_Tile_Lemon.png"
+	},
+	{
+		"id": "GENU_MemoryGame_global_Tile_Lime",
+		"imageFile": "GENU_MemoryGame_global_Tile_Lime.png"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Macho",
@@ -76,12 +92,20 @@
 		"imageFile": "GENU_MemoryGame_global_Tile_Orange.png"
 	},
 	{
+		"id": "GENU_MemoryGame_global_Tile_Pasta",
+		"imageFile": "GENU_MemoryGame_global_Tile_Pasta.png"
+	},
+	{
 		"id": "GENU_MemoryGame_global_Tile_PeanutButter",
 		"imageFile": "GENU_MemoryGame_global_Tile_PeanutButter.png"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Peas",
 		"imageFile": "GENU_MemoryGame_global_Tile_Peas.png"
+	},
+	{
+		"id": "GENU_MemoryGame_global_Tile_Pomegranate",
+		"imageFile": "GENU_MemoryGame_global_Tile_Pomegranate.png"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Prana",
@@ -108,8 +132,20 @@
 		"imageFile": "GENU_MemoryGame_global_Tile_SugarHigh.png"
 	},
 	{
+		"id": "GENU_MemoryGame_global_Tile_Tomato",
+		"imageFile": "GENU_MemoryGame_global_Tile_Tomato.png"
+	},
+	{
 		"id": "GENU_MemoryGame_global_Tile_Truce",
 		"imageFile": "GENU_MemoryGame_global_Tile_Truce.png"
+	},
+	{
+		"id": "GENU_MemoryGame_global_Tile_Water",
+		"imageFile": "GENU_MemoryGame_global_Tile_Water.png"
+	},
+	{
+		"id": "GENU_MemoryGame_global_Tile_Watermelon",
+		"imageFile": "GENU_MemoryGame_global_Tile_Watermelon.png"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Wrapper",

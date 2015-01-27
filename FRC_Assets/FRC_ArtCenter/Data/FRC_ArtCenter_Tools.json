@@ -904,49 +904,12 @@
 				"defaultScale": 0.5
 			},
 			{
-				"id": "GENU_ArtCenter_global_Stamp_Bean",
-				"imageFile": "GENU_ArtCenter_global_Stamp_Bean.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_Bean_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_Bean_thumbnail.png",
-				"width": 347,
-				"height": 512,
-				"defaultScale": 0.5
-			},
-			{
-				"id": "GENU_ArtCenter_global_Stamp_Beef",
-				"imageFile": "GENU_ArtCenter_global_Stamp_Beef.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_Beef_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_Beef_thumbnail.png",
-				"width": 419,
-				"height": 512,
-				"defaultScale": 0.5
-			},
-			{
-				"id": "GENU_ArtCenter_global_Stamp_Bread",
-				"imageFile": "GENU_ArtCenter_global_Stamp_Bread.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_Bread_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_Bread_thumbnail.png",
-				"width": 512,
-				"height": 369,
-				"defaultScale": 0.5
-			},
-			{
 				"id": "GENU_ArtCenter_global_Stamp_Celery",
 				"imageFile": "GENU_ArtCenter_global_Stamp_Celery.png",
 				"maskFile": "GENU_ArtCenter_global_Stamp_Celery_mask.png",
 				"thumbFile": "GENU_ArtCenter_global_Stamp_Celery_thumbnail.png",
 				"width": 512,
 				"height": 359,
-				"defaultScale": 0.5
-			},
-
-			{
-				"id": "GENU_ArtCenter_global_Stamp_Chicken",
-				"imageFile": "GENU_ArtCenter_global_Stamp_Chicken.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_Chicken_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_Chicken_thumbnail.png",
-				"width": 448,
-				"height": 512,
 				"defaultScale": 0.5
 			},
 			{
@@ -958,14 +921,40 @@
 				"height": 512,
 				"defaultScale": 0.5
 			},
-
 			{
-				"id": "GENU_ArtCenter_global_Stamp_Milk",
-				"imageFile": "GENU_ArtCenter_global_Stamp_Milk.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_Milk_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_Milk_thumbnail.png",
-				"width": 291,
+				"id": "GENU_ArtCenter_global_Stamp_Cucumber",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Cucumber.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Cucumber_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Cucumber_thumbnail.png",
+				"width": 512,
+				"height": 359,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Kiwi",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Kiwi.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Kiwi_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Kiwi_thumbnail.png",
+				"width": 473,
 				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Lemon",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Lemon.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Lemon_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Lemon_thumbnail.png",
+				"width": 512,
+				"height": 393,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Lime",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Lime.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Lime_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Lime_thumbnail.png",
+				"width": 512,
+				"height": 394,
 				"defaultScale": 0.5
 			},
 			{
@@ -996,11 +985,11 @@
 				"defaultScale": 0.5
 			},
 			{
-				"id": "GENU_ArtCenter_global_Stamp_PeanutButter",
-				"imageFile": "GENU_ArtCenter_global_Stamp_PeanutButter.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_PeanutButter_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_PeanutButter_thumbnail.png",
-				"width": 383,
+				"id": "GENU_ArtCenter_global_Stamp_RedBellPepper",
+				"imageFile": "GENU_ArtCenter_global_Stamp_RedBellPepper.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_RedBellPepper_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_RedBellPepper_thumbnail.png",
+				"width": 412,
 				"height": 512,
 				"defaultScale": 0.5
 			},
@@ -1014,6 +1003,15 @@
 				"defaultScale": 0.5
 			},
 			{
+				"id": "GENU_ArtCenter_global_Stamp_Pomegranate",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Pomegranate.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Pomegranate_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Pomegranate_thumbnail.png",
+				"width": 512,
+				"height": 507,
+				"defaultScale": 0.5
+			},
+			{
 				"id": "GENU_ArtCenter_global_Stamp_Raspberry",
 				"imageFile": "GENU_ArtCenter_global_Stamp_Raspberry.png",
 				"maskFile": "GENU_ArtCenter_global_Stamp_Raspberry_mask.png",
@@ -1023,12 +1021,48 @@
 				"defaultScale": 0.5
 			},
 			{
-				"id": "GENU_ArtCenter_global_Stamp_RedBellPepper",
-				"imageFile": "GENU_ArtCenter_global_Stamp_RedBellPepper.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_RedBellPepper_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_RedBellPepper_thumbnail.png",
-				"width": 412,
+				"id": "GENU_ArtCenter_global_Stamp_Strawberry",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Strawberry.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Strawberry_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Strawberry_thumbnail.png",
+				"width": 352,
 				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Tomato",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Tomato.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Tomato_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Tomato_thumbnail.png",
+				"width": 512,
+				"height": 473,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Watermelon",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Watermelon.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Watermelon_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Watermelon_thumbnail.png",
+				"width": 469,
+				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Bread",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Bread.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Bread_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Bread_thumbnail.png",
+				"width": 512,
+				"height": 369,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Pasta",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Pasta.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Pasta_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Pasta_thumbnail.png",
+				"width": 512,
+				"height": 424,
 				"defaultScale": 0.5
 			},
 			{
@@ -1041,11 +1075,56 @@
 				"defaultScale": 0.5
 			},
 			{
-				"id": "GENU_ArtCenter_global_Stamp_Strawberry",
-				"imageFile": "GENU_ArtCenter_global_Stamp_Strawberry.png",
-				"maskFile": "GENU_ArtCenter_global_Stamp_Strawberry_mask.png",
-				"thumbFile": "GENU_ArtCenter_global_Stamp_Strawberry_thumbnail.png",
-				"width": 352,
+				"id": "GENU_ArtCenter_global_Stamp_Bean",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Bean.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Bean_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Bean_thumbnail.png",
+				"width": 347,
+				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Chicken",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Chicken.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Chicken_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Chicken_thumbnail.png",
+				"width": 448,
+				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_PeanutButter",
+				"imageFile": "GENU_ArtCenter_global_Stamp_PeanutButter.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_PeanutButter_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_PeanutButter_thumbnail.png",
+				"width": 383,
+				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Beef",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Beef.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Beef_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Beef_thumbnail.png",
+				"width": 419,
+				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Milk",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Milk.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Milk_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Milk_thumbnail.png",
+				"width": 291,
+				"height": 512,
+				"defaultScale": 0.5
+			},
+			{
+				"id": "GENU_ArtCenter_global_Stamp_Water",
+				"imageFile": "GENU_ArtCenter_global_Stamp_Water.png",
+				"maskFile": "GENU_ArtCenter_global_Stamp_Water_mask.png",
+				"thumbFile": "GENU_ArtCenter_global_Stamp_Water_thumbnail.png",
+				"width": 200,
 				"height": 512,
 				"defaultScale": 0.5
 			}

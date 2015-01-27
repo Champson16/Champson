@@ -262,7 +262,11 @@ FRC_ArtCenter_ColorSelector.new = function(scene, width, height)
 	for i=1,#colorData do
 		colors[#colors+1] = HexToRGB(colorData[i]);
 	end
-	colors = sortByHue(colors);
+	
+	-- sort the colors in the palette if desired
+	if FRC_ArtCenter_Settings.UI.COLOR_PALETTE_SORTED then
+	  colors = sortByHue(colors);
+	end
 
 	for i=1,#colors do
 		local c = colors[i];

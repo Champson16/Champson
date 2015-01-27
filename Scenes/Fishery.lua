@@ -51,17 +51,16 @@ function scene.createScene(self, event)
 
 	-- setup scene audio
 
-	--[[ FRC_AudioManager:newHandle({
-		name = "SugaryIntro",
-		path = "FRC_Assets/GENU_Assets/Audio/ZAZOOTIME_Alarm_Bugle-MilitaryCavalryCall.mp3",
+	FRC_AudioManager:newHandle({
+		name = "FisheryIntro",
+		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_TowTruck.mp3",
 		group = "ambientMusic"
 	});
 	FRC_AudioManager:newHandle({
-		name = "SugaryIdle",
-		path = "FRC_Assets/GENU_Assets/Audio/ZAZOOTIME_Alarm_Kids-Bloobblubblub1.mp3",
+		name = "FisheryIdle",
+		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_TowTruck_idle.mp3",
 		group = "ambientMusic"
 	});
-	--]]
 
 	local bgGroup = display.newGroup();
 	bgGroup.anchorChildren = false;
@@ -173,11 +172,11 @@ alwaysVisible = true,
 					if (FRC_AppSettings.get("ambientSoundOn")) then
 						self:setFocusState(false);
 						FRC_AppSettings.set("ambientSoundOn", false);
-						AudioManager:findGroup("ambientMusic"):pause();
+						FRC_AudioManager:findGroup("ambientMusic"):pause();
 					else
 						self:setFocusState(true);
 						FRC_AppSettings.set("ambientSoundOn", true);
-						AudioManager:findGroup("ambientMusic"):resume();
+						FRC_AudioManager:findGroup("ambientMusic"):resume();
 					end
 				end
 			}
@@ -190,7 +189,6 @@ function scene.enterScene(self, event)
 	local view = scene.view;
 
 	-- now let's animate everything!
-	-- this should only happen the first time that the application is launched
 	if introAnimationSequences then
 		for i=1, introAnimationSequences.numChildren do
 			introAnimationSequences[i]:play({
@@ -206,7 +204,7 @@ function scene.enterScene(self, event)
 					ambientAnimationSequences[i]:play({autoLoop = true, intervalTime = 30});
 					ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 					if ambientMusic then
-						-- ambientMusic:play("SugaryIdle", {loops = -1});
+						ambientMusic:play("FisheryIdle", {loops = -1});
 						if (not FRC_AppSettings.get("ambientSoundOn")) then
 							ambientMusic:pause();
 						end
@@ -216,12 +214,13 @@ function scene.enterScene(self, event)
 		end
 		ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 		if ambientMusic then
-			-- ambientMusic:play("SugaryIntro");
+			ambientMusic:play("FisheryIntro");
 			if (not FRC_AppSettings.get("ambientSoundOn")) then
 				ambientMusic:pause();
 			end
 		end
 	end
+
 end
 
 function scene.exitScene(self, event)
@@ -249,6 +248,10 @@ function scene.exitScene(self, event)
 			end
 		end
 		ambientAnimationSequences = nil;
+	end
+	ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
+	if ambientMusic then
+		ambientMusic:stop();
 	end
 	ui:dispose();
 end

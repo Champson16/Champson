@@ -306,11 +306,11 @@ function scene.createScene(self, event)
 	-- set up the background
 	local bgImage = display.newImageRect(imageBase .. 'GENU_Home_LandingPage_Background.png', 1152, 768);
 	bgGroup:insert(bgImage);
-	bgImage.alpha = 0;
+	-- bgImage.alpha = 0;
 	FRC_Layout.scaleToFit(bgImage);
 	bgImage.x, bgImage.y = 0, 0;
 
-	transArray[ #transArray + 1 ] = transition.to( bgImage, { delay = 0, time = 300, alpha = 1, transition = easing.inOutQuad});
+	-- transArray[ #transArray + 1 ] = transition.to( bgImage, { delay = 0, time = 300, alpha = 1, transition = easing.inOutQuad});
 	-- setup the logo animation
 	local bgLogo = display.newImageRect(imageBase .. 'GENU_Home_LandingPage_Logo.png', 1152, 768);
 	bgOverlayGroup:insert(bgLogo);
@@ -861,7 +861,15 @@ function scene.enterScene(self, event)
 			else
 				-- DEBUG:
 				print("HOME scene RESUME background audio");
-				ambientMusic:resume();
+				scene.playTheme1();
+				-- ambientMusic:resume("UofChewTheme1");
+				--[[ -- check to make sure that there was audio to resume
+				timer.performWithDelay(100, function()
+					if not ambientMusic:isPlaying() then
+						ambientMusic:resume("UofChewTheme1");
+					end
+					end, 1);
+				--]]
 			end
 		else
 			-- fallback to restarting one of the background theme songs
