@@ -187,6 +187,7 @@ end
 function scene.enterScene(self, event)
 	local scene = self;
 	local view = scene.view;
+	local ambientMusic;
 
 	-- now let's animate everything!
 	if introAnimationSequences then
@@ -207,9 +208,12 @@ function scene.enterScene(self, event)
 					ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 					-- TODO: make sure this only fires once
 					if ambientMusic then
+						ambientMusic:stop();
 						ambientMusic:play("TasteeTownIdle", {loops = -1});
 						if (not FRC_AppSettings.get("ambientSoundOn")) then
-							ambientMusic:pause();
+							timer.performWithDelay(1, function()
+								ambientMusic:pause();
+								end, 1);
 						end
 					end
 				end
@@ -217,9 +221,12 @@ function scene.enterScene(self, event)
 		end
 		ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 		if ambientMusic then
+			ambientMusic:stop();
 			ambientMusic:play("TasteeTownIntro");
 			if (not FRC_AppSettings.get("ambientSoundOn")) then
-				ambientMusic:pause();
+				timer.performWithDelay(1, function()
+					ambientMusic:pause();
+					end, 1);
 			end
 		end
 	end
@@ -251,7 +258,7 @@ function scene.exitScene(self, event)
 		end
 		ambientAnimationSequences = nil;
 	end
-	ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
+	local ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 	if ambientMusic then
 		ambientMusic:stop();
 	end

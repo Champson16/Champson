@@ -186,6 +186,10 @@ function scene.createScene(self, event)
 
 
 	local function goHome()
+		ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
+		if ambientMusic then
+			ambientMusic:stop();
+		end
 		storyboard.gotoScene('Scenes.Home', { effect="crossFade", time="250" });
 	end
 	scene.backHandler = goHome;
@@ -303,10 +307,6 @@ function scene.exitScene(self, event)
 			end
 		end
 		introAnimationSequences = nil;
-	end
-	ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
-	if ambientMusic then
-		ambientMusic:stop();
 	end
 	ui:dispose();
 end

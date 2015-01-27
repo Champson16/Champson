@@ -35,6 +35,7 @@ function scene.playTheme1()
 	print("playing THEME1");
 	ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 	if ambientMusic then
+		scene.currentThemeMusic = "UofChewTheme1";
 		ambientMusic:play("UofChewTheme1", { onComplete = function() scene.playTheme2(); end } );
 		if (not FRC_AppSettings.get("ambientSoundOn")) then
 			-- DEBUG:
@@ -49,6 +50,7 @@ function scene.playTheme2()
 	print("playing THEME2");
 	ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 	if ambientMusic then
+		scene.currentThemeMusic = "UofChewTheme2";
 		ambientMusic:play("UofChewTheme2", { onComplete = function() scene.playTheme1(); end } );
 		if (not FRC_AppSettings.get("ambientSoundOn")) then
 			-- DEBUG:
@@ -78,6 +80,17 @@ end
 function scene.removeControls(self)
 	local transArray = {};
 	scene.buttonIsActive = true;
+end
+
+function scene.stopThemeMusic(self)
+	local ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
+	if ambientMusic then
+		-- find the current theme music
+		local themeMusic = ambientMusic:findHandle(scene.currentThemeMusic);
+		if (themeMusic and themeMusic:isPlaying()) then
+			ambientMusic:stop();
+		end
+	end
 end
 
 function scene.createScene(self, event)
@@ -339,22 +352,26 @@ function scene.createScene(self, event)
 --]]
 
 	-- lay in all of the map overlay buttons
-	local sugaryButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheSugary_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheSugary_down.png',
-		width = 328,
-		height = 239,
-		x = 223 - 576;
-		y = 295 - 384;
+	local fisheryButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_down.png',
+		width = 434,
+		height = 179,
+		x = 576 - 576;
+		y = 154 - 384;
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
-			storyboard.gotoScene('Scenes.Sugary');
+			scene.stopThemeMusic();
+			storyboard.gotoScene('Scenes.Fishery');
 		end
 	});
-	sugaryButton.anchorX = 0.5;
-	sugaryButton.anchorY = 0.5;
-	bgGroup:insert(sugaryButton);
+	fisheryButton.anchorX = 0.5;
+	fisheryButton.anchorY = 0.5;
+	-- create and assign the mask
+	local fisheryButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_mask.png');
+	fisheryButton:setMask(fisheryButtonMask);
+	bgGroup:insert(fisheryButton);
 
 	local makeryButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheMakery_up.png',
@@ -366,29 +383,37 @@ function scene.createScene(self, event)
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
+			scene.stopThemeMusic();
 			storyboard.gotoScene('Scenes.Makery');
 		end
 	});
 	makeryButton.anchorX = 0.5;
 	makeryButton.anchorY = 0.5;
+	-- create and assign the mask
+	local makeryButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TheMakery_mask.png');
+	makeryButton:setMask(makeryButtonMask);
 	bgGroup:insert(makeryButton);
 
-	local fisheryButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_down.png',
-		width = 434,
-		height = 179,
-		x = 576 - 576;
-		y = 154 - 384;
+	local sugaryButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheSugary_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheSugary_down.png',
+		width = 328,
+		height = 239,
+		x = 223 - 576;
+		y = 295 - 384;
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
-			storyboard.gotoScene('Scenes.Fishery');
+			scene.stopThemeMusic();
+			storyboard.gotoScene('Scenes.Sugary');
 		end
 	});
-	fisheryButton.anchorX = 0.5;
-	fisheryButton.anchorY = 0.5;
-	bgGroup:insert(fisheryButton);
+	sugaryButton.anchorX = 0.5;
+	sugaryButton.anchorY = 0.5;
+	-- create and assign the mask
+	local sugaryButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TheSugary_mask.png');
+	sugaryButton:setMask(sugaryButtonMask);
+	bgGroup:insert(sugaryButton);
 
 	local puzzlesButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Puzzles_up.png',
@@ -406,24 +431,10 @@ function scene.createScene(self, event)
 	});
 	puzzlesButton.anchorX = 0.5;
 	puzzlesButton.anchorY = 0.5;
+	-- create and assign the mask
+	local puzzlesButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_Puzzles_mask.png');
+	puzzlesButton:setMask(puzzlesButtonMask);
 	bgGroup:insert(puzzlesButton);
-
-	local braineryButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_down.png',
-		width = 294,
-		height = 200,
-		x = 893 - 576;
-		y = 260 - 384;
-		onRelease = function()
-			if scene.buttonIsActive then return; end
-			scene.removeControls();
-			storyboard.gotoScene('Scenes.Brainery');
-		end
-	});
-	braineryButton.anchorX = 0.5;
-	braineryButton.anchorY = 0.5;
-	bgGroup:insert(braineryButton);
 
 	local tasteeTownButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_up.png',
@@ -435,12 +446,37 @@ function scene.createScene(self, event)
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
+			scene.stopThemeMusic();
 			storyboard.gotoScene('Scenes.TasteeTown');
 		end
 	});
 	tasteeTownButton.anchorX = 0.5;
 	tasteeTownButton.anchorY = 0.5;
+	-- create and assign the mask
+	local tasteeTownButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_mask.png');
+	tasteeTownButton:setMask(tasteeTownButtonMask);
 	bgGroup:insert(tasteeTownButton);
+
+	local braineryButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_down.png',
+		width = 294,
+		height = 200,
+		x = 893 - 576;
+		y = 260 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			scene.stopThemeMusic();
+			storyboard.gotoScene('Scenes.Brainery');
+		end
+	});
+	braineryButton.anchorX = 0.5;
+	braineryButton.anchorY = 0.5;
+	-- create and assign the mask
+	local braineryButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_mask.png');
+	braineryButton:setMask(braineryButtonMask);
+	bgGroup:insert(braineryButton);
 
 	local recipesButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Recipes_up.png',
@@ -483,6 +519,9 @@ function scene.createScene(self, event)
 	});
 	recipesButton.anchorX = 0.5;
 	recipesButton.anchorY = 0.5;
+	-- create and assign the mask
+	local recipesButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_Recipes_mask.png');
+	recipesButton:setMask(recipesButtonMask);
 	bgGroup:insert(recipesButton);
 
 	local mainBuildingButton = ui.button.new({
@@ -495,11 +534,15 @@ function scene.createScene(self, event)
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
+			scene.stopThemeMusic();
 			storyboard.gotoScene('Scenes.MainBuilding', { effect="crossFade", time="250" });
 		end
 	});
 	mainBuildingButton.anchorX = 0.5;
 	mainBuildingButton.anchorY = 0.5;
+	-- create and assign the mask
+	local mainBuildingButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_MainBuilding_mask.png');
+	mainBuildingButton:setMask(mainBuildingButtonMask);
 	bgGroup:insert(mainBuildingButton);
 
 	local bodinatorButton = ui.button.new({
@@ -512,11 +555,15 @@ function scene.createScene(self, event)
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
+			-- scene.stopThemeMusic();
 			storyboard.gotoScene('Scenes.Bodinator', { effect="crossFade", time="250" });
 		end
 	});
 	bodinatorButton.anchorX = 0.5;
 	bodinatorButton.anchorY = 0.5;
+	-- create and assign the mask
+	local bodinatorButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_Bodinator_mask.png');
+	bodinatorButton:setMask(bodinatorButtonMask);
 	bgGroup:insert(bodinatorButton);
 
 	local memoryGameButton = ui.button.new({
@@ -535,6 +582,9 @@ function scene.createScene(self, event)
 	});
 	memoryGameButton.anchorX = 0.5;
 	memoryGameButton.anchorY = 0.5;
+	-- create and assign the mask
+	local memoryGameButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_Concentration_mask.png');
+	memoryGameButton:setMask(memoryGameButtonMask);
 	bgGroup:insert(memoryGameButton);
 
 	local artDepartmentButton = ui.button.new({
@@ -553,6 +603,9 @@ function scene.createScene(self, event)
 	});
 	artDepartmentButton.anchorX = 0.5;
 	artDepartmentButton.anchorY = 0.5;
+	-- create and assign the mask
+	local artDepartmentButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_ArtDepartment_mask.png');
+	artDepartmentButton:setMask(artDepartmentButtonMask);
 	bgGroup:insert(artDepartmentButton);
 
 	-- position background image at correct location
@@ -774,7 +827,13 @@ alwaysVisible = true,
 						FRC_AppSettings.set("ambientSoundOn", true);
 						local ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 						if ambientMusic then
-							ambientMusic:resume();
+							-- find the current theme music
+							local themeMusic = ambientMusic:findHandle(scene.currentThemeMusic);
+							if (themeMusic and themeMusic:isPlaying()) then
+							  ambientMusic:resume();
+						  else
+								scene.playTheme1();
+							end
 						end
 					end
 				end
@@ -821,6 +880,7 @@ function scene.enterScene(self, event)
 			print("freshLaunch playing TitleAudio");
 			-- DEBUG:
 			print("ambientSoundOn: ",  FRC_AppSettings.get("ambientSoundOn"));
+			scene.currentThemeMusic = "TitleAudio";
 			ambientMusic:play("TitleAudio", { onComplete = function()
 					scene.playTheme1();
 				end, 1 } );
@@ -833,6 +893,7 @@ function scene.enterScene(self, event)
 			end
 		else
 			timer.performWithDelay(1000, function()
+				scene.currentThemeMusic = "TitleAudio";
 				ambientMusic:play("TitleAudio", { onComplete = function()
 						scene.playTheme1();
 					end } );
@@ -857,7 +918,9 @@ function scene.enterScene(self, event)
 			if (not FRC_AppSettings.get("ambientSoundOn")) then
 				-- DEBUG:
 				print("ambientMusic:pause");
-				ambientMusic:pause();
+				timer.performWithDelay(1, function()
+					ambientMusic:pause();
+					end, 1);
 			else
 				-- DEBUG:
 				print("HOME scene RESUME background audio");
