@@ -163,7 +163,7 @@ function scene.createScene(self, event)
 		buttonWidth = 100,
 		buttonHeight = 100,
 		buttonPadding = 15,
-alwaysVisible = true,
+		alwaysVisible = true,
 		bgColor = { 1, 1, 1, .95 },
 		buttons = {
 			{

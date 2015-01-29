@@ -134,7 +134,37 @@
 		"ext": "png"
 	},
 	{
-		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_Map",
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_MapForkInRoad",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_MapSugaryMakery",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_MapUniversityGarden",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_TheFishery",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_TheMakery",
+		"width": 1152,
+		"height": 768,
+		"ext": "png"
+	},
+	{
+		"image": "GENU_JigsawPuzzle_Game_global_Puzzle_TheSugary",
 		"width": 1152,
 		"height": 768,
 		"ext": "png"

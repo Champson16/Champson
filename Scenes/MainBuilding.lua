@@ -136,9 +136,8 @@ function scene.createScene(self, event)
 		y = 324 - 368,
 		onRelease = function()
 			libraryBackground.alpha = 1; -- show it
-			appInfoButton.alpha = 1;
-			brandButton.alpha = 1;
-			castButton.alpha = 1;
+			uOfChewCastButton.alpha = 1;
+			tasteeTownCastButton.alpha = 1;
 		end
 	});
 	libraryButton.anchorX = 0.5;
@@ -174,13 +173,13 @@ function scene.createScene(self, event)
 	libraryBackground.x, libraryBackground.y = 0, 0;
 	libraryBackground.alpha = 0; -- hide this by default
 
-	appInfoButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_Library_global_AppInfo_up.png',
-		imageDown = imageBase .. 'GENU_Library_global_AppInfo_down.png',
-		width = 314,
-		height = 257,
-		x = 239 - 578,
-		y = 429 - 368,
+	uOfChewCastButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_Library_global_UofChewCast_up.png',
+		imageDown = imageBase .. 'GENU_Library_global_UofChewCast_down.png',
+		width = 384,
+		height = 314,
+		x = 340 - 578,
+		y = 414 - 368,
 		onRelease = function()
 			-- show HTML
 			local screenRect = display.newRect(0, 0, screenW, screenH);
@@ -194,7 +193,7 @@ function scene.createScene(self, event)
 			webView.x = display.contentCenterX;
 			webView.y = display.contentCenterY + 20;
 			local devicePlatformName = import("platform").detected;
-			webView:request("Help/GENU_FRC_WebOverlay_Library_AppInfo.html", system.DocumentsDirectory);
+			webView:request("Help/GENU_FRC_WebOverlay_Library_UofChewCast.html", system.DocumentsDirectory);
 
 			local closeButton = ui.button.new({
 				imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
@@ -213,18 +212,18 @@ function scene.createScene(self, event)
 			webView.closeButton = closeButton;
 		end
 	});
-	appInfoButton.alpha = 0; -- hide this by default
-	appInfoButton.anchorX = 0.5;
-	appInfoButton.anchorY = 0.5;
-	bg:insert(appInfoButton);
+	uOfChewCastButton.alpha = 0; -- hide this by default
+	uOfChewCastButton.anchorX = 0.5;
+	uOfChewCastButton.anchorY = 0.5;
+	bg:insert(uOfChewCastButton);
 
-	brandButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_Library_global_Brand_up.png',
-		imageDown = imageBase .. 'GENU_Library_global_Brand_down.png',
-		width = 314,
-		height = 257,
-		x = 576 - 578,
-		y = 372 - 368,
+	tasteeTownCastButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_Library_global_TasteeTownCast_up.png',
+		imageDown = imageBase .. 'GENU_Library_global_TasteeTownCast_down.png',
+		width = 384,
+		height = 314,
+		x = 813 - 578,
+		y = 414 - 368,
 		onRelease = function()
 			-- show HTML
 			local screenRect = display.newRect(0, 0, screenW, screenH);
@@ -238,7 +237,7 @@ function scene.createScene(self, event)
 			webView.x = display.contentCenterX;
 			webView.y = display.contentCenterY + 20;
 			local devicePlatformName = import("platform").detected;
-			webView:request("Help/GENU_FRC_WebOverlay_Library_Brand.html", system.DocumentsDirectory);
+			webView:request("Help/GENU_FRC_WebOverlay_Library_TasteeTownCast.html", system.DocumentsDirectory);
 
 			local closeButton = ui.button.new({
 				imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
@@ -257,55 +256,10 @@ function scene.createScene(self, event)
 			webView.closeButton = closeButton;
 		end
 	});
-	brandButton.alpha = 0; -- hide this by default
-	brandButton.anchorX = 0.5;
-	brandButton.anchorY = 0.5;
-	bg:insert(brandButton);
-
-	castButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_Library_global_Cast_up.png',
-		imageDown = imageBase .. 'GENU_Library_global_Cast_down.png',
-		width = 314,
-		height = 257,
-		x = 914 - 578,
-		y = 429 - 368,
-		onRelease = function()
-			-- show HTML
-			local screenRect = display.newRect(0, 0, screenW, screenH);
-			screenRect.x = display.contentCenterX;
-			screenRect.y = display.contentCenterY;
-			screenRect:setFillColor(0, 0, 0, 0.75);
-			screenRect:addEventListener('touch', function() return true; end);
-			screenRect:addEventListener('tap', function() return true; end);
-
-			local webView = native.newWebView(0, 0, screenW - 100, screenH - 55);
-			webView.x = display.contentCenterX;
-			webView.y = display.contentCenterY + 20;
-			local devicePlatformName = import("platform").detected;
-			webView:request("Help/GENU_FRC_WebOverlay_Library_Cast.html", system.DocumentsDirectory);
-
-			local closeButton = ui.button.new({
-				imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
-				imageDown = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
-				width = 50,
-				height = 50,
-				onRelease = function(event)
-					local self = event.target;
-					webView:removeSelf(); webView = nil;
-					self:removeSelf(); closeButton = nil;
-					screenRect:removeSelf(); screenRect = nil;
-				end
-			});
-			closeButton.x = 5 + (closeButton.contentWidth * 0.5) - ((screenW - display.contentWidth) * 0.5);
-			closeButton.y = 5 + (closeButton.contentHeight * 0.5) - ((screenH - display.contentHeight) * 0.5);
-			webView.closeButton = closeButton;
-		end
-	});
-	castButton.alpha = 0; -- hide this by default
-	castButton.anchorX = 0.5;
-	castButton.anchorY = 0.5;
-	bg:insert(castButton);
-
+	tasteeTownCastButton.alpha = 0; -- hide this by default
+	tasteeTownCastButton.anchorX = 0.5;
+	tasteeTownCastButton.anchorY = 0.5;
+	bg:insert(tasteeTownCastButton);
 
 	view:insert(bg);
 

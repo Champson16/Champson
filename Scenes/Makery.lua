@@ -27,16 +27,20 @@ function scene.createScene(self, event)
 	-- SET UP ANIMATIONS
 
 	local introAnimationFiles = {
-		"GENU_Animation_global_MakeryCar_d.xml",
+		--[[ "GENU_Animation_global_MakeryCar_d.xml",
 		"GENU_Animation_global_MakeryCar_c.xml",
 		"GENU_Animation_global_MakeryCar_b.xml",
-		"GENU_Animation_global_MakeryCar_a.xml"	};
+		"GENU_Animation_global_MakeryCar_a.xml"	--]]
+		"GENU_Animation_global_MakeryCar_idle_d.xml",
+		"GENU_Animation_global_MakeryCar_idle_c.xml",
+		"GENU_Animation_global_MakeryCar_idle_b.xml",
+		"GENU_Animation_global_MakeryCar_idle_a.xml" };
 	-- preload the animation data (XML and images) early
 	introAnimationSequences = FRC_AnimationManager.createAnimationClipGroup(introAnimationFiles, animationXMLBase, animationImageBase);
 	FRC_Layout.scaleToFit(introAnimationSequences);
 	view:insert(introAnimationSequences);
 
-	local ambientAnimationFiles = {
+--[[	local ambientAnimationFiles = {
 		"GENU_Animation_global_MakeryCar_idle_d.xml",
 		"GENU_Animation_global_MakeryCar_idle_c.xml",
 		"GENU_Animation_global_MakeryCar_idle_b.xml",
@@ -46,14 +50,16 @@ function scene.createScene(self, event)
 	ambientAnimationSequences = FRC_AnimationManager.createAnimationClipGroup(ambientAnimationFiles, animationXMLBase, animationImageBase);
 	FRC_Layout.scaleToFit(ambientAnimationSequences);
 	view:insert(ambientAnimationSequences);
+	--]]
 
 	-- setup scene audio
 
-	FRC_AudioManager:newHandle({
+	--[[ FRC_AudioManager:newHandle({
 		name = "MakeryIntro",
 		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_MakeryCar.mp3",
 		group = "ambientMusic"
 	});
+	--]]
 	FRC_AudioManager:newHandle({
 		name = "MakeryIdle",
 		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_MakeryCar_idle.mp3",
@@ -193,11 +199,12 @@ function scene.enterScene(self, event)
 			introAnimationSequences[i]:play({
 				showLastFrame = false,
 				playBackward = false,
-				autoLoop = false,
+				autoLoop = true,
 				palindromicLoop = false,
 				delay = 3,
 				intervalTime = 30,
 				maxIterations = 1,
+				--[[
 				onCompletion = function ()
 					-- after the title animation, we will play the introduction sequences only
 					if ambientAnimationSequences[i] then
@@ -215,12 +222,13 @@ function scene.enterScene(self, event)
 						end
 					end
 				end
+				--]]
 			});
 		end
 		ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 		if ambientMusic then
 			ambientMusic:stop();
-			ambientMusic:play("MakeryIntro");
+			ambientMusic:play("MakeryIdle", {loops = -1});
 			if (not FRC_AppSettings.get("ambientSoundOn")) then
 				timer.performWithDelay(1, function()
 					ambientMusic:pause();
@@ -232,7 +240,7 @@ end
 
 function scene.exitScene(self, event)
 	-- we need to clear the animations from the screen
-	if (introAnimationSequences) then
+	if (introAnimationSequences and introAnimationSequences.numChildren) then
 		for i=1, introAnimationSequences.numChildren do
 			local anim = introAnimationSequences[i];
 			if (anim) then
@@ -244,7 +252,7 @@ function scene.exitScene(self, event)
 		end
 		introAnimationSequences = nil;
 	end
-	if (ambientAnimationSequences) then
+	if (ambientAnimationSequences and ambientAnimationSequences.numChildren) then
 		for i=1, ambientAnimationSequences.numChildren do
 			local anim = ambientAnimationSequences[i];
 			if (anim) then

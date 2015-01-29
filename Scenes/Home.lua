@@ -357,21 +357,22 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_down.png',
 		width = 434,
 		height = 179,
-		x = 576 - 576;
-		y = 154 - 384;
+		-- x = 0;
+		-- y = -230;
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			storyboard.gotoScene('Scenes.Fishery');
+			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Fishery'); end, 1);
 		end
 	});
-	fisheryButton.anchorX = 0.5;
-	fisheryButton.anchorY = 0.5;
+	fisheryButton.anchorX = 0.5; -- 0.5;
+	fisheryButton.anchorY = 0.5; -- 0.5;
 	-- create and assign the mask
 	local fisheryButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_mask.png');
 	fisheryButton:setMask(fisheryButtonMask);
 	bgGroup:insert(fisheryButton);
+	FRC_Layout.scaleToFit(fisheryButton, 0, -230);
 
 	local makeryButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheMakery_up.png',
@@ -384,7 +385,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			storyboard.gotoScene('Scenes.Makery');
+			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Makery'); end, 1);
 		end
 	});
 	makeryButton.anchorX = 0.5;
@@ -405,7 +406,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			storyboard.gotoScene('Scenes.Sugary');
+			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Sugary'); end, 1);
 		end
 	});
 	sugaryButton.anchorX = 0.5;
@@ -436,27 +437,6 @@ function scene.createScene(self, event)
 	puzzlesButton:setMask(puzzlesButtonMask);
 	bgGroup:insert(puzzlesButton);
 
-	local tasteeTownButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_up.png',
-		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_down.png',
-		width = 232,
-		height = 130,
-		x = 813 - 576;
-		y = 339 - 384;
-		onRelease = function()
-			if scene.buttonIsActive then return; end
-			scene.removeControls();
-			scene.stopThemeMusic();
-			storyboard.gotoScene('Scenes.TasteeTown');
-		end
-	});
-	tasteeTownButton.anchorX = 0.5;
-	tasteeTownButton.anchorY = 0.5;
-	-- create and assign the mask
-	local tasteeTownButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_mask.png');
-	tasteeTownButton:setMask(tasteeTownButtonMask);
-	bgGroup:insert(tasteeTownButton);
-
 	local braineryButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_up.png',
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Brainery_down.png',
@@ -468,7 +448,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			storyboard.gotoScene('Scenes.Brainery');
+			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Brainery'); end, 1);
 		end
 	});
 	braineryButton.anchorX = 0.5;
@@ -478,6 +458,27 @@ function scene.createScene(self, event)
 	braineryButton:setMask(braineryButtonMask);
 	bgGroup:insert(braineryButton);
 
+	local tasteeTownButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_up.png',
+		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_down.png',
+		width = 232,
+		height = 130,
+		x = 813 - 576;
+		y = 339 - 384;
+		onRelease = function()
+			if scene.buttonIsActive then return; end
+			scene.removeControls();
+			scene.stopThemeMusic();
+			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.TasteeTown'); end, 1);
+		end
+	});
+	tasteeTownButton.anchorX = 0.5;
+	tasteeTownButton.anchorY = 0.5;
+	-- create and assign the mask
+	local tasteeTownButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TasteeTown_mask.png');
+	tasteeTownButton:setMask(tasteeTownButtonMask);
+	bgGroup:insert(tasteeTownButton);
+
 	local recipesButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_Recipes_up.png',
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_Recipes_down.png',
@@ -486,8 +487,6 @@ function scene.createScene(self, event)
 		x = 574 - 576;
 		y = 417 - 384;
 		onRelease = function()
-			if scene.buttonIsActive then return; end
-			scene.removeControls();
 			local screenRect = display.newRect(0, 0, screenW, screenH);
 			screenRect.x = display.contentCenterX;
 			screenRect.y = display.contentCenterY;
@@ -598,7 +597,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
-			timer.performWithDelay(600, function() storyboard.gotoScene('Scenes.ArtCenter'); end, 1);
+			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.ArtCenter'); end, 1);
 		end
 	});
 	artDepartmentButton.anchorX = 0.5;
