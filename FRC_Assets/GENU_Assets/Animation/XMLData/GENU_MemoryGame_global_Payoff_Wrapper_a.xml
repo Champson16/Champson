@@ -1,0 +1,121 @@
+<Animations>
+  <Animation name="GENU_MemoryGame_global_Payoff_Wrapper_a" frameCount="61">
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_001_0028">
+      <Frame x="313.60" y="-30.80" scaleX="0.912" scaleY="0.912" index="0"/>
+      <Frame x="313.60" y="-30.80" scaleX="0.912" scaleY="0.912" index="1"/>
+      <Frame x="313.60" y="-30.80" scaleX="0.912" scaleY="0.912" index="59"/>
+      <Frame x="313.60" y="-30.80" scaleX="0.912" scaleY="0.912" index="60"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_002_0028">
+      <Frame x="312.60" y="-30.80" scaleX="0.912" scaleY="0.912" index="2"/>
+      <Frame x="312.60" y="-30.80" scaleX="0.912" scaleY="0.912" index="3"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_003_0028">
+      <Frame x="312.50" y="-5.45" scaleX="0.912" scaleY="0.912" index="4"/>
+      <Frame x="312.50" y="-5.45" scaleX="0.912" scaleY="0.912" index="5"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_004_0028">
+      <Frame x="295.10" y="9.80" scaleX="0.912" scaleY="0.912" index="6"/>
+      <Frame x="295.10" y="9.80" scaleX="0.912" scaleY="0.912" index="7"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_005_0028">
+      <Frame x="292.15" y="9.80" scaleX="0.912" scaleY="0.912" index="8"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_006_0028">
+      <Frame x="341.05" y="-10.65" scaleX="0.912" scaleY="0.912" index="9"/>
+      <Frame x="341.05" y="-10.65" scaleX="0.912" scaleY="0.912" index="10"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_007_0028">
+      <Frame x="360.75" y="2.90" scaleX="0.912" scaleY="0.912" index="11"/>
+      <Frame x="360.75" y="2.90" scaleX="0.912" scaleY="0.912" index="12"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_008_0028">
+      <Frame x="339.45" y="60.25" scaleX="0.912" scaleY="0.912" index="13"/>
+      <Frame x="339.45" y="60.25" scaleX="0.912" scaleY="0.912" index="14"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_009_0028">
+      <Frame x="339.90" y="46.80" scaleX="0.912" scaleY="0.912" index="15"/>
+      <Frame x="339.90" y="46.80" scaleX="0.912" scaleY="0.912" index="16"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_010_0028">
+      <Frame x="339.90" y="42.45" scaleX="0.912" scaleY="0.912" index="17"/>
+      <Frame x="339.90" y="42.45" scaleX="0.912" scaleY="0.912" index="18"/>
+      <Frame x="339.90" y="42.45" scaleX="0.912" scaleY="0.912" index="19"/>
+      <Frame x="339.90" y="42.45" scaleX="0.912" scaleY="0.912" index="20"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_011_0028">
+      <Frame x="350.50" y="9.40" scaleX="0.912" scaleY="0.912" index="21"/>
+      <Frame x="350.50" y="9.40" scaleX="0.912" scaleY="0.912" index="22"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_012_0028">
+      <Frame x="309.85" y="-28.35" scaleX="0.912" scaleY="0.912" index="23"/>
+      <Frame x="309.85" y="-28.35" scaleX="0.912" scaleY="0.912" index="24"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_013_0028">
+      <Frame x="314.45" y="-28.35" scaleX="0.912" scaleY="0.912" index="25"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_014_0028">
+      <Frame x="326.40" y="9.80" scaleX="0.912" scaleY="0.912" index="26"/>
+      <Frame x="326.40" y="9.80" scaleX="0.912" scaleY="0.912" index="27"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_015_0028">
+      <Frame x="312.85" y="13.80" scaleX="0.912" scaleY="0.912" index="28"/>
+      <Frame x="312.85" y="13.80" scaleX="0.912" scaleY="0.912" index="29"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_016_0028">
+      <Frame x="333.55" y="-10.45" scaleX="0.912" scaleY="0.912" index="30"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_017_0028">
+      <Frame x="295.30" y="-32.55" scaleX="0.912" scaleY="0.912" index="31"/>
+      <Frame x="295.30" y="-32.55" scaleX="0.912" scaleY="0.912" index="32"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_018_0028">
+      <Frame x="292.95" y="-32.55" scaleX="0.912" scaleY="0.912" index="33"/>
+      <Frame x="292.95" y="-32.55" scaleX="0.912" scaleY="0.912" index="34"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_019_0028">
+      <Frame x="304.70" y="-7.15" scaleX="0.912" scaleY="0.912" index="35"/>
+      <Frame x="304.70" y="-7.15" scaleX="0.912" scaleY="0.912" index="36"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_020_0028">
+      <Frame x="318.50" y="8.10" scaleX="0.912" scaleY="0.912" index="37"/>
+      <Frame x="318.50" y="8.10" scaleX="0.912" scaleY="0.912" index="38"/>
+      <Frame x="318.50" y="8.10" scaleX="0.912" scaleY="0.912" index="39"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_021_0028">
+      <Frame x="291.10" y="-12.35" scaleX="0.912" scaleY="0.912" index="40"/>
+      <Frame x="291.10" y="-12.35" scaleX="0.912" scaleY="0.912" index="41"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_022_0028">
+      <Frame x="271.35" y="1.15" scaleX="0.912" scaleY="0.912" index="42"/>
+      <Frame x="271.35" y="1.15" scaleX="0.912" scaleY="0.912" index="43"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_023_0028">
+      <Frame x="317.40" y="68.95" scaleX="0.912" scaleY="0.912" index="44"/>
+      <Frame x="317.40" y="68.95" scaleX="0.912" scaleY="0.912" index="45"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_024_0028">
+      <Frame x="312.50" y="56.45" scaleX="0.912" scaleY="0.912" index="46"/>
+      <Frame x="312.50" y="56.45" scaleX="0.912" scaleY="0.912" index="47"/>
+      <Frame x="312.50" y="56.45" scaleX="0.912" scaleY="0.912" index="48"/>
+      <Frame x="312.50" y="56.45" scaleX="0.912" scaleY="0.912" index="49"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_025_0028">
+      <Frame x="309.55" y="7.65" scaleX="0.912" scaleY="0.912" index="50"/>
+      <Frame x="309.55" y="7.65" scaleX="0.912" scaleY="0.912" index="51"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_026_0028">
+      <Frame x="292.85" y="-30.05" scaleX="0.912" scaleY="0.912" index="52"/>
+      <Frame x="292.85" y="-30.05" scaleX="0.912" scaleY="0.912" index="53"/>
+      <Frame x="292.85" y="-30.05" scaleX="0.912" scaleY="0.912" index="54"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_027_0028">
+      <Frame x="305.00" y="8.10" scaleX="0.912" scaleY="0.912" index="55"/>
+      <Frame x="305.00" y="8.10" scaleX="0.912" scaleY="0.912" index="56"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Wrapper_028_0028">
+      <Frame x="290.60" y="12.10" scaleX="0.912" scaleY="0.912" index="57"/>
+      <Frame x="290.60" y="12.10" scaleX="0.912" scaleY="0.912" index="58"/>
+    </Part>
+  </Animation>
+</Animations>

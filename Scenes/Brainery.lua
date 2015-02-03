@@ -89,7 +89,7 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_Button_global_Ok_down.png',
 		width = 213,
 		height = 74,
-		x = 890 - 576;
+		x = 900 - 576;
 		y = 628 - 384;
 		onRelease = function()
 			storyboard.gotoScene('Scenes.Home', { effect="crossFade", time="250" });

@@ -1,0 +1,108 @@
+<Animations>
+  <Animation name="GENU_MemoryGame_global_Payoff_Maxwell_a" frameCount="70">
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_001_0017">
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="0"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="1"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="2"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="3"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="4"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="5"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="6"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="7"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="8"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="9"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="10"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="11"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="12"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="13"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="14"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="15"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="16"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="17"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_002_0017">
+      <Frame x="297.85" y="-18.45" scaleX="0.776" scaleY="0.776" index="18"/>
+      <Frame x="297.85" y="-18.45" scaleX="0.776" scaleY="0.776" index="19"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_003_0017">
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="20"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="21"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="22"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="23"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="24"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="25"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="26"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="27"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="28"/>
+      <Frame x="278.35" y="-19.20" scaleX="0.776" scaleY="0.776" index="29"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_004_0017">
+      <Frame x="283.25" y="13.60" scaleX="0.776" scaleY="0.776" index="30"/>
+      <Frame x="283.25" y="13.60" scaleX="0.776" scaleY="0.776" index="31"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_005_0017">
+      <Frame x="285.85" y="-16.30" scaleX="0.776" scaleY="0.776" index="32"/>
+      <Frame x="285.85" y="-16.30" scaleX="0.776" scaleY="0.776" index="33"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_006_0017">
+      <Frame x="273.85" y="-26.40" scaleX="0.776" scaleY="0.776" index="34"/>
+      <Frame x="273.85" y="-26.40" scaleX="0.776" scaleY="0.776" index="35"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_007_0017">
+      <Frame x="325.20" y="-25.75" scaleX="0.776" scaleY="0.776" index="36"/>
+      <Frame x="325.20" y="-25.75" scaleX="0.776" scaleY="0.776" index="37"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_008_0017">
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="38"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="39"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="40"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="41"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="42"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="43"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="44"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="45"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="46"/>
+      <Frame x="328.35" y="-18.85" scaleX="0.776" scaleY="0.776" index="47"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_009_0017">
+      <Frame x="302.70" y="-18.85" scaleX="0.776" scaleY="0.776" index="48"/>
+      <Frame x="302.70" y="-18.85" scaleX="0.776" scaleY="0.776" index="49"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_010_0017">
+      <Frame x="283.30" y="-19.20" scaleX="0.776" scaleY="0.776" index="50"/>
+      <Frame x="283.30" y="-19.20" scaleX="0.776" scaleY="0.776" index="51"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_011_0017">
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="52"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_012_0017">
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="53"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="54"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="55"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="56"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="57"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_013_0017">
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="58"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="59"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_014_0017">
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="60"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_015_0017">
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="61"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="62"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="63"/>
+      <Frame x="291.25" y="-18.20" scaleX="0.776" scaleY="0.776" index="64"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_016_0017">
+      <Frame x="291.75" y="-18.20" scaleX="0.776" scaleY="0.776" index="65"/>
+      <Frame x="291.75" y="-18.20" scaleX="0.776" scaleY="0.776" index="66"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Maxwell_017_0017">
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="67"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="68"/>
+      <Frame x="306.65" y="-18.45" scaleX="0.776" scaleY="0.776" index="69"/>
+    </Part>
+  </Animation>
+</Animations>

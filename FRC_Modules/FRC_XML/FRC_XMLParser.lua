@@ -108,26 +108,27 @@ function XmlParser.new()
 
   function xmlparser:saveFile(xmlFilename, base, rootElementName, xmltbl)
     if not base then
-      base = system.TemporaryDirectory
+      base = system.TemporaryDirectory;
     end
 
-    local path = system.pathForFile( xmlFilename, base )
-    local hFile, err = io.open(path, "w")
+    local path = system.pathForFile( xmlFilename, base );
+    local hFile, err = io.open(path, "w");
 
     if hFile and not err then
-      hFile:write(xmlparser:toXml(rootElementName, xmltbl))
-      io.close(hFile)
-      return true
+      hFile:write(xmlparser:toXml(rootElementName, xmltbl));
+      io.close(hFile);
+      return true;
     else
-      print( err )
-      return false
+      io.close(hFile);
+      print( err );
+      return false;
     end
   end
 
   function xmlparser:loadFile(xmlFilename, base)
     -- print("xmlparser:loadFile xmlFilename, base: ", tostring(xmlFilename), " - ", base);
     if not base then
-      base = system.ResourceDirectory
+      base = system.ResourceDirectory;
     end
 
     local path = system.pathForFile( xmlFilename, base )
@@ -144,6 +145,7 @@ function XmlParser.new()
       -- print(xmlText);
       return self:ParseXmlText(xmlText),nil;
     else
+      io.close(hFile);
       print("XML Data Read Error: ", err );
       return nil;
     end

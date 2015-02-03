@@ -363,7 +363,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Fishery'); end, 1);
+			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Fishery'); end, 1);
 		end
 	});
 	fisheryButton.anchorX = 0.5; -- 0.5;
@@ -385,7 +385,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Makery'); end, 1);
+			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Makery'); end, 1);
 		end
 	});
 	makeryButton.anchorX = 0.5;
@@ -406,7 +406,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Sugary'); end, 1);
+			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Sugary'); end, 1);
 		end
 	});
 	sugaryButton.anchorX = 0.5;
@@ -448,7 +448,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.Brainery'); end, 1);
+			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Brainery'); end, 1);
 		end
 	});
 	braineryButton.anchorX = 0.5;
@@ -469,7 +469,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.TasteeTown'); end, 1);
+			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.TasteeTown'); end, 1);
 		end
 	});
 	tasteeTownButton.anchorX = 0.5;

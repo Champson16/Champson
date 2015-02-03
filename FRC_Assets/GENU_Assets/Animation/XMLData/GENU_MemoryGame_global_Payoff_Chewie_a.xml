@@ -1,0 +1,111 @@
+<Animations>
+  <Animation name="GENU_MemoryGame_global_Payoff_Chewie_a" frameCount="61">
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_001_0023">
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="0"/>
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="1"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_002_0023">
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="2"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_003_0023">
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="3"/>
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="4"/>
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="5"/>
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="6"/>
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="7"/>
+      <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="8"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_004_0023">
+      <Frame x="268.10" y="8.25" scaleX="0.923" scaleY="0.923" index="9"/>
+      <Frame x="268.10" y="8.25" scaleX="0.923" scaleY="0.923" index="10"/>
+      <Frame x="268.10" y="8.25" scaleX="0.923" scaleY="0.923" index="11"/>
+      <Frame x="268.10" y="8.25" scaleX="0.923" scaleY="0.923" index="12"/>
+      <Frame x="268.10" y="8.25" scaleX="0.923" scaleY="0.923" index="13"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_005_0023">
+      <Frame x="411.25" y="-27.70" scaleX="0.923" scaleY="0.923" index="14"/>
+      <Frame x="411.25" y="-27.70" scaleX="0.923" scaleY="0.923" index="15"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_006_0023">
+      <Frame x="407.65" y="-35.00" scaleX="0.934" scaleY="0.934" index="16"/>
+      <Frame x="407.65" y="-35.00" scaleX="0.934" scaleY="0.934" index="17"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_007_0023">
+      <Frame x="411.30" y="-41.50" scaleX="0.950" scaleY="0.950" index="18"/>
+      <Frame x="411.30" y="-41.50" scaleX="0.950" scaleY="0.950" index="19"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_008_0023">
+      <Frame x="390.70" y="-33.00" scaleX="0.923" scaleY="0.923" index="20"/>
+      <Frame x="390.70" y="-33.00" scaleX="0.923" scaleY="0.923" index="21"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_009_0023">
+      <Frame x="228.90" y="-18.15" scaleX="0.923" scaleY="0.923" index="22"/>
+      <Frame x="228.90" y="-18.15" scaleX="0.923" scaleY="0.923" index="23"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_010_0023">
+      <Frame x="228.90" y="13.95" scaleX="0.923" scaleY="0.923" index="24"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_011_0023">
+      <Frame x="360.75" y="29.80" scaleX="0.923" scaleY="0.923" index="25"/>
+      <Frame x="360.75" y="29.80" scaleX="0.923" scaleY="0.923" index="26"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_012_0023">
+      <Frame x="345.35" y="56.65" scaleX="0.923" scaleY="0.923" index="27"/>
+      <Frame x="345.35" y="56.65" scaleX="0.923" scaleY="0.923" index="28"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_013_0023">
+      <Frame x="392.00" y="56.65" scaleX="0.923" scaleY="0.923" index="29"/>
+      <Frame x="392.00" y="56.65" scaleX="0.923" scaleY="0.923" index="30"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_014_0023">
+      <Frame x="368.20" y="56.65" scaleX="0.923" scaleY="0.923" index="31"/>
+      <Frame x="368.20" y="56.65" scaleX="0.923" scaleY="0.923" index="32"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_015_0023">
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="33"/>
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="34"/>
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="37"/>
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="38"/>
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="41"/>
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="42"/>
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="45"/>
+      <Frame x="381.70" y="56.65" scaleX="0.923" scaleY="0.923" index="46"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_016_0023">
+      <Frame x="368.80" y="56.65" scaleX="0.923" scaleY="0.923" index="35"/>
+      <Frame x="368.80" y="56.65" scaleX="0.923" scaleY="0.923" index="36"/>
+      <Frame x="368.80" y="56.65" scaleX="0.923" scaleY="0.923" index="39"/>
+      <Frame x="368.80" y="56.65" scaleX="0.923" scaleY="0.923" index="40"/>
+      <Frame x="368.80" y="56.65" scaleX="0.923" scaleY="0.923" index="43"/>
+      <Frame x="368.80" y="56.65" scaleX="0.923" scaleY="0.923" index="44"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_017_0023">
+      <Frame x="373.50" y="47.00" scaleX="0.923" scaleY="0.923" index="47"/>
+      <Frame x="373.50" y="47.00" scaleX="0.923" scaleY="0.923" index="48"/>
+      <Frame x="373.50" y="47.00" scaleX="0.923" scaleY="0.923" index="49"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_018_0023">
+      <Frame x="372.45" y="36.95" scaleX="0.923" scaleY="0.923" index="50"/>
+      <Frame x="372.45" y="36.95" scaleX="0.923" scaleY="0.923" index="51"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_019_0023">
+      <Frame x="276.50" y="4.60" scaleX="0.923" scaleY="0.923" index="52"/>
+      <Frame x="276.50" y="4.60" scaleX="0.923" scaleY="0.923" index="53"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_020_0023">
+      <Frame x="273.00" y="10.35" scaleX="0.923" scaleY="0.923" index="54"/>
+      <Frame x="273.00" y="10.35" scaleX="0.923" scaleY="0.923" index="55"/>
+      <Frame x="273.00" y="10.35" scaleX="0.923" scaleY="0.923" index="56"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_021_0023">
+      <Frame x="240.25" y="13.50" scaleX="0.923" scaleY="0.923" index="57"/>
+      <Frame x="240.25" y="13.50" scaleX="0.923" scaleY="0.923" index="58"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_022_0023">
+      <Frame x="270.80" y="-15.80" scaleX="0.923" scaleY="0.923" index="59"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Chewie_023_0023">
+      <Frame x="264.70" y="6.30" scaleX="0.923" scaleY="0.923" index="60"/>
+    </Part>
+  </Animation>
+</Animations>

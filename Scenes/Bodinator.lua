@@ -56,12 +56,12 @@ function scene.createScene(self, event)
 
 	-- setup scene audio
 
-	--[[ FRC_AudioManager:newHandle({
-		name = "SugaryIntro",
-		path = "FRC_Assets/GENU_Assets/Audio/ZAZOOTIME_Alarm_Bugle-MilitaryCavalryCall.mp3",
+	FRC_AudioManager:newHandle({
+		name = "BodinatorIntro",
+		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_Bodinator.mp3",
 		group = "ambientMusic"
 	});
-	FRC_AudioManager:newHandle({
+	--[[ FRC_AudioManager:newHandle({
 		name = "SugaryIdle",
 		path = "FRC_Assets/GENU_Assets/Audio/ZAZOOTIME_Alarm_Kids-Bloobblubblub1.mp3",
 		group = "ambientMusic"
@@ -109,11 +109,14 @@ function scene.createScene(self, event)
 			end
 			ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 			if ambientMusic then
-				-- ambientMusic:play("SugaryIntro");
+				ambientMusic:stop();
+				ambientMusic:play("BodinatorIntro");
 				if (not FRC_AppSettings.get("ambientSoundOn")) then
-					ambientMusic:pause();
+					timer.performWithDelay(1, function()
+						ambientMusic:pause();
+						end, 1);
+					end
 				end
-			end
 		end
 	end
 

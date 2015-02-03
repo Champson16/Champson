@@ -1,0 +1,104 @@
+<Animations>
+  <Animation name="GENU_MemoryGame_global_Payoff_Golly_a" frameCount="70">
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_001_0015">
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="0"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="1"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="2"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="3"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="4"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="5"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="6"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="7"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="8"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="9"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="10"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="11"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="12"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="13"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="14"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="15"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="16"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="17"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="67"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="68"/>
+      <Frame x="-310.10" y="7.20" scaleX="0.846" scaleY="0.846" index="69"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_002_0015">
+      <Frame x="-311.75" y="4.25" scaleX="0.846" scaleY="0.846" index="18"/>
+      <Frame x="-311.75" y="4.25" scaleX="0.846" scaleY="0.846" index="19"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_003_0015">
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="20"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="21"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="22"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="23"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="24"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="25"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="26"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="27"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="28"/>
+      <Frame x="-293.35" y="2.05" scaleX="0.846" scaleY="0.846" index="29"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_004_0015">
+      <Frame x="-286.60" y="47.10" scaleX="0.846" scaleY="0.846" index="30"/>
+      <Frame x="-286.60" y="47.10" scaleX="0.846" scaleY="0.846" index="31"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_005_0015">
+      <Frame x="-291.95" y="1.75" scaleX="0.846" scaleY="0.846" index="32"/>
+      <Frame x="-291.95" y="1.75" scaleX="0.846" scaleY="0.846" index="33"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_006_0015">
+      <Frame x="-278.75" y="-12.00" scaleX="0.846" scaleY="0.846" index="34"/>
+      <Frame x="-278.75" y="-12.00" scaleX="0.846" scaleY="0.846" index="35"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_007_0015">
+      <Frame x="-338.35" y="-17.00" scaleX="0.846" scaleY="0.846" index="36"/>
+      <Frame x="-338.35" y="-17.00" scaleX="0.846" scaleY="0.846" index="37"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_008_0015">
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="38"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="39"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_009_0015">
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="40"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="41"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="42"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="43"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="44"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="45"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="46"/>
+      <Frame x="-347.10" y="1.30" scaleX="0.846" scaleY="0.846" index="47"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_010_0015">
+      <Frame x="-318.35" y="1.55" scaleX="0.846" scaleY="0.846" index="48"/>
+      <Frame x="-318.35" y="1.55" scaleX="0.846" scaleY="0.846" index="49"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_011_0015">
+      <Frame x="-307.40" y="5.80" scaleX="0.846" scaleY="0.846" index="50"/>
+      <Frame x="-307.40" y="5.80" scaleX="0.846" scaleY="0.846" index="51"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_012_0015">
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="52"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="60"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_013_0015">
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="53"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="54"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="55"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="56"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="57"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="61"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="62"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="63"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="64"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_014_0015">
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="58"/>
+      <Frame x="-312.50" y="6.45" scaleX="0.846" scaleY="0.846" index="59"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Golly_015_0015">
+      <Frame x="-308.90" y="7.15" scaleX="0.846" scaleY="0.846" index="65"/>
+      <Frame x="-308.90" y="7.15" scaleX="0.846" scaleY="0.846" index="66"/>
+    </Part>
+  </Animation>
+</Animations>

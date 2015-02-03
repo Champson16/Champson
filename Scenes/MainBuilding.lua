@@ -78,7 +78,10 @@ function scene.createScene(self, event)
 			end
 		end
 		onComplete = function(event)
-			audio.stop(1); -- ??
+			-- audio.stop(1); -- ??
+			if (FRC_AppSettings.get("ambientSoundOn")) then
+				FRC_AudioManager:findGroup("ambientMusic"):resume();
+			end
 			if (videoBg) then
 				videoBg:removeSelf();
 				videoBg = nil;
@@ -89,7 +92,9 @@ function scene.createScene(self, event)
 				learnVideo = nil;
 			end
 		end
-		FRC_AudioManager:findGroup("ambientMusic"):pause();
+		if (FRC_AppSettings.get("ambientSoundOn")) then
+			FRC_AudioManager:findGroup("ambientMusic"):pause();
+		end
 		--media.playVideo(videoFile, true, onComplete);
 
     -- skip the video if we are on the Simulator

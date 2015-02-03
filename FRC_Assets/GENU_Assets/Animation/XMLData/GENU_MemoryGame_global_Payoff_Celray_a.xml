@@ -1,0 +1,110 @@
+<Animations>
+  <Animation name="GENU_MemoryGame_global_Payoff_Celray_a" frameCount="60">
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_001_0023">
+      <Frame x="291.65" y="-22.75" scaleX="1.442" scaleY="1.442" index="0"/>
+      <Frame x="291.65" y="-22.75" scaleX="1.442" scaleY="1.442" index="1"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_002_0023">
+      <Frame x="291.20" y="-28.60" scaleX="1.442" scaleY="1.442" index="2"/>
+      <Frame x="291.20" y="-28.60" scaleX="1.442" scaleY="1.442" index="3"/>
+      <Frame x="291.20" y="-28.60" scaleX="1.442" scaleY="1.442" index="4"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_003_0023">
+      <Frame x="254.00" y="1.05" scaleX="1.442" scaleY="1.442" index="5"/>
+      <Frame x="254.00" y="1.05" scaleX="1.442" scaleY="1.442" index="6"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_004_0023">
+      <Frame x="164.10" y="-10.75" scaleX="1.442" scaleY="1.442" index="7"/>
+      <Frame x="164.10" y="-10.75" scaleX="1.442" scaleY="1.442" index="8"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_005_0023">
+      <Frame x="171.25" y="-10.75" scaleX="1.442" scaleY="1.442" index="9"/>
+      <Frame x="171.25" y="-10.75" scaleX="1.442" scaleY="1.442" index="10"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_006_0023">
+      <Frame x="171.75" y="-10.85" scaleX="1.442" scaleY="1.442" index="11"/>
+      <Frame x="171.75" y="-10.85" scaleX="1.442" scaleY="1.442" index="12"/>
+      <Frame x="171.75" y="-10.85" scaleX="1.442" scaleY="1.442" index="13"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_007_0023">
+      <Frame x="176.20" y="13.05" scaleX="1.442" scaleY="1.442" index="14"/>
+      <Frame x="176.20" y="13.05" scaleX="1.442" scaleY="1.442" index="15"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_008_0023">
+      <Frame x="296.70" y="-53.45" scaleX="1.442" scaleY="1.442" index="16"/>
+      <Frame x="296.70" y="-53.45" scaleX="1.442" scaleY="1.442" index="17"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_009_0023">
+      <Frame x="320.55" y="-24.60" scaleX="1.442" scaleY="1.442" index="18"/>
+      <Frame x="320.55" y="-24.60" scaleX="1.442" scaleY="1.442" index="19"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_010_0023">
+      <Frame x="263.10" y="-4.90" scaleX="1.442" scaleY="1.442" index="20"/>
+      <Frame x="263.10" y="-4.90" scaleX="1.442" scaleY="1.442" index="21"/>
+      <Frame x="263.10" y="-4.90" scaleX="1.442" scaleY="1.442" index="22"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_011_0023">
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="23"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="24"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="25"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="26"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="27"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="28"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="29"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_012_0023">
+      <Frame x="275.45" y="-11.90" scaleX="1.442" scaleY="1.442" index="30"/>
+      <Frame x="275.45" y="-11.90" scaleX="1.442" scaleY="1.442" index="31"/>
+      <Frame x="275.45" y="-11.90" scaleX="1.442" scaleY="1.442" index="32"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_013_0023">
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="33"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="34"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="35"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="36"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="37"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="38"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="39"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="40"/>
+      <Frame x="279.90" y="-16.85" scaleX="1.442" scaleY="1.442" index="41"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_014_0023">
+      <Frame x="273.55" y="-14.30" scaleX="1.442" scaleY="1.442" index="42"/>
+      <Frame x="273.55" y="-14.30" scaleX="1.442" scaleY="1.442" index="43"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_015_0023">
+      <Frame x="356.90" y="-27.85" scaleX="1.442" scaleY="1.442" index="44"/>
+      <Frame x="356.90" y="-27.85" scaleX="1.442" scaleY="1.442" index="45"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_016_0023">
+      <Frame x="377.30" y="-27.85" scaleX="1.442" scaleY="1.442" index="46"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_017_0023">
+      <Frame x="376.20" y="-16.85" scaleX="1.442" scaleY="1.442" index="47"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_018_0023">
+      <Frame x="398.05" y="-16.85" scaleX="1.442" scaleY="1.442" index="48"/>
+      <Frame x="398.05" y="-16.85" scaleX="1.442" scaleY="1.442" index="49"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_019_0023">
+      <Frame x="420.35" y="-16.85" scaleX="1.442" scaleY="1.442" index="50"/>
+      <Frame x="420.35" y="-16.85" scaleX="1.442" scaleY="1.442" index="51"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_020_0023">
+      <Frame x="404.50" y="-16.85" scaleX="1.442" scaleY="1.442" index="52"/>
+      <Frame x="404.50" y="-16.85" scaleX="1.442" scaleY="1.442" index="53"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_021_0023">
+      <Frame x="404.30" y="-13.25" scaleX="1.442" scaleY="1.442" index="54"/>
+      <Frame x="404.30" y="-13.25" scaleX="1.442" scaleY="1.442" index="55"/>
+      <Frame x="404.30" y="-13.25" scaleX="1.442" scaleY="1.442" index="56"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_022_0023">
+      <Frame x="288.45" y="-5.80" scaleX="1.442" scaleY="1.442" index="57"/>
+      <Frame x="288.45" y="-5.80" scaleX="1.442" scaleY="1.442" index="58"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Celray_023_0023">
+      <Frame x="277.00" y="-19.95" scaleX="1.442" scaleY="1.442" index="59"/>
+    </Part>
+  </Animation>
+</Animations>

@@ -1,0 +1,120 @@
+<Animations>
+  <Animation name="GENU_MemoryGame_global_Payoff_Prana_a" frameCount="60">
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_001_0028">
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="0"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="1"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="2"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="3"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="4"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="57"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="58"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="59"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_002_0028">
+      <Frame x="367.15" y="11.65" scaleX="1.002" scaleY="1.002" index="5"/>
+      <Frame x="367.15" y="11.65" scaleX="1.002" scaleY="1.002" index="6"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_003_0028">
+      <Frame x="356.60" y="9.20" scaleX="1.002" scaleY="1.002" index="7"/>
+      <Frame x="356.60" y="9.20" scaleX="1.002" scaleY="1.002" index="8"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_004_0028">
+      <Frame x="355.15" y="9.10" scaleX="1.002" scaleY="1.002" index="9"/>
+      <Frame x="355.15" y="9.10" scaleX="1.002" scaleY="1.002" index="10"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_005_0028">
+      <Frame x="355.10" y="9.60" scaleX="1.002" scaleY="1.002" index="11"/>
+      <Frame x="355.10" y="9.60" scaleX="1.002" scaleY="1.002" index="12"/>
+      <Frame x="355.10" y="9.60" scaleX="1.002" scaleY="1.002" index="13"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_006_0028">
+      <Frame x="348.25" y="-6.30" scaleX="1.002" scaleY="1.002" index="14"/>
+      <Frame x="348.25" y="-6.30" scaleX="1.002" scaleY="1.002" index="15"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_007_0028">
+      <Frame x="354.85" y="4.15" scaleX="1.002" scaleY="1.002" index="16"/>
+      <Frame x="354.85" y="4.15" scaleX="1.002" scaleY="1.002" index="17"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_008_0028">
+      <Frame x="348.70" y="22.55" scaleX="1.002" scaleY="1.002" index="18"/>
+      <Frame x="348.70" y="22.55" scaleX="1.002" scaleY="1.002" index="19"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_009_0028">
+      <Frame x="332.25" y="34.95" scaleX="1.002" scaleY="1.002" index="20"/>
+      <Frame x="332.25" y="34.95" scaleX="1.002" scaleY="1.002" index="21"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_010_0028">
+      <Frame x="332.25" y="39.85" scaleX="1.002" scaleY="1.002" index="22"/>
+      <Frame x="332.25" y="39.85" scaleX="1.002" scaleY="1.002" index="23"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_011_0028">
+      <Frame x="332.25" y="39.85" scaleX="1.002" scaleY="1.002" index="24"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_012_0028">
+      <Frame x="319.00" y="39.85" scaleX="1.002" scaleY="1.002" index="25"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_013_0028">
+      <Frame x="306.50" y="66.90" scaleX="1.002" scaleY="1.002" index="26"/>
+      <Frame x="306.50" y="66.90" scaleX="1.002" scaleY="1.002" index="27"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_014_0028">
+      <Frame x="306.05" y="23.30" scaleX="1.002" scaleY="1.002" index="28"/>
+      <Frame x="306.05" y="23.30" scaleX="1.002" scaleY="1.002" index="29"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_015_0028">
+      <Frame x="325.25" y="9.95" scaleX="1.002" scaleY="1.002" index="30"/>
+      <Frame x="325.25" y="9.95" scaleX="1.002" scaleY="1.002" index="31"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_016_0028">
+      <Frame x="325.80" y="6.75" scaleX="1.002" scaleY="1.002" index="32"/>
+      <Frame x="325.80" y="6.75" scaleX="1.002" scaleY="1.002" index="33"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_017_0028">
+      <Frame x="322.95" y="3.25" scaleX="1.002" scaleY="1.002" index="34"/>
+      <Frame x="322.95" y="3.25" scaleX="1.002" scaleY="1.002" index="35"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_018_0028">
+      <Frame x="323.70" y="3.45" scaleX="1.002" scaleY="1.002" index="36"/>
+      <Frame x="323.70" y="3.45" scaleX="1.002" scaleY="1.002" index="37"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_019_0028">
+      <Frame x="326.85" y="8.95" scaleX="1.002" scaleY="1.002" index="38"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_020_0028">
+      <Frame x="329.10" y="9.30" scaleX="1.002" scaleY="1.002" index="39"/>
+      <Frame x="329.10" y="9.30" scaleX="1.002" scaleY="1.002" index="40"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_021_0028">
+      <Frame x="377.85" y="11.40" scaleX="1.002" scaleY="1.002" index="41"/>
+      <Frame x="377.85" y="11.40" scaleX="1.002" scaleY="1.002" index="42"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_022_0028">
+      <Frame x="368.80" y="8.30" scaleX="1.002" scaleY="1.002" index="43"/>
+      <Frame x="368.80" y="8.30" scaleX="1.002" scaleY="1.002" index="44"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_023_0028">
+      <Frame x="367.70" y="10.60" scaleX="1.002" scaleY="1.002" index="45"/>
+      <Frame x="367.70" y="10.60" scaleX="1.002" scaleY="1.002" index="46"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_024_0028">
+      <Frame x="366.10" y="10.90" scaleX="1.002" scaleY="1.002" index="47"/>
+      <Frame x="366.10" y="10.90" scaleX="1.002" scaleY="1.002" index="52"/>
+      <Frame x="366.10" y="10.90" scaleX="1.002" scaleY="1.002" index="53"/>
+      <Frame x="366.10" y="10.90" scaleX="1.002" scaleY="1.002" index="54"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_025_0028">
+      <Frame x="366.10" y="10.90" scaleX="1.002" scaleY="1.002" index="48"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_026_0028">
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="49"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_027_0028">
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="50"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="51"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Prana_028_0028">
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="55"/>
+      <Frame x="366.85" y="10.75" scaleX="1.002" scaleY="1.002" index="56"/>
+    </Part>
+  </Animation>
+</Animations>

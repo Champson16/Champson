@@ -1,0 +1,107 @@
+<Animations>
+  <Animation name="GENU_MemoryGame_global_Payoff_Nichelle_a" frameCount="61">
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_001_0021">
+      <Frame x="-292.00" y="38.90" index="0"/>
+      <Frame x="-292.00" y="38.90" index="1"/>
+      <Frame x="-292.00" y="38.90" index="2"/>
+      <Frame x="-292.00" y="38.90" index="3"/>
+      <Frame x="-292.00" y="38.90" index="59"/>
+      <Frame x="-292.00" y="38.90" index="60"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_002_0021">
+      <Frame x="-287.00" y="56.75" index="4"/>
+      <Frame x="-287.00" y="56.75" index="5"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_003_0021">
+      <Frame x="-297.55" y="31.35" index="6"/>
+      <Frame x="-297.55" y="31.35" index="7"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_004_0021">
+      <Frame x="-312.40" y="-3.30" index="8"/>
+      <Frame x="-312.40" y="-3.30" index="9"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_005_0021">
+      <Frame x="-291.80" y="6.95" index="10"/>
+      <Frame x="-291.80" y="6.95" index="11"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_006_0021">
+      <Frame x="-295.10" y="6.95" index="12"/>
+      <Frame x="-295.10" y="6.95" index="13"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_007_0021">
+      <Frame x="-294.10" y="6.95" index="14"/>
+      <Frame x="-294.10" y="6.95" index="15"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_008_0021">
+      <Frame x="-293.30" y="6.95" index="16"/>
+      <Frame x="-293.30" y="6.95" index="17"/>
+      <Frame x="-293.30" y="6.95" index="18"/>
+      <Frame x="-293.30" y="6.95" index="19"/>
+      <Frame x="-293.30" y="6.95" index="20"/>
+      <Frame x="-293.30" y="6.95" index="21"/>
+      <Frame x="-293.30" y="6.95" index="22"/>
+      <Frame x="-293.30" y="6.95" index="23"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_009_0021">
+      <Frame x="-283.25" y="36.65" index="24"/>
+      <Frame x="-283.25" y="36.65" index="25"/>
+      <Frame x="-283.25" y="36.65" index="26"/>
+      <Frame x="-283.25" y="36.65" index="27"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_010_0021">
+      <Frame x="-301.75" y="42.80" index="28"/>
+      <Frame x="-301.75" y="42.80" index="29"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_011_0021">
+      <Frame x="-307.00" y="39.90" index="30"/>
+      <Frame x="-307.00" y="39.90" index="31"/>
+      <Frame x="-307.00" y="39.90" index="32"/>
+      <Frame x="-307.00" y="39.90" index="33"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_012_0021">
+      <Frame x="-307.00" y="39.90" index="34"/>
+      <Frame x="-307.00" y="39.90" index="35"/>
+      <Frame x="-307.00" y="39.90" index="36"/>
+      <Frame x="-307.00" y="39.90" index="37"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_013_0021">
+      <Frame x="-306.80" y="50.85" index="38"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_014_0021">
+      <Frame x="-309.85" y="74.10" index="39"/>
+      <Frame x="-309.85" y="74.10" index="40"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_015_0021">
+      <Frame x="-288.30" y="-3.05" index="41"/>
+      <Frame x="-288.30" y="-3.05" index="42"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_016_0021">
+      <Frame x="-293.80" y="-79.60" index="43"/>
+      <Frame x="-293.80" y="-79.60" index="44"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_017_0021">
+      <Frame x="-284.60" y="-76.25" index="45"/>
+      <Frame x="-284.60" y="-76.25" index="46"/>
+      <Frame x="-284.60" y="-76.25" index="47"/>
+      <Frame x="-284.60" y="-76.25" index="48"/>
+      <Frame x="-284.60" y="-76.25" index="49"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_018_0021">
+      <Frame x="-269.75" y="-37.40" index="50"/>
+      <Frame x="-269.75" y="-37.40" index="51"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_019_0021">
+      <Frame x="-332.45" y="64.65" index="52"/>
+      <Frame x="-332.45" y="64.65" index="53"/>
+      <Frame x="-332.45" y="64.65" index="54"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_020_0021">
+      <Frame x="-289.75" y="41.00" index="55"/>
+      <Frame x="-289.75" y="41.00" index="56"/>
+    </Part>
+    <Part name="GENU_MemoryGame_global_Payoff_Nichelle_021_0021">
+      <Frame x="-290.15" y="38.90" index="57"/>
+      <Frame x="-290.15" y="38.90" index="58"/>
+    </Part>
+  </Animation>
+</Animations>

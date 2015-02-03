@@ -1,11 +1,11 @@
 <Animations>
   <Animation name="GENU_Animation_global_TowTruck_idle_b" frameCount="5">
     <Part name="GENU_Animation_en_Fishery_SpeechBubble">
-      <Frame x="-203.00" y="127.00" scaleX="0.799" scaleY="0.799" index="0"/>
-      <Frame x="-203.00" y="127.00" scaleX="0.799" scaleY="0.799" index="1"/>
-      <Frame x="-203.00" y="127.00" scaleX="0.799" scaleY="0.799" index="2"/>
-      <Frame x="-203.00" y="127.00" scaleX="0.799" scaleY="0.799" index="3"/>
-      <Frame x="-203.00" y="127.00" scaleX="0.799" scaleY="0.799" index="4"/>
+      <Frame x="-43.00" y="127.00" scaleX="0.799" scaleY="0.799" index="0"/>
+      <Frame x="-43.00" y="127.00" scaleX="0.799" scaleY="0.799" index="1"/>
+      <Frame x="-43.00" y="127.00" scaleX="0.799" scaleY="0.799" index="2"/>
+      <Frame x="-43.00" y="127.00" scaleX="0.799" scaleY="0.799" index="3"/>
+      <Frame x="-43.00" y="127.00" scaleX="0.799" scaleY="0.799" index="4"/>
     </Part>
   </Animation>
 </Animations>

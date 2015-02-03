@@ -1,155 +1,188 @@
 {
 	"cards": [{
 		"id": "GENU_MemoryGame_global_Tile_Banana",
-		"imageFile": "GENU_MemoryGame_global_Tile_Banana.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Banana.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Banana.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Beef",
-		"imageFile": "GENU_MemoryGame_global_Tile_Beef.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Beef.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Beef.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Billie",
-		"imageFile": "GENU_MemoryGame_global_Tile_Billie.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Billie.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_BillieBeetBox.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Bread",
-		"imageFile": "GENU_MemoryGame_global_Tile_Bread.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Bread.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Bread.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Celery",
-		"imageFile": "GENU_MemoryGame_global_Tile_Celery.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Celery.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Celery2.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Celray",
-		"imageFile": "GENU_MemoryGame_global_Tile_Celray.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Celray.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_CellRay.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Chanel",
-		"imageFile": "GENU_MemoryGame_global_Tile_Chanel.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Chanel.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Chanel.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Chewie",
-		"imageFile": "GENU_MemoryGame_global_Tile_Chewie.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Chewie.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_ChefLouie.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Chicken",
-		"imageFile": "GENU_MemoryGame_global_Tile_Chicken.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Chicken.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Chicken.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Corn",
-		"imageFile": "GENU_MemoryGame_global_Tile_Corn.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Corn.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Corn.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Cucumber",
-		"imageFile": "GENU_MemoryGame_global_Tile_Cucumber.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Cucumber.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Cucumber.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Golly",
-		"imageFile": "GENU_MemoryGame_global_Tile_Golly.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Golly.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Golly.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_KidneyBean",
-		"imageFile": "GENU_MemoryGame_global_Tile_KidneyBean.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_KidneyBean.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Bean.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Kiwi",
-		"imageFile": "GENU_MemoryGame_global_Tile_Kiwi.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Kiwi.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Kiwi.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Lemon",
-		"imageFile": "GENU_MemoryGame_global_Tile_Lemon.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Lemon.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Lemon.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Lime",
-		"imageFile": "GENU_MemoryGame_global_Tile_Lime.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Lime.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Lime.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Macho",
-		"imageFile": "GENU_MemoryGame_global_Tile_Macho.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Macho.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Macho.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Maxwell",
-		"imageFile": "GENU_MemoryGame_global_Tile_Maxwell.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Maxwell.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Maxwell.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Milk",
-		"imageFile": "GENU_MemoryGame_global_Tile_Milk.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Milk.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Milk.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Mushroom",
-		"imageFile": "GENU_MemoryGame_global_Tile_Mushroom.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Mushroom.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Mushroom.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Nichelle",
-		"imageFile": "GENU_MemoryGame_global_Tile_Nichelle.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Nichelle.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Nichelle.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Onion",
-		"imageFile": "GENU_MemoryGame_global_Tile_Onion.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Onion.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Onion.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Orange",
-		"imageFile": "GENU_MemoryGame_global_Tile_Orange.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Orange.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Orange.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Pasta",
-		"imageFile": "GENU_MemoryGame_global_Tile_Pasta.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Pasta.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Pasta.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_PeanutButter",
-		"imageFile": "GENU_MemoryGame_global_Tile_PeanutButter.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_PeanutButter.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_PeanutButter.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Peas",
-		"imageFile": "GENU_MemoryGame_global_Tile_Peas.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Peas.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Peas.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Pomegranate",
-		"imageFile": "GENU_MemoryGame_global_Tile_Pomegranate.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Pomegranate.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Pomegranate.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Prana",
-		"imageFile": "GENU_MemoryGame_global_Tile_Prana.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Prana.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Prana.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_ProfCornicus",
-		"imageFile": "GENU_MemoryGame_global_Tile_ProfCornicus.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_ProfCornicus.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_ProfessorCornicus.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Raspberry",
-		"imageFile": "GENU_MemoryGame_global_Tile_Raspberry.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Raspberry.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Raspberry.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Rice",
-		"imageFile": "GENU_MemoryGame_global_Tile_Rice.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Rice.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Rice.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Strawberry",
-		"imageFile": "GENU_MemoryGame_global_Tile_Strawberry.png"
-	},
-	{
-		"id": "GENU_MemoryGame_global_Tile_SugarHigh",
-		"imageFile": "GENU_MemoryGame_global_Tile_SugarHigh.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Strawberry.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Strawberry.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Tomato",
-		"imageFile": "GENU_MemoryGame_global_Tile_Tomato.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Tomato.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Tomato.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Truce",
-		"imageFile": "GENU_MemoryGame_global_Tile_Truce.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Truce.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Truce.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Water",
-		"imageFile": "GENU_MemoryGame_global_Tile_Water.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Water.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Water.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Watermelon",
-		"imageFile": "GENU_MemoryGame_global_Tile_Watermelon.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Watermelon.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_Watermelon.mp3"
 	},
 	{
 		"id": "GENU_MemoryGame_global_Tile_Wrapper",
-		"imageFile": "GENU_MemoryGame_global_Tile_Wrapper.png"
+		"imageFile": "GENU_MemoryGame_global_Tile_Wrapper.png",
+		"audioFile": "GENU_MemoryGame_en_Tile_CandyWrapper.mp3"
 	}
 	]
 }

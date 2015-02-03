@@ -1,5 +1,6 @@
 local ui = require('FRC_Modules.FRC_UI.FRC_UI');
 local storyboard = require('storyboard');
+local FRC_DataLib = require('FRC_Modules.FRC_DataLib.FRC_DataLib');
 local FRC_Layout = require('FRC_Modules.FRC_Layout.FRC_Layout');
 local FRC_MemoryGame = require('FRC_Modules.FRC_MemoryGame.FRC_MemoryGame');
 local FRC_MemoryGame_Settings = require('FRC_Modules.FRC_MemoryGame.FRC_MemoryGame_Settings');
@@ -8,11 +9,17 @@ local FRC_ActionBar = require('FRC_Modules.FRC_ActionBar.FRC_ActionBar');
 local FRC_SettingsBar = require('FRC_Modules.FRC_SettingsBar.FRC_SettingsBar');
 local FRC_AppSettings = require('FRC_Modules.FRC_AppSettings.FRC_AppSettings');
 local FRC_AudioManager = require('FRC_Modules.FRC_AudioManager.FRC_AudioManager');
+local FRC_AnimationManager = require('FRC_Modules.FRC_AnimationManager.FRC_AnimationManager');
+
+local animationXMLBase = 'FRC_Assets/GENU_Assets/Animation/XMLData/';
+local animationImageBase = 'FRC_Assets/GENU_Assets/Animation/Images/';
+local gameoverAnimationSequence = {};
 
 local scene = storyboard.newScene();
 local triesVisible = true;
 local restartNextGame = false;
 local lastGame = nil;
+local math_random = math.random;
 
 local goldenCockerel = native.systemFontBold; --"Golden Cockerel ITC Std";
 if (system.getInfo("platformName") == "Android") then
@@ -21,14 +28,30 @@ end
 
 local imageBase = 'FRC_Assets/GENU_Assets/Images/';
 
+-- preload memory game "game over" animations
+local gameOverAnimations = FRC_DataLib.readJSON(FRC_MemoryGame_Settings.DATA.GAMEOVER_ANIMATIONS).gameoveranimations;
+-- DEBUG:
+-- print("gameOverAnimations ", gameOverAnimations);
+-- print("first id ", gameOverAnimations[1].id);
+
 -- preload memory game audios
 local memoryEncouragementAudioPaths = {
 	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Amazing.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Astounding.mp3',
 	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Awesome.mp3',
-	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_GoodJob.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Congratulations.mp3',
 	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_GreatJob.mp3',
-	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_IKnewYouCouldDoIt.mp3',
-	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_YayYouDidIt.mp3'
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Groovy.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_NiceJob1.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_NiceJob2.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Outstanding.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Spectacular.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Stupendous.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Super.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Sweet.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Terrific.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_Yay.mp3',
+	'FRC_Assets/FRC_MemoryGame/Audio/GENU_en_VO_MemoryGameEncouragements_YouDidIt.mp3'
 };
 
 local memoryEncouragements = FRC_AudioManager:newGroup({
@@ -43,12 +66,19 @@ local memorySFX = FRC_AudioManager:newGroup({
 	maxChannels = FRC_AppSettings.get("MAX_SFX_CHANNELS")
 });
 
+local cardflipSFX = FRC_AudioManager:newGroup({
+	name = "cardflip_sfx",
+	startChannel = FRC_AppSettings.get("SFX_CHANNEL") + FRC_AppSettings.get("MAX_SFX_CHANNELS") + 1,
+	maxChannels = 1
+});
+
 for i=1,#memoryEncouragementAudioPaths do
 	FRC_AudioManager:newHandle({
 		path = memoryEncouragementAudioPaths[i],
 		group = memoryEncouragements
 	});
 end
+
 
 local function beginNewGame(event)
 	local scene = event.target;
@@ -81,6 +111,9 @@ local function beginNewGame(event)
 		-- enabled the Tries settings button
 		scene.settingsBarMenu.menuItems[3]:setDisabledState(false);
 		scene.settingsBarMenu.menuItems[3]:setFocusState(true);
+	else
+		scene.settingsBarMenu.menuItems[3]:setDisabledState(false);
+		scene.settingsBarMenu.menuItems[3]:setFocusState(false);
 	end
 end
 
@@ -112,20 +145,97 @@ local function showDifficultyChooser(event)
 	chooser.y = display.contentCenterY;
 end
 
+-- the module FRC_MemoryGame has dispatched a game over event
+-- we need to present the end of game payoff
 local function onMemoryGameOver(event)
-	if (memoryEncouragements and not scene.chooser) then
+	local view = event.target.view;
+	-- if there are animations, we will present the modern approach
+	-- DEBUG:
+	print("onMemoryGameOver event picked up!");
+	if (gameOverAnimations) then --  and not scene.chooser) then
 		-- DEBUG:
-		print("onMemoryGameOver start");
-		memoryEncouragements:playRandom({ onComplete=function()
-		  -- restartNextGame = false;
-			-- DEBUG:
-			print("onMemoryGameOver onComplete");
-			showDifficultyChooser(event);
-		end });
+		print("playing game over animation");
+		-- pick one of the animations randomly
+		local anim = gameOverAnimations[math_random(1, #gameOverAnimations)];
+		-- DEBUG:
+		-- local anim = gameOverAnimations[#gameOverAnimations];
+		print(anim.id);
+		-- print(anim.animationFiles);
+		-- preload the animation data (XML and images) early
+		gameOverAnimationSequence = FRC_AnimationManager.createAnimationClipGroup(anim.animationFiles, animationXMLBase, animationImageBase);
+		FRC_Layout.scaleToFit(gameOverAnimationSequence);
+		view:insert(gameOverAnimationSequence);
+		-- now let's animate everything!
+		if gameOverAnimationSequence then
+			for i=1, gameOverAnimationSequence.numChildren do
+				gameOverAnimationSequence[i]:play({
+					showLastFrame = true,
+					playBackward = false,
+					autoLoop = false,
+					palindromicLoop = false,
+					delay = 3,
+					intervalTime = 30,
+					maxIterations = 1
+				});
+			end
+		end
+		-- play a random encouragement audio
+		if memoryEncouragements then
+			memoryEncouragements:playRandom();
+		end
+		-- create a new display group with everything we need
+		local bgGroup = display.newGroup();
+		bgGroup.anchorChildren = false;
+		bgGroup.anchorX = 0.5;
+		bgGroup.anchorY = 0.5;
+
+		bgGroup.x = display.contentCenterX;
+		bgGroup.y = display.contentCenterY;
+		view:insert(bgGroup);
+
+		-- put the OK button up
+		-- lay in all of the map overlay buttons
+		local moduleCloseButton = ui.button.new({
+			imageUp = imageBase .. 'GENU_Button_global_Ok_up.png',
+			imageDown = imageBase .. 'GENU_Button_global_Ok_down.png',
+			width = 213,
+			height = 74,
+			x = 896 - 576;
+			y = 678 - 384;
+			onRelease = function()
+				bgGroup:removeSelf();
+				-- dispose of game over animations
+				if (gameOverAnimationSequence and gameOverAnimationSequence.numChildren) then
+					for i=1, gameOverAnimationSequence.numChildren do
+						local anim = gameOverAnimationSequence[i];
+						if (anim) then
+							anim.dispose();
+						end
+					end
+					gameOverAnimationSequence = nil;
+				end
+				showDifficultyChooser(event);
+			end
+		});
+		moduleCloseButton.anchorX = 0.5;
+		moduleCloseButton.anchorY = 0.5;
+		bgGroup:insert(moduleCloseButton);
 	else
-		-- DEBUG
-		print("WARNING: Memory game is missing encouragement audio!");
-		showDifficultyChooser(event);
+		-- this is the older approach which just plays encouragement audio and then redisplays the chooser for a new game
+		if (memoryEncouragements and not scene.chooser) then
+			-- DEBUG:
+			print("onMemoryGameOver start");
+			memoryEncouragements:playRandom({ onComplete=function()
+			  -- restartNextGame = false;
+				-- DEBUG:
+				print("onMemoryGameOver onComplete");
+				showDifficultyChooser(event);
+			end });
+		else
+			-- DEBUG
+			print("WARNING: Memory game is missing encouragement audio!");
+			showDifficultyChooser(event);
+		end
 	end
 end
 
@@ -339,6 +449,16 @@ function scene.enterScene(self, event)
 end
 
 function scene.exitScene(self, event)
+	-- dispose of game over animations
+	if (gameOverAnimationSequence and gameOverAnimationSequence.numChildren) then
+		for i=1, gameOverAnimationSequence.numChildren do
+			local anim = gameOverAnimationSequence[i];
+			if (anim) then
+				anim.dispose();
+			end
+		end
+		gameOverAnimationSequence = nil;
+	end
 
 	-- dispose of audios
 	local sfx = FRC_AudioManager:findGroup("memory_sfx");
@@ -351,7 +471,11 @@ function scene.exitScene(self, event)
 		enc:stop();
 		enc:dispose();
 	end
-
+	local csfx = FRC_AudioManager:findGroup("cardflip_sfx");
+	if csfx then
+		csfx:stop();
+		csfx:dispose();
+	end
 	if (scene.game) then
 		scene.game:dispose();
 		scene.game = nil;

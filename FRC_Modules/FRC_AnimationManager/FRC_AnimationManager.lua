@@ -886,7 +886,7 @@ FRC_AnimationManager.createAnimationClipGroup = function(inputFiles, baseXMLDir,
         preexistingFile, err = io.open(path,"r");
 
         if (preexistingFile and not err) then
-          io.close(preexistingFile);
+          -- io.close(preexistingFile);
           if (appLUApath) then
             -- read Lua table via require
             local appLUAFilename = string.gsub( string.gsub(baseXMLDir .. XMLLUAfilename, "/", "."), ".lua", "");
@@ -923,10 +923,11 @@ FRC_AnimationManager.createAnimationClipGroup = function(inputFiles, baseXMLDir,
             -- table.dump(dataToSave);
             print("FRC Generating LUA file");
             newLuaFile, err = io.open(path,"w");
-            newLuaFile:write( dataToSave );
+            if newLuaFile then newLuaFile:write( dataToSave ); end
             io.close(newLuaFile);
           end
         end
+        io.close(preexistingFile);
       else
         xmltable = FRC_AnimationManager.loadXMLData( XMLfilepath );
         if (system.getInfo("environment") == "simulator") then
@@ -935,7 +936,7 @@ FRC_AnimationManager.createAnimationClipGroup = function(inputFiles, baseXMLDir,
           -- DEBUG:
           table.dump(dataToSave);
           newLuaFile, err = io.open(docLUApath,"w");
-          newLuaFile:write( dataToSave );
+          if newLuaFile then newLuaFile:write( dataToSave ); end
           io.close(newLuaFile);
         end
       end

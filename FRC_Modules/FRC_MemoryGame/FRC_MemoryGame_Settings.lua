@@ -18,7 +18,8 @@ FRC_MemoryGame_Settings.UI = {
 
 FRC_MemoryGame_Settings.DATA = {
 	CARDS = "FRC_Assets/FRC_MemoryGame/Data/FRC_MemoryGame_Cards.json",
-	CHOOSER_BUTTONS = "FRC_Assets/FRC_MemoryGame/Data/FRC_MemoryGame_DifficultyButtons.json"
+	CHOOSER_BUTTONS = "FRC_Assets/FRC_MemoryGame/Data/FRC_MemoryGame_DifficultyButtons.json",
+	GAMEOVER_ANIMATIONS = "FRC_Assets/FRC_MemoryGame/Data/FRC_MemoryGame_GameoverAnimations.json",
 };
 
 return FRC_MemoryGame_Settings;

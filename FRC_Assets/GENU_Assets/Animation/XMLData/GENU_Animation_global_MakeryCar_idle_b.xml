@@ -1,11 +1,11 @@
 <Animations>
   <Animation name="GENU_Animation_global_MakeryCar_idle_b" frameCount="5">
     <Part name="GENU_Animation_global_Makery_SpeechBubble">
-      <Frame x="-99.10" y="22.35" scaleX="0.799" scaleY="0.799" index="0"/>
-      <Frame x="-99.10" y="22.35" scaleX="0.799" scaleY="0.799" index="1"/>
-      <Frame x="-99.10" y="22.35" scaleX="0.799" scaleY="0.799" index="2"/>
-      <Frame x="-99.10" y="22.35" scaleX="0.799" scaleY="0.799" index="3"/>
-      <Frame x="-99.10" y="22.35" scaleX="0.799" scaleY="0.799" index="4"/>
+      <Frame x="-171.40" y="159.45" scaleX="0.799" scaleY="0.799" index="0"/>
+      <Frame x="-171.40" y="159.45" scaleX="0.799" scaleY="0.799" index="1"/>
+      <Frame x="-171.40" y="159.45" scaleX="0.799" scaleY="0.799" index="2"/>
+      <Frame x="-171.40" y="159.45" scaleX="0.799" scaleY="0.799" index="3"/>
+      <Frame x="-171.40" y="159.45" scaleX="0.799" scaleY="0.799" index="4"/>
     </Part>
   </Animation>
 </Animations>

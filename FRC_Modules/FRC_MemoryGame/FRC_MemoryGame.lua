@@ -46,6 +46,16 @@ local function onCardFlippedToFront(event)
 		end
 
 		self.flippedCardCount = self.flippedCardCount + 1;
+
+    -- play the flip SFX
+    --[[ local sfxSound = FRC_AudioManager:findGroup("memory_sfx");
+    if sfxSound then
+      sfxSound:play(self.flippedCardSound);
+    end
+    --]]
+    -- DEBUG:
+    print("Playing Card Flip sound: ", self.flippedCardSound.name);
+    self.flippedCardSound:play();
 		return true;
 
 	elseif (event.phase == "ended") then
@@ -152,6 +162,8 @@ local function dispose(self)
 	self:removeEventListener('cardDisappear', onCardDisappear);
 
 	self.loadedAudio = nil;
+  self.flippedCardSound:dispose();
+  self.flippedCardSound = nil;
 
 	for i=self.numChildren,1,-1 do
 		if (self[i].dispose) then
@@ -185,7 +197,7 @@ FRC_MemoryGame.new = function(scene, columns, rows)
 	local gameGroup = display.newGroup();
 	local x, y = 0, 0;
 
-	-- preload all audios
+	-- preload all card specific audios
 	gameGroup.loadedAudio = {};
 	for i=1,#cardData do
     if cardData[i].audioFile then
@@ -211,6 +223,13 @@ FRC_MemoryGame.new = function(scene, columns, rows)
 			y = y + FRC_MemoryGame_Settings.UI.CARD_HEIGHT + FRC_MemoryGame_Settings.UI.CARD_PADDING_Y;
 		end
 	end
+
+  -- add in flip sound
+  gameGroup.flippedCardSound = FRC_AudioManager:newHandle({
+    name = "cardFlipSFX",
+    path = "FRC_Assets/FRC_MemoryGame/Audio/GENU_MemoryGame_en_Tile_Flip.mp3",
+    group = "cardflip_sfx"
+  });
 
 	-- properties and methods
 	gameGroup.scene = scene;

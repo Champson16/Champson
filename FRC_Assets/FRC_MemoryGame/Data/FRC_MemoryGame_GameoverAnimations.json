@@ -1,0 +1,93 @@
+{
+	"gameoveranimations":
+	[
+		{
+			"id": "Billy",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Billy_c.xml",
+				"GENU_MemoryGame_global_Payoff_Billy_b.xml",
+				"GENU_MemoryGame_global_Payoff_Billy_a.xml"
+				],
+		},
+		{
+			"id": "Celray",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Celray_c.xml",
+				"GENU_MemoryGame_global_Payoff_Celray_b.xml",
+				"GENU_MemoryGame_global_Payoff_Celray_a.xml"
+				],
+		},
+		{
+			"id": "Chanel",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Chanel_c.xml",
+				"GENU_MemoryGame_global_Payoff_Chanel_b.xml",
+				"GENU_MemoryGame_global_Payoff_Chanel_a.xml"
+			],
+		},
+		{
+			"id": "Chewie",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Chewie_c.xml",
+				"GENU_MemoryGame_global_Payoff_Chewie_b.xml",
+				"GENU_MemoryGame_global_Payoff_Chewie_a.xml"
+			],
+		},
+		{
+			"id": "Golly",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Golly_c.xml",
+				"GENU_MemoryGame_global_Payoff_Golly_b.xml",
+				"GENU_MemoryGame_global_Payoff_Golly_a.xml"
+			],
+		},
+		{
+			"id": "Macho",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Macho_c.xml",
+				"GENU_MemoryGame_global_Payoff_Macho_b.xml",
+				"GENU_MemoryGame_global_Payoff_Macho_a.xml"
+			],
+		},
+		{
+			"id": "Maxwell",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Maxwell_c.xml",
+				"GENU_MemoryGame_global_Payoff_Maxwell_b.xml",
+				"GENU_MemoryGame_global_Payoff_Maxwell_a.xml"
+			],
+		},
+		{
+			"id": "Nichelle",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Nichelle_c.xml",
+				"GENU_MemoryGame_global_Payoff_Nichelle_b.xml",
+				"GENU_MemoryGame_global_Payoff_Nichelle_a.xml"
+			],
+		},
+		{
+			"id": "Prana",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Prana_c.xml",
+				"GENU_MemoryGame_global_Payoff_Prana_b.xml",
+				"GENU_MemoryGame_global_Payoff_Prana_a.xml"
+			],
+		},
+		{
+			"id": "Truce",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Truce_c.xml",
+				"GENU_MemoryGame_global_Payoff_Truce_b.xml",
+				"GENU_MemoryGame_global_Payoff_Truce_a.xml"
+			],
+		},
+		{
+			"id": "Wrapper",
+			"animationFiles": [
+				"GENU_MemoryGame_global_Payoff_Wrapper_c.xml",
+				"GENU_MemoryGame_global_Payoff_Wrapper_b.xml",
+				"GENU_MemoryGame_global_Payoff_Wrapper_a.xml"
+			],
+		}
+	]
+}
