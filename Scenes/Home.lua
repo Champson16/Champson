@@ -88,7 +88,7 @@ function scene.stopThemeMusic(self)
 		-- find the current theme music
 		local themeMusic = ambientMusic:findHandle(scene.currentThemeMusic);
 		if (themeMusic and themeMusic:isPlaying()) then
-			ambientMusic:stop();
+			ambientMusic:pause();
 		end
 	end
 end
@@ -575,6 +575,7 @@ function scene.createScene(self, event)
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
+			scene.stopThemeMusic();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
 			storyboard.gotoScene('Scenes.MemoryGame', { effect="crossFade", time="250" });
 		end

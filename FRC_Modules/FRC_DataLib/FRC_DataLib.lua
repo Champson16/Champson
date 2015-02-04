@@ -7,7 +7,6 @@ FRC_DataLib.readFile = function(filename, baseDirectory)
 	if (not path) then return false; end
 	local file = io.open(path, 'r');
 	if (not file) then
-		io.close( file );
 		return false;
 	end
 	local data = file:read('*a');
@@ -21,7 +20,6 @@ FRC_DataLib.saveFile = function(filename, saveData, baseDirectory)
 	if (not path) then return false; end
 	local file = io.open(path, "w")
 	if (not file) then
-		io.close( file );
 		return false;
 	end
 	file:write(saveData)
@@ -50,7 +48,6 @@ function FRC_DataLib.saveTable(t, filename)
 		io.close( file );
 		return true;
 	else
-		io.close( file );
 		return false;
 	end
 end
@@ -69,7 +66,6 @@ function FRC_DataLib.loadTable(filename, baseDirectory)
 		io.close( file );
 		return myTable;
 	end
-	io.close( file );
 	print(filename, "file not found");
 	return nil;
 end
