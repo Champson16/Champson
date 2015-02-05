@@ -58,28 +58,6 @@
 			}
 		},
 		{
-			"name": "PolkaDots",
-			"image": "GENU_JigsawPuzzle_Game_en_EffectPolkaDot.png",
-			"width": 282,
-			"height": 95,
-			"filter": "filter.polkaDots",
-			"filterProperties": {
-				"numPixels": 32,
-				"dotRadius": 1,
-				"aspectRatio": 1.25
-			}
-		},
-		{
-			"name": "Sepia",
-			"image": "GENU_JigsawPuzzle_Game_en_EffectVintage.png",
-			"width": 282,
-			"height": 95,
-			"filter": "filter.sepia",
-			"filterProperties": {
-				"intensity": 1
-			}
-		},
-		{
 			"name": "Wobble",
 			"image": "GENU_JigsawPuzzle_Game_en_EffectWobble.png",
 			"width": 282,
@@ -91,25 +69,13 @@
 			}
 		},
 		{
-			"name": "Swirl",
-			"image": "GENU_JigsawPuzzle_Game_en_EffectSwirl.png",
+			"name": "Sepia",
+			"image": "GENU_JigsawPuzzle_Game_en_EffectVintage.png",
 			"width": 282,
 			"height": 95,
-			"filter": "filter.swirl",
+			"filter": "filter.sepia",
 			"filterProperties": {
-				"swirlInOut": true,
-				"intensity": 0.4
-			}
-		},
-		{
-			"name": "Scatter",
-			"image": "GENU_JigsawPuzzle_Game_en_EffectScatter.png",
-			"width": 282,
-			"height": 95,
-			"filter": "filter.scatter",
-			"filterProperties": {
-				"zoomInOut": true,
-				"intensity": 0.3
+				"intensity": 1
 			}
 		}
 		]

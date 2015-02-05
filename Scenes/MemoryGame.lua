@@ -149,6 +149,7 @@ end
 -- we need to present the end of game payoff
 local function onMemoryGameOver(event)
 	local view = event.target.view;
+	restartNextGame = false;
 	-- if there are animations, we will present the modern approach
 	-- DEBUG:
 	print("onMemoryGameOver event picked up!");
@@ -181,6 +182,8 @@ local function onMemoryGameOver(event)
 		end
 		-- play a random encouragement audio
 		if memoryEncouragements then
+			-- DEBUG:
+			print("playing random memory game over sound");
 			memoryEncouragements:playRandom();
 		end
 		-- create a new display group with everything we need
@@ -335,7 +338,17 @@ function scene.createScene(self, event)
 				onRelease = function()
 					-- restart memory game
 					restartNextGame = true;
-					storyboard.gotoScene('Scenes.MemoryGame', { useLoader=true });
+					-- storyboard.gotoScene('Scenes.MemoryGame', { useLoader=true });
+					if (scene.triesText) and (scene.triesText.removeSelf) then
+						scene.triesText:removeSelf();
+						scene.triesText = nil;
+					else
+						scene.triesText = nil;
+					end
+					scene.game:dispose();
+					scene.game = nil;
+					lastGame.target = scene;
+					beginNewGame(lastGame);
 				end
 			},
 			{

@@ -161,6 +161,13 @@ local function dispose(self)
 	self:removeEventListener('cardFlipToBack', onCardFlippedToBack);
 	self:removeEventListener('cardDisappear', onCardDisappear);
 
+  if gameGroup then
+    for i=1,#gameGroup.loadedAudio do
+      if gameGroup.loadedAudio[i] then
+        gameGroup.loadedAudio[i]:dispose();
+      end
+    end
+  end
 	self.loadedAudio = nil;
   self.flippedCardSound:dispose();
   self.flippedCardSound = nil;
@@ -208,6 +215,7 @@ FRC_MemoryGame.new = function(scene, columns, rows)
     end
 	end
 
+  -- lay the cards out on the screen
 	for i=1,#FRC_MemoryGame.cardsInPlay do
 		local card = FRC_MemoryGame_Card.new(gameGroup, FRC_MemoryGame.cardsInPlay[i].id, FRC_MemoryGame_Settings.UI.IMAGE_BASE_PATH .. FRC_MemoryGame.cardsInPlay[i].imageFile, x, y);
 		card.rotation = math.random(-2, 2);
@@ -225,11 +233,20 @@ FRC_MemoryGame.new = function(scene, columns, rows)
 	end
 
   -- add in flip sound
-  gameGroup.flippedCardSound = FRC_AudioManager:newHandle({
-    name = "cardFlipSFX",
-    path = "FRC_Assets/FRC_MemoryGame/Audio/GENU_MemoryGame_en_Tile_Flip.mp3",
-    group = "cardflip_sfx"
-  });
+  local flipSoundGroup = FRC_AudioManager:findGroup("cardflip_sfx");
+  local flipSound;
+  if flipSoundGroup then
+    flipSound = flipSoundGroup:findHandle("cardFlipSFX");
+  end
+  if flipSound then
+    gameGroup.flippedCardSound = flipSound;
+  else
+    gameGroup.flippedCardSound = FRC_AudioManager:newHandle({
+      name = "cardFlipSFX",
+      path = "FRC_Assets/FRC_MemoryGame/Audio/GENU_MemoryGame_en_Tile_Flip.mp3",
+      group = "cardflip_sfx"
+    });
+  end
 
 	-- properties and methods
 	gameGroup.scene = scene;

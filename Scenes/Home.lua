@@ -110,8 +110,9 @@ function scene.createScene(self, event)
 	-- set up the display of the background image and logo
 	local bgGroup = display.newGroup();
 	bgGroup.anchorChildren = false;
-	bgGroup.anchorX = 0.5;
-	bgGroup.anchorY = 0.5;
+	FRC_Layout.scaleToFit(bgGroup);
+	-- bgGroup.anchorX = 0.5;
+	-- bgGroup.anchorY = 0.5;
 
 	local function calculateDelta( previousTouches, event )
 
@@ -320,8 +321,8 @@ function scene.createScene(self, event)
 	local bgImage = display.newImageRect(imageBase .. 'GENU_Home_LandingPage_Background.png', 1152, 768);
 	bgGroup:insert(bgImage);
 	-- bgImage.alpha = 0;
-	FRC_Layout.scaleToFit(bgImage);
-	bgImage.x, bgImage.y = 0, 0;
+	-- FRC_Layout.scaleToFit(bgImage);
+	-- bgImage.x, bgImage.y = 0, 0;
 
 	-- transArray[ #transArray + 1 ] = transition.to( bgImage, { delay = 0, time = 300, alpha = 1, transition = easing.inOutQuad});
 	-- setup the logo animation
@@ -357,8 +358,8 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_down.png',
 		width = 434,
 		height = 179,
-		-- x = 0;
-		-- y = -230;
+		x = 0;
+		y = -230;
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
@@ -366,13 +367,12 @@ function scene.createScene(self, event)
 			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Fishery'); end, 1);
 		end
 	});
+	bgGroup:insert(fisheryButton);
 	fisheryButton.anchorX = 0.5; -- 0.5;
 	fisheryButton.anchorY = 0.5; -- 0.5;
 	-- create and assign the mask
 	local fisheryButtonMask = graphics.newMask(imageBase .. 'GENU_LandingPage_NavigationButton_TheFishery_mask.png');
 	fisheryButton:setMask(fisheryButtonMask);
-	bgGroup:insert(fisheryButton);
-	FRC_Layout.scaleToFit(fisheryButton, 0, -230);
 
 	local makeryButton = ui.button.new({
 		imageUp = imageBase .. 'GENU_LandingPage_NavigationButton_TheMakery_up.png',

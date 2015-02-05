@@ -5,6 +5,7 @@ local FRC_ActionBar = require('FRC_Modules.FRC_ActionBar.FRC_ActionBar');
 local FRC_SettingsBar = require('FRC_Modules.FRC_SettingsBar.FRC_SettingsBar');
 local FRC_AudioManager = require('FRC_Modules.FRC_AudioManager.FRC_AudioManager');
 local FRC_AppSettings = require('FRC_Modules.FRC_AppSettings.FRC_AppSettings');
+local FRC_Video = require('FRC_Modules.FRC_Video.FRC_Video');
 local math_random = math.random;
 
 local scene = storyboard.newScene();
@@ -23,6 +24,8 @@ function scene.createScene(self, event)
 	local auditoriumButton, auditoriumBackground, auditoriumVideoButton; -- forward declarations
 	local libraryButton, libraryBackground, appInfoButton, brandButton, castButton; -- forward declarations
 
+	local videoPlayer;
+
 	function swingButtonLeft( button )
 		transArray[ #transArray + 1] = transition.to( button, { time = 1200 + math.random(1,800), rotation = 10, transition = easing.inOutQuad, onComplete = function() swingButtonRight( button ) end } )
 	end
@@ -33,13 +36,14 @@ function scene.createScene(self, event)
 
 	local bg = display.newGroup();
 	bg.anchorChildren = false;
-	bg.anchorX = 0.5;
-	bg.anchorY = 0.5;
+	FRC_Layout.scaleToFit(bg);
+	-- bg.anchorX = 0.5;
+	-- bg.anchorY = 0.5;
 
 	local bgImage = display.newImageRect(imageBase .. 'GENU_MainBuilding_en_Background.png', 1152, 768);
 	bg:insert(bgImage);
+	-- FRC_Layout.scaleToFit(bgImage);
 
-	FRC_Layout.scaleToFit(bgImage);
 	bgImage.x, bgImage.y = 0, 0;
 
 	-- bg.xScale = screenW / display.contentWidth;
@@ -49,70 +53,51 @@ function scene.createScene(self, event)
 	bg.x = display.contentCenterX;
 	bg.y = display.contentCenterY;
 
-	function playAuditoriumVideo()
-		local deviceWidth = ( display.contentWidth - (display.screenOriginX * 2) ) / display.contentScaleX;
-		local scaleFactor = math.floor( deviceWidth / display.contentWidth );
-		local videoDidPlay = false;
-		local videoFile, learnVideo, videoDuration, onComplete;
-		local videoBg = display.newRect(0, 0, screenW, screenH);
-		videoBg:setFillColor(0, 0, 0, 1.0);
-		videoBg.x, videoBg.y = display.contentCenterX, display.contentCenterY;
-		--videoBg:addEventListener('tap', function() return true; end);
-		videoBg:addEventListener('touch', function()
-			videoDidPlay = true;
-			onComplete();
-			return true;
-		end
-		);
-
-		if (_G.ANDROID_DEVICE) then
-			videoFile = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_SD.mp4';
-			videoDuration = 62000;
-		else
-			if scaleFactor == 2 then
-				videoFile = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_HD.mp4';
-				videoDuration = 62000;
-			else
-				videoFile = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_SD.mp4';
-				videoDuration = 62000;
-			end
-		end
-		onComplete = function(event)
-			-- audio.stop(1); -- ??
-			if (FRC_AppSettings.get("ambientSoundOn")) then
-				FRC_AudioManager:findGroup("ambientMusic"):resume();
-			end
-			if (videoBg) then
-				videoBg:removeSelf();
-				videoBg = nil;
-			end
-			if (learnVideo) then
-				learnVideo:pause();
-				learnVideo:removeSelf();
-				learnVideo = nil;
-			end
-		end
+	function videoPlaybackComplete(event)
 		if (FRC_AppSettings.get("ambientSoundOn")) then
-			FRC_AudioManager:findGroup("ambientMusic"):pause();
+			FRC_AudioManager:findGroup("ambientMusic"):resume();
 		end
-		--media.playVideo(videoFile, true, onComplete);
-
-    -- skip the video if we are on the Simulator
-		if (system.getInfo("environment") == "simulator") then
-			onComplete();
+		if (videoPlayer) then
+			videoPlayer:removeSelf();
+			videoPlayer = nil;
 		end
+		return true
+	end
 
-		learnVideo = native.newVideo(0, 0, screenW, screenH);
-		learnVideo.x = display.contentWidth * 0.5;
-		learnVideo.y = display.contentHeight * 0.5;
-		learnVideo:addEventListener("video", function(event)
-			if (event.phase == "ready") and (not videoDidPlay) then
-				videoDidPlay = true;
-				learnVideo:play();
-				timer.performWithDelay(videoDuration, onComplete, 1);
-			end
-			end);
-			learnVideo:load(videoFile);
+	function playGerardVideo()
+		local videoData = {
+		HD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_HD.mp4',
+		HD_VIDEO_SIZE = { width = 1024, height = 768 },
+		SD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_SD.mp4',
+		SD_VIDEO_SIZE = { width = 512, height = 384 },
+		VIDEO_SCALE = 'LETTERBOX',
+		VIDEO_LENGTH = 62000 };
+
+		videoPlayer = FRC_Video.new(view, videoData);
+		if videoPlayer then
+			videoPlayer:addEventListener('videoComplete', videoPlaybackComplete );
+		else
+			-- this will fire because we are running in the Simulator and the video playback ends before it begins!
+			videoPlaybackComplete();
+		end
+	end
+
+	function playUofChewVideo()
+		local videoData = {
+		HD_VIDEO_PATH = videoBase .. 'GENU_Auditorium_IntroAnim_HD.m4v',
+		HD_VIDEO_SIZE = { width = 1024, height = 768 },
+		SD_VIDEO_PATH = videoBase .. 'GENU_Auditorium_IntroAnim_SD.m4v',
+		SD_VIDEO_SIZE = { width = 512, height = 384 },
+		VIDEO_SCALE = 'LETTERBOX',
+		VIDEO_LENGTH = 30367 };
+
+		videoPlayer = FRC_Video.new(view, videoData);
+		if videoPlayer then
+			videoPlayer:addEventListener('videoComplete', videoPlaybackComplete );
+		else
+			-- this will fire because we are running in the Simulator and the video playback ends before it begins!
+			videoPlaybackComplete();
+		end
 	end
 
 	auditoriumButton = ui.button.new({
@@ -121,11 +106,12 @@ function scene.createScene(self, event)
 		width = 301,
 		height = 371,
 		x = 524 - 576,
-		y = 307 - 368,
+		y = 293 - 368,
 		onRelease = function()
 			-- we need to cover the screen with a background, new video playback buttons and then respond to the button
 			auditoriumBackground.alpha = 1; -- show it
-			auditoriumVideoButton.alpha = 1;
+			gerardVideoButton.alpha = 1;
+			uOfChewVideoButton.alpha = 1;
 		end
 	});
 	auditoriumButton.anchorX = 0.5;
@@ -138,7 +124,7 @@ function scene.createScene(self, event)
 		width = 295,
 		height = 328,
 		x = 798 - 576,
-		y = 324 - 368,
+		y = 310 - 368,
 		onRelease = function()
 			libraryBackground.alpha = 1; -- show it
 			uOfChewCastButton.alpha = 1;
@@ -151,30 +137,46 @@ function scene.createScene(self, event)
 
 	auditoriumBackground = display.newImageRect(imageBase .. 'GENU_Theater_global_TheaterBackground.png', 1152, 768);
 	bg:insert(auditoriumBackground);
-	FRC_Layout.scaleToFit(auditoriumBackground);
+	-- FRC_Layout.scaleToFit(auditoriumBackground);
 	auditoriumBackground.x, auditoriumBackground.y = 0, 0;
 	auditoriumBackground.alpha = 0; -- hide this by default
 
-	auditoriumVideoButton = ui.button.new({
-		imageUp = imageBase .. 'GENU_Theater_global_TheaterPlayPreview_up.png',
-		imageDown = imageBase .. 'GENU_Theater_global_TheaterPlayPreview_down.png',
-		width = 844,
-		height = 528,
-		x = 1,
-		y = 330 - 368,
+	gerardVideoButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_Theater_global_GerardPreview_up.png',
+		imageDown = imageBase .. 'GENU_Theater_global_GerardPreview_down.png',
+		width = 409,
+		height = 235,
+		x = 364 - 576,
+		y = 363 - 368,
 		onRelease = function()
-			playAuditoriumVideo();
+			playGerardVideo();
 		end
 	});
-	auditoriumVideoButton.alpha = 0; -- hide this by default
-	auditoriumVideoButton.anchorX = 0.5;
-	auditoriumVideoButton.anchorY = 0.5;
-	bg:insert(auditoriumVideoButton);
+	gerardVideoButton.alpha = 0; -- hide this by default
+	gerardVideoButton.anchorX = 0.5;
+	gerardVideoButton.anchorY = 0.5;
+	bg:insert(gerardVideoButton);
+
+	uOfChewVideoButton = ui.button.new({
+		imageUp = imageBase .. 'GENU_Theater_global_IntroPreview_up.png',
+		imageDown = imageBase .. 'GENU_Theater_global_IntroPreview_down.png',
+		width = 408,
+		height = 235,
+		x = 787 - 576,
+		y = 363 - 368,
+		onRelease = function()
+			playUofChewVideo();
+		end
+	});
+	uOfChewVideoButton.alpha = 0; -- hide this by default
+	uOfChewVideoButton.anchorX = 0.5;
+	uOfChewVideoButton.anchorY = 0.5;
+	bg:insert(uOfChewVideoButton);
 
 
 	libraryBackground = display.newImageRect(imageBase .. 'GENU_Library_global_Background.png', 1152, 768);
 	bg:insert(libraryBackground);
-	FRC_Layout.scaleToFit(libraryBackground);
+	-- FRC_Layout.scaleToFit(libraryBackground);
 	libraryBackground.x, libraryBackground.y = 0, 0;
 	libraryBackground.alpha = 0; -- hide this by default
 
@@ -183,7 +185,7 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_Library_global_UofChewCast_down.png',
 		width = 384,
 		height = 314,
-		x = 340 - 578,
+		x = 340 - 576,
 		y = 414 - 368,
 		onRelease = function()
 			-- show HTML
@@ -227,7 +229,7 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_Library_global_TasteeTownCast_down.png',
 		width = 384,
 		height = 314,
-		x = 813 - 578,
+		x = 813 - 576,
 		y = 414 - 368,
 		onRelease = function()
 			-- show HTML

@@ -122,13 +122,15 @@ end
 function AudioManager:findGroupForHandle(name)
 	local handle;
 	for i=1,#self.groups do
-		for j=1,#self.groups.handles do
-			if (self.groups[i].handles[j] == name or self.groups[i].handles[j].name == name) then
-				handle = self.groups[i].handles[j];
-				break;
+		if self.groups.handles then
+			for j=1,#self.groups.handles do
+				if (self.groups[i].handles[j] == name or self.groups[i].handles[j].name == name) then
+					handle = self.groups[i].handles[j];
+					break;
+				end
 			end
+			if (handle) then break; end
 		end
-		if (handle) then break; end
 	end
 	return handle;
 end
