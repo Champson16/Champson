@@ -55,7 +55,9 @@ local function onCardFlippedToFront(event)
     --]]
     -- DEBUG:
     print("Playing Card Flip sound: ", self.flippedCardSound.name);
-    self.flippedCardSound:play();
+    if (FRC_AppSettings.get("ambientSoundOn")) then
+      self.flippedCardSound:play();
+    end
 		return true;
 
 	elseif (event.phase == "ended") then
@@ -67,13 +69,18 @@ local function onCardFlippedToFront(event)
 				self.matchCount = self.matchCount + 1;
 
 				if self.loadedAudio[self.activeCard1.id] then
-          self.loadedAudio[self.activeCard1.id]:play({channel=FRC_AppSettings.get("SFX_CHANNEL"), force=true});
-
-  				self.matchTimer = timer.performWithDelay(self.loadedAudio[self.activeCard1.id]:getDuration(), function()
-  					self.matchTimer = nil;
-  					self.activeCard1:hide();
-  					self.activeCard2:hide();
-  				end, 1);
+          if (FRC_AppSettings.get("ambientSoundOn")) then
+            self.loadedAudio[self.activeCard1.id]:play({channel=FRC_AppSettings.get("SFX_CHANNEL"), force=true});
+    				self.matchTimer = timer.performWithDelay(self.loadedAudio[self.activeCard1.id]:getDuration(), function()
+    					self.matchTimer = nil;
+    					self.activeCard1:hide();
+    					self.activeCard2:hide();
+    				end, 1);
+          else
+            self.matchTimer = nil;
+            self.activeCard1:hide();
+            self.activeCard2:hide();
+          end
         else
           self.matchTimer = nil;
           self.activeCard1:hide();

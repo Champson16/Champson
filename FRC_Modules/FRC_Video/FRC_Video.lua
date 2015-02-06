@@ -36,12 +36,15 @@ FRC_Video.new = function(parentView, videoData)
 
   function videoGroup.skipVideo(event)
     if (not event or event.phase == "began") then
-      -- skip the video (or the rest of it)
+      -- let the parent view know that the video is finished
+      parentView:dispatchEvent({ name = 'videoComplete' });
+      if bg then
+        bg:removeSelf();
+        bg = nil;
+      end
       videoGroup.freeMemory();
       videoGroup:removeSelf();
       if (videoGroup) then videoGroup = nil; end
-      -- let the parent view know that the video is finished
-      parentView:dispatchEvent({ name = 'videoComplete' });
     end
     -- we handled the event
     return true;

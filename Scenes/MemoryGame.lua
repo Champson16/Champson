@@ -181,7 +181,7 @@ local function onMemoryGameOver(event)
 		-- DEBUG:
 		print("playing game over animation");
 		-- pick one of the animations randomly
-		local anim = gameOverAnimations[4] -- math_random(1, #gameOverAnimations)];
+		local anim = gameOverAnimations[math_random(1, #gameOverAnimations)];
 		-- DEBUG:
 		-- local anim = gameOverAnimations[#gameOverAnimations];  2 and 4 are the problems
 		print(anim.id);
@@ -207,8 +207,10 @@ local function onMemoryGameOver(event)
 		-- play a random encouragement audio
 		if memoryEncouragements then
 			-- DEBUG:
-			print("playing random memory game over sound");
-			memoryEncouragements:playRandom();
+			if (FRC_AppSettings.get("ambientSoundOn")) then
+				print("playing random memory game over sound");
+				memoryEncouragements:playRandom();
+			end
 		end
 		-- create a new display group with everything we need
 		local bgGroup = display.newGroup();

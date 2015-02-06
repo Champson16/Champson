@@ -40,7 +40,8 @@ function scene.createScene(self, event)
 	FRC_AudioManager:newHandle({
 		name = "BraineryIdle",
 		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_Brainery.mp3",
-		group = "ambientMusic"
+		group = "ambientMusic",
+		useLoadSound = true
 	});
 
 

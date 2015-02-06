@@ -68,7 +68,8 @@ function scene.createScene(self, event)
 	FRC_AudioManager:newHandle({
 		name = "SugaryIdle",
 		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_Balloon_idle.mp3",
-		group = "ambientMusic"
+		group = "ambientMusic",
+		useLoadSound = true
 	});
 
 	local bgGroup = display.newGroup();

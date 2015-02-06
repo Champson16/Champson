@@ -59,7 +59,8 @@ function scene.createScene(self, event)
 	FRC_AudioManager:newHandle({
 		name = "BodinatorIntro",
 		path = "FRC_Assets/GENU_Assets/Audio/GENU_Animation_global_Bodinator.mp3",
-		group = "ambientMusic"
+		group = "ambientMusic",
+		useLoadSound = true
 	});
 	--[[ FRC_AudioManager:newHandle({
 		name = "SugaryIdle",
@@ -109,7 +110,6 @@ function scene.createScene(self, event)
 			end
 			ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 			if ambientMusic then
-				ambientMusic:stop();
 				ambientMusic:play("BodinatorIntro");
 				if (not FRC_AppSettings.get("ambientSoundOn")) then
 					timer.performWithDelay(1, function()
@@ -132,6 +132,10 @@ function scene.createScene(self, event)
 			-- hide buttons
 			moduleReplayButton.alpha = 0;
 			learnMoreButton.alpha = 0;
+			ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
+			if ambientMusic then
+				ambientMusic:stop();
+			end
 			-- replay animation
 			scene.playMainAnimation();
 		end
