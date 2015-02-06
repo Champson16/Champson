@@ -528,15 +528,24 @@ xmltable = {
 			[23] = {
 				name = "GENU_MemoryGame_global_Payoff_Chewie_023_0023",
 				Frame = {
-					y = "6.30",
-					scaleX = "0.923",
-					index = "60",
-					x = "264.70",
-					scaleY = "0.923"
+					[1] = {
+						y = "6.30",
+						scaleX = "0.923",
+						index = "60",
+						x = "264.70",
+						scaleY = "0.923"
+					},
+					[2] = {
+						y = "6.30",
+						scaleX = "0.923",
+						index = "61",
+						x = "264.70",
+						scaleY = "0.923"
+					}
 				}
 			}
 		},
-		frameCount = "61",
+		frameCount = "62",
 		name = "GENU_MemoryGame_global_Payoff_Chewie_a"
 	}
 }

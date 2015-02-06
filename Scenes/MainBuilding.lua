@@ -65,12 +65,15 @@ function scene.createScene(self, event)
 	end
 
 	function playGerardVideo()
+		if (FRC_AppSettings.get("ambientSoundOn")) then
+			FRC_AudioManager:findGroup("ambientMusic"):pause();
+		end
 		local videoData = {
 		HD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_HD.mp4',
 		HD_VIDEO_SIZE = { width = 1024, height = 768 },
 		SD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_SD.mp4',
 		SD_VIDEO_SIZE = { width = 512, height = 384 },
-		VIDEO_SCALE = 'LETTERBOX',
+		VIDEO_SCALE = 'FULLSCREEN',
 		VIDEO_LENGTH = 62000 };
 
 		videoPlayer = FRC_Video.new(view, videoData);
@@ -83,12 +86,15 @@ function scene.createScene(self, event)
 	end
 
 	function playUofChewVideo()
+		if (FRC_AppSettings.get("ambientSoundOn")) then
+			FRC_AudioManager:findGroup("ambientMusic"):pause();
+		end
 		local videoData = {
 		HD_VIDEO_PATH = videoBase .. 'GENU_Auditorium_IntroAnim_HD.m4v',
 		HD_VIDEO_SIZE = { width = 1024, height = 768 },
 		SD_VIDEO_PATH = videoBase .. 'GENU_Auditorium_IntroAnim_SD.m4v',
 		SD_VIDEO_SIZE = { width = 512, height = 384 },
-		VIDEO_SCALE = 'LETTERBOX',
+		VIDEO_SCALE = 'FULLSCREEN',
 		VIDEO_LENGTH = 30367 };
 
 		videoPlayer = FRC_Video.new(view, videoData);

@@ -1,5 +1,5 @@
 <Animations>
-  <Animation name="GENU_MemoryGame_global_Payoff_Chewie_a" frameCount="61">
+  <Animation name="GENU_MemoryGame_global_Payoff_Chewie_a" frameCount="62">
     <Part name="GENU_MemoryGame_global_Payoff_Chewie_001_0023">
       <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="0"/>
       <Frame x="263.05" y="3.30" scaleX="0.923" scaleY="0.923" index="1"/>
@@ -106,6 +106,7 @@
     </Part>
     <Part name="GENU_MemoryGame_global_Payoff_Chewie_023_0023">
       <Frame x="264.70" y="6.30" scaleX="0.923" scaleY="0.923" index="60"/>
+      <Frame x="264.70" y="6.30" scaleX="0.923" scaleY="0.923" index="61"/>
     </Part>
   </Animation>
 </Animations>

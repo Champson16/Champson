@@ -150,6 +150,8 @@ local function checkGameOver(self)
 end
 
 local function dispose(self)
+  -- DEBUG:
+  print("FRC_MemoryGame self disposing!");
 	if (self.isDisposed) then return; end
 	self.isDisposed = true;
 	if (self.matchTimer) then timer.cancel(self.matchTimer); self.matchTimer = nil; end
@@ -161,14 +163,16 @@ local function dispose(self)
 	self:removeEventListener('cardFlipToBack', onCardFlippedToBack);
 	self:removeEventListener('cardDisappear', onCardDisappear);
 
-  if gameGroup then
-    for i=1,#gameGroup.loadedAudio do
-      if gameGroup.loadedAudio[i] then
-        gameGroup.loadedAudio[i]:dispose();
-      end
+  for i=1,#self.loadedAudio do
+    if self.loadedAudio[i] then
+      -- DEBUG:
+      print("disposing game audio: ", self.loadedAudio[i].name);
+      self.loadedAudio[i]:stop();
+      self.loadedAudio[i]:dispose();
     end
   end
-	self.loadedAudio = nil;
+
+  self.loadedAudio = nil;
   self.flippedCardSound:dispose();
   self.flippedCardSound = nil;
 
@@ -185,7 +189,8 @@ end
 
 FRC_MemoryGame.new = function(scene, columns, rows)
 	local screenW, screenH = FRC_Layout.getScreenDimensions();
-	local cardData = FRC_DataLib.readJSON(FRC_MemoryGame_Settings.DATA.CARDS).cards;
+  local cards = FRC_DataLib.readJSON(FRC_MemoryGame_Settings.DATA.CARDS);
+	local cardData = cards.cards;
 	local shuffledCardData = table.shuffle(cardData);
 
 	local matchSet = (columns * rows) * 0.5;
@@ -210,7 +215,8 @@ FRC_MemoryGame.new = function(scene, columns, rows)
     if cardData[i].audioFile then
   		gameGroup.loadedAudio[cardData[i].id] = FRC_AudioManager:newHandle({
   			path = FRC_MemoryGame_Settings.UI.AUDIO_BASE_PATH .. cardData[i].audioFile,
-  			group = "memory_sfx"
+  			group = "memory_sfx",
+        useLoadSound = true
   		});
     end
 	end
@@ -244,7 +250,8 @@ FRC_MemoryGame.new = function(scene, columns, rows)
     gameGroup.flippedCardSound = FRC_AudioManager:newHandle({
       name = "cardFlipSFX",
       path = "FRC_Assets/FRC_MemoryGame/Audio/GENU_MemoryGame_en_Tile_Flip.mp3",
-      group = "cardflip_sfx"
+      group = "cardflip_sfx",
+      useLoadSound = true
     });
   end
 

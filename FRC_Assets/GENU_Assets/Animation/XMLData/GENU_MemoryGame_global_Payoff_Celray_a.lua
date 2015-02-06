@@ -523,15 +523,24 @@ xmltable = {
 			[23] = {
 				name = "GENU_MemoryGame_global_Payoff_Celray_023_0023",
 				Frame = {
-					y = "-19.95",
-					scaleX = "1.442",
-					index = "59",
-					x = "277.00",
-					scaleY = "1.442"
+					[1] = {
+						y = "-19.95",
+						scaleX = "1.442",
+						index = "59",
+						x = "277.00",
+						scaleY = "1.442"
+					},
+					[2] = {
+						y = "-19.95",
+						scaleX = "1.442",
+						index = "60",
+						x = "277.00",
+						scaleY = "1.442"
+					}
 				}
 			}
 		},
-		frameCount = "60",
+		frameCount = "61",
 		name = "GENU_MemoryGame_global_Payoff_Celray_a"
 	}
 }

@@ -101,7 +101,7 @@ FRC_Video.new = function(parentView, videoData)
     if (event.phase == "ready") then
       videoGroup.currentVideo:play();
       videoGroup.currentVideo:removeEventListener("video", videoGroup.playVideo );
-      videoGroup.videoTimer = timer.performWithDelay(currentVideoLength, videoGroup.getNextVideo, 1);
+      videoGroup.videoTimer = timer.performWithDelay(currentVideoLength, videoGroup.skipVideo, 1);
     end
   end
 

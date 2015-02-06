@@ -182,10 +182,13 @@ xmltable = {
 				},
 				[60] = {
 					index = "59"
+				},
+				[61] = {
+					index = "60"
 				}
 			}
 		},
-		frameCount = "60",
+		frameCount = "61",
 		name = "GENU_MemoryGame_global_Payoff_Celray_c"
 	}
 }

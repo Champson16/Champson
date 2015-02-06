@@ -1,5 +1,5 @@
 <Animations>
-  <Animation name="GENU_MemoryGame_global_Payoff_Celray_a" frameCount="60">
+  <Animation name="GENU_MemoryGame_global_Payoff_Celray_a" frameCount="61">
     <Part name="GENU_MemoryGame_global_Payoff_Celray_001_0023">
       <Frame x="291.65" y="-22.75" scaleX="1.442" scaleY="1.442" index="0"/>
       <Frame x="291.65" y="-22.75" scaleX="1.442" scaleY="1.442" index="1"/>
@@ -105,6 +105,7 @@
     </Part>
     <Part name="GENU_MemoryGame_global_Payoff_Celray_023_0023">
       <Frame x="277.00" y="-19.95" scaleX="1.442" scaleY="1.442" index="59"/>
+      <Frame x="277.00" y="-19.95" scaleX="1.442" scaleY="1.442" index="60"/>
     </Part>
   </Animation>
 </Animations>

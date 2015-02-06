@@ -1,5 +1,5 @@
 <Animations>
-  <Animation name="GENU_MemoryGame_global_Payoff_Celray_c" frameCount="60">
+  <Animation name="GENU_MemoryGame_global_Payoff_Celray_c" frameCount="61">
     <Part name="GENU_MemoryGame_global_Payoff_Window">
       <Frame index="0"/>
       <Frame index="1"/>
@@ -61,6 +61,7 @@
       <Frame index="57"/>
       <Frame index="58"/>
       <Frame index="59"/>
+      <Frame index="60"/>
     </Part>
   </Animation>
 </Animations>

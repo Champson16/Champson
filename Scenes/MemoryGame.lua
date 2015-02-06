@@ -75,7 +75,8 @@ local cardflipSFX = FRC_AudioManager:newGroup({
 for i=1,#memoryEncouragementAudioPaths do
 	FRC_AudioManager:newHandle({
 		path = memoryEncouragementAudioPaths[i],
-		group = memoryEncouragements
+		group = memoryEncouragements,
+		useLoadSound = true
 	});
 end
 
@@ -145,6 +146,29 @@ local function showDifficultyChooser(event)
 	chooser.y = display.contentCenterY;
 end
 
+local function restartGame()
+	-- OLD method was to reload the current module!
+	-- storyboard.gotoScene('Scenes.MemoryGame', { useLoader=true });
+
+	-- NEW method to restart memory game:
+	-- DEBUG:
+	print("restartGame called!");
+	restartNextGame = true;
+	-- dispose of the current game
+	scene.game:dispose();
+	scene.game = nil;
+	-- clear the screen tries data
+	if (scene.triesText) and (scene.triesText.removeSelf) then
+		scene.triesText:removeSelf();
+		scene.triesText = nil;
+	else
+		scene.triesText = nil;
+	end
+	-- start a new game
+	lastGame.target = scene;
+	beginNewGame(lastGame);
+end
+
 -- the module FRC_MemoryGame has dispatched a game over event
 -- we need to present the end of game payoff
 local function onMemoryGameOver(event)
@@ -157,9 +181,9 @@ local function onMemoryGameOver(event)
 		-- DEBUG:
 		print("playing game over animation");
 		-- pick one of the animations randomly
-		local anim = gameOverAnimations[math_random(1, #gameOverAnimations)];
+		local anim = gameOverAnimations[4] -- math_random(1, #gameOverAnimations)];
 		-- DEBUG:
-		-- local anim = gameOverAnimations[#gameOverAnimations];
+		-- local anim = gameOverAnimations[#gameOverAnimations];  2 and 4 are the problems
 		print(anim.id);
 		-- print(anim.animationFiles);
 		-- preload the animation data (XML and images) early
@@ -336,19 +360,7 @@ function scene.createScene(self, event)
 				disabled = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_StartOver_disabled.png',
 				isDisabled = true,
 				onRelease = function()
-					-- restart memory game
-					restartNextGame = true;
-					-- storyboard.gotoScene('Scenes.MemoryGame', { useLoader=true });
-					if (scene.triesText) and (scene.triesText.removeSelf) then
-						scene.triesText:removeSelf();
-						scene.triesText = nil;
-					else
-						scene.triesText = nil;
-					end
-					scene.game:dispose();
-					scene.game = nil;
-					lastGame.target = scene;
-					beginNewGame(lastGame);
+					restartGame();
 				end
 			},
 			{

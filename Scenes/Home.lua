@@ -533,7 +533,7 @@ function scene.createScene(self, event)
 		onRelease = function()
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
-			scene.stopThemeMusic();
+			-- scene.stopThemeMusic();
 			storyboard.gotoScene('Scenes.MainBuilding', { effect="crossFade", time="250" });
 		end
 	});
