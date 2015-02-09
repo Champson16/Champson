@@ -95,7 +95,7 @@ function scene.createScene(self, event)
 		SD_VIDEO_PATH = videoBase .. 'GENU_Auditorium_IntroAnim_SD.m4v',
 		SD_VIDEO_SIZE = { width = 512, height = 384 },
 		VIDEO_SCALE = 'FULLSCREEN',
-		VIDEO_LENGTH = 30367 };
+		VIDEO_LENGTH = 30323 };
 
 		videoPlayer = FRC_Video.new(view, videoData);
 		if videoPlayer then

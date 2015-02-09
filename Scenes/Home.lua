@@ -83,6 +83,8 @@ function scene.removeControls(self)
 end
 
 function scene.stopThemeMusic(self)
+	-- DEBUG:
+	print("scene.stopThemeMusic called");
 	local ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 	if ambientMusic then
 		-- find the current theme music
@@ -448,6 +450,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
+			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
 			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Brainery'); end, 1);
 		end
 	});
@@ -828,12 +831,12 @@ alwaysVisible = true,
 						local ambientMusic = FRC_AudioManager:findGroup("ambientMusic");
 						if ambientMusic then
 							-- find the current theme music
-							local themeMusic = ambientMusic:findHandle(scene.currentThemeMusic);
-							if (themeMusic and themeMusic:isPlaying()) then
-							  ambientMusic:resume();
-						  else
-								scene.playTheme1();
-							end
+							-- local themeMusic = ambientMusic:findHandle(scene.currentThemeMusic);
+							-- if (themeMusic and themeMusic:isPlaying()) then
+							ambientMusic:resume();
+						  --else
+							--	scene.playTheme1();
+							--end
 						end
 					end
 				end
@@ -924,15 +927,14 @@ function scene.enterScene(self, event)
 			else
 				-- DEBUG:
 				print("HOME scene RESUME background audio");
-				scene.playTheme1();
-				-- ambientMusic:resume("UofChewTheme1");
-				--[[ -- check to make sure that there was audio to resume
+				ambientMusic:resume();
+				-- check to make sure that there was audio to resume
 				timer.performWithDelay(100, function()
-					if not ambientMusic:isPlaying() then
-						ambientMusic:resume("UofChewTheme1");
+					local themeMusic = ambientMusic:findHandle(scene.currentThemeMusic);
+					if (themeMusic and not themeMusic:isPlaying()) then
+						scene.playTheme1();
 					end
-					end, 1);
-				--]]
+				end, 1);
 			end
 		else
 			-- fallback to restarting one of the background theme songs

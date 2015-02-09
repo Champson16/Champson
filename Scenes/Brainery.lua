@@ -172,6 +172,8 @@ function scene.enterScene(self, event)
 	local view = scene.view;
 	local ambientMusic;
 
+	native.setActivityIndicator(false);
+
 	-- now let's animate everything!
 	if introAnimationSequences then
 		for i=1, introAnimationSequences.numChildren do

@@ -177,6 +177,9 @@ local function onMemoryGameOver(event)
 	-- if there are animations, we will present the modern approach
 	-- DEBUG:
 	print("onMemoryGameOver event picked up!");
+	-- disable StartOver button since the game is over
+	scene.actionBarMenu.menuItems[5]:setDisabledState(true);
+
 	if (gameOverAnimations) then --  and not scene.chooser) then
 		-- DEBUG:
 		print("playing game over animation");
@@ -246,9 +249,11 @@ local function onMemoryGameOver(event)
 				showDifficultyChooser(event);
 			end
 		});
-		moduleCloseButton.anchorX = 0.5;
-		moduleCloseButton.anchorY = 0.5;
+		-- moduleCloseButton.anchorX = 0.5;
+		-- moduleCloseButton.anchorY = 0.5;
 		bgGroup:insert(moduleCloseButton);
+		-- FRC_Layout.scaleToFit(moduleCloseButton);
+
 	else
 		-- this is the older approach which just plays encouragement audio and then redisplays the chooser for a new game
 		if (memoryEncouragements and not scene.chooser) then
