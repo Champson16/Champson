@@ -971,7 +971,7 @@
 				"imageFile": "GENU_ArtCenter_global_Stamp_Onion.png",
 				"maskFile": "GENU_ArtCenter_global_Stamp_Onion_mask.png",
 				"thumbFile": "GENU_ArtCenter_global_Stamp_Onion_thumbnail.png",
-				"width": 450,
+				"width": 416,
 				"height": 512,
 				"defaultScale": 0.5
 			},
@@ -980,7 +980,7 @@
 				"imageFile": "GENU_ArtCenter_global_Stamp_Orange.png",
 				"maskFile": "GENU_ArtCenter_global_Stamp_Orange_mask.png",
 				"thumbFile": "GENU_ArtCenter_global_Stamp_Orange_thumbnail.png",
-				"width": 430,
+				"width": 492,
 				"height": 512,
 				"defaultScale": 0.5
 			},
@@ -1025,7 +1025,7 @@
 				"imageFile": "GENU_ArtCenter_global_Stamp_Strawberry.png",
 				"maskFile": "GENU_ArtCenter_global_Stamp_Strawberry_mask.png",
 				"thumbFile": "GENU_ArtCenter_global_Stamp_Strawberry_thumbnail.png",
-				"width": 352,
+				"width": 424,
 				"height": 512,
 				"defaultScale": 0.5
 			},

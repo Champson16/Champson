@@ -60,23 +60,6 @@ function scene.playTheme2()
 	end
 end
 
-function scene.onCanvasTouch(self, event)
-
-	if (event.phase == "began") then
-		-- nothing yet
-	elseif (event.phase == "moved") then
-		-- enable pinch-scaling when one finger is on a shape/stamp and the other on the canvas
-		if (event.list and scene.currentlyPinchingObject and scene.initialTouchList) then
-			local list = {};
-			list[1] = scene.initialTouchList;
-			list[2] = event.list[1];
-			doPinchZoom(scene.currentlyPinchingObject, list);
-		end
-	end
-
-	return true;
-end
-
 function scene.removeControls(self)
 	local transArray = {};
 	scene.buttonIsActive = true;
@@ -115,203 +98,6 @@ function scene.createScene(self, event)
 	FRC_Layout.scaleToFit(bgGroup);
 	-- bgGroup.anchorX = 0.5;
 	-- bgGroup.anchorY = 0.5;
-
-	local function calculateDelta( previousTouches, event )
-
-		local id,touch = next( previousTouches )
-		if event.id == id then
-			id,touch = next( previousTouches, id )
-			assert( id ~= event.id )
-		end
-
-		local dx = touch.x - event.x
-		local dy = touch.y - event.y
-		return dx, dy
-
-	end
-
-	local function calculateCenter( previousTouches, event )
-
-		local id,touch = next( previousTouches )
-		if event.id == id then
-			id,touch = next( previousTouches, id )
-			assert( id ~= event.id )
-		end
-
-		local cx = math.floor( ( touch.x + event.x ) * 0.5 )
-		local cy = math.floor( ( touch.y + event.y ) * 0.5 )
-		return cx, cy
-
-	end
-
-	-- create a table listener object for the bkgd image
-	function bgGroup:touch( event )
-
-		local phase = event.phase
-		local eventTime = event.time
-		local previousTouches = self.previousTouches
-
-		if not self.xScaleStart then
-			self.xScaleStart, self.yScaleStart = self.xScale, self.yScale
-		end
-
-		local numTotalTouches = 1
-		if previousTouches then
-			-- add in total from previousTouches, subtract one if event is already in the array
-			numTotalTouches = numTotalTouches + self.numPreviousTouches
-			if previousTouches[event.id] then
-				numTotalTouches = numTotalTouches - 1
-			end
-		end
-
-		if "began" == phase then
-			-- Very first "began" event
-			if not self.isFocus then
-				-- Subsequent touch events will target button even if they are outside the contentBounds of button
-				display.getCurrentStage():setFocus( self )
-				self.isFocus = true
-
-				-- Store initial position
-				self.x0 = event.x - self.x
-				self.y0 = event.y - self.y
-
-				previousTouches = {}
-				self.previousTouches = previousTouches
-				self.numPreviousTouches = 0
-				self.firstTouch = event
-
-			elseif not self.distance then
-				local dx,dy
-				local cx,cy
-
-				if previousTouches and numTotalTouches >= 2 then
-					dx,dy = calculateDelta( previousTouches, event )
-					cx,cy = calculateCenter( previousTouches, event )
-				end
-
-				-- initialize to distance between two touches
-				if dx and dy then
-					local d = math.sqrt( dx*dx + dy*dy )
-					if d > 0 then
-						self.distance = d
-						self.xScaleOriginal = self.xScale
-						self.yScaleOriginal = self.yScale
-
-						self.x0 = cx - self.x
-						self.y0 = cy - self.y
-
-					end
-				end
-
-			end
-
-			if not previousTouches[event.id] then
-				self.numPreviousTouches = self.numPreviousTouches + 1
-			end
-			previousTouches[event.id] = event
-
-		elseif self.isFocus then
-			if "moved" == phase then
-				if self.distance then
-					local dx,dy
-					local cx,cy
-					if previousTouches and numTotalTouches == 2 then
-						dx,dy = calculateDelta( previousTouches, event )
-						cx,cy = calculateCenter( previousTouches, event )
-					end
-
-					if dx and dy then
-						local newDistance = math.sqrt( dx*dx + dy*dy )
-						local scale = newDistance / self.distance
-
-						if scale > 0 then
-							self.xScale = self.xScaleOriginal * scale
-							self.yScale = self.yScaleOriginal * scale
-
-							-- Make object move while scaling
-							self.x = cx - ( self.x0 * scale )
-							self.y = cy - ( self.y0 * scale )
-						end
-					end
-				else
-					if event.id == self.firstTouch.id then
-						-- don't move unless this is the first touch id.
-						-- Make object move (we subtract self.x0, self.y0 so that moves are
-						-- relative to initial grab point, rather than object "snapping").
-						-- TODO: we need to constrain the x and y to prevent the image move from exceeding display bounds!
-						self.x = event.x - self.x0
-						self.y = event.y - self.y0
-					end
-				end
-
-				if event.id == self.firstTouch.id then
-					self.firstTouch = event
-				end
-
-				if not previousTouches[event.id] then
-					self.numPreviousTouches = self.numPreviousTouches + 1
-				end
-				previousTouches[event.id] = event
-
-			elseif "ended" == phase or "cancelled" == phase then
-				-- check for taps
-				local dx = math.abs( event.xStart - event.x )
-				local dy = math.abs( event.yStart - event.y )
-				if eventTime - previousTouches[event.id].time < 150 and dx < 10 and dy < 10 then
-					if not self.tapTime then
-						-- single tap
-						self.tapTime = eventTime
-						self.tapDelay = timer.performWithDelay( 300, function() self.tapTime = nil end )
-					elseif eventTime - self.tapTime < 300 then
-						-- double tap
-						timer.cancel( self.tapDelay )
-						self.tapTime = nil
-						if self.xScale == self.xScaleStart and self.yScale == self.yScaleStart then
-							-- when double tap increases scale, scale goes to 2x
-							transition.to( self, { time=300, transition=easing.inOutQuad, xScale=self.xScale*2, yScale=self.yScale*2, x=event.x - self.x0*2, y=event.y - self.y0*2 } )
-						else
-							local factor = self.xScaleStart / self.xScale
-							-- alternatively double tap reduces image back to original 1x scale
-							transition.to( self, { time=300, transition=easing.inOutQuad, xScale=self.xScaleStart, yScale=self.yScaleStart, x=event.x - self.x0*factor, y=event.y - self.y0*factor } )
-						end
-					end
-				end
-
-				--
-				if previousTouches[event.id] then
-					self.numPreviousTouches = self.numPreviousTouches - 1
-					previousTouches[event.id] = nil
-				end
-
-				if self.numPreviousTouches == 1 then
-					-- must be at least 2 touches remaining to pinch/zoom
-					self.distance = nil
-					-- reset initial position
-					local id,touch = next( previousTouches )
-					self.x0 = touch.x - self.x
-					self.y0 = touch.y - self.y
-					self.firstTouch = touch
-
-				elseif self.numPreviousTouches == 0 then
-					-- previousTouches is empty so no more fingers are touching the screen
-					-- Allow touch events to be sent normally to the objects they "hit"
-					display.getCurrentStage():setFocus( nil )
-					self.isFocus = false
-					self.distance = nil
-					self.xScaleOriginal = nil
-					self.yScaleOriginal = nil
-
-					-- reset array
-					self.previousTouches = nil
-					self.numPreviousTouches = nil
-				end
-			end
-		end
-
-		return true
-	end
-
-	-- bgGroup:addEventListener('touch', bgGroup);
 
 	-- setup any overlays needed
 	local bgOverlayGroup = display.newGroup();
@@ -366,7 +152,8 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Fishery'); end, 1);
+			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Fishery'); end, 1);
+			storyboard.gotoScene('Scenes.Fishery', { effect="crossFade", time="250" });
 		end
 	});
 	bgGroup:insert(fisheryButton);
@@ -387,7 +174,8 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Makery'); end, 1);
+			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Makery'); end, 1);
+			storyboard.gotoScene('Scenes.Makery', { effect="crossFade", time="250" });
 		end
 	});
 	makeryButton.anchorX = 0.5;
@@ -408,7 +196,8 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Sugary'); end, 1);
+			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Sugary'); end, 1);
+			storyboard.gotoScene('Scenes.Sugary', { effect="crossFade", time="250" });
 		end
 	});
 	sugaryButton.anchorX = 0.5;
@@ -451,7 +240,8 @@ function scene.createScene(self, event)
 			scene.removeControls();
 			scene.stopThemeMusic();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
-			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Brainery'); end, 1);
+			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Brainery'); end, 1);
+			storyboard.gotoScene('Scenes.Brainery', { effect="crossFade", time="250" });
 		end
 	});
 	braineryButton.anchorX = 0.5;
@@ -472,7 +262,8 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			scene.stopThemeMusic();
-			timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.TasteeTown'); end, 1);
+			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.TasteeTown'); end, 1);
+			storyboard.gotoScene('Scenes.TasteeTown', { effect="crossFade", time="250" });
 		end
 	});
 	tasteeTownButton.anchorX = 0.5;
@@ -601,7 +392,8 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
-			timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.ArtCenter'); end, 1);
+			-- timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.ArtCenter'); end, 1);
+			storyboard.gotoScene('Scenes.ArtCenter', { effect="crossFade", time="250" });
 		end
 	});
 	artDepartmentButton.anchorX = 0.5;

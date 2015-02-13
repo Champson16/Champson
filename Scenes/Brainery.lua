@@ -13,6 +13,7 @@ local animationImageBase = 'FRC_Assets/GENU_Assets/Animation/Images/';
 local introAnimationSequences = {};
 local ambientAnimationSequences = {};
 
+local braineryWebview;
 
 local scene = storyboard.newScene();
 
@@ -23,6 +24,7 @@ function scene.createScene(self, event)
 	local screenW, screenH = FRC_Layout.getScreenDimensions();
 
 	local imageBase = 'FRC_Assets/GENU_Assets/Images/';
+
 
 	-- SET UP ANIMATIONS
 
@@ -50,9 +52,27 @@ function scene.createScene(self, event)
 	bgGroup.anchorX = 0.5;
 	bgGroup.anchorY = 0.5;
 
-	bgGroup.x = display.contentCenterX;
-	bgGroup.y = display.contentCenterY;
+	bgGroup.x = 0; -- display.contentCenterX;
+	bgGroup.y = 0; -- display.contentCenterY;
 	view:insert(bgGroup);
+
+	-- TEST addition to add background image
+	local bg = display.newGroup();
+	bg.anchorChildren = false;
+	FRC_Layout.scaleToFit(bg);
+	local bgImage = display.newImageRect(animationImageBase .. 'GENU_Animation_ComingSoonDialogueFrame.png', 1152, 768);
+	bg:insert(bgImage);
+	bgImage.x, bgImage.y = 0, 0;
+	bg.x = display.contentCenterX;
+	bg.y = display.contentCenterY;
+	view:insert(bg);
+	
+	--[[ local bgImage = display.newImageRect(animationImageBase .. 'GENU_Animation_ComingSoonDialogueFrame.png', 1152, 768);
+	bgImage.anchorX = 0.5;
+	bgImage.anchorY = 0.5;
+	bgGroup:insert(bgImage);
+	bgImage.x, bgImage.y = 0, 0;
+	--]]
 
 	-- lay in all of the map overlay buttons
 	local moduleCloseButton = ui.button.new({
@@ -128,6 +148,38 @@ alwaysVisible = true,
 					closeButton.y = 5 + (closeButton.contentHeight * 0.5) - ((screenH - display.contentHeight) * 0.5);
 					webView.closeButton = closeButton;
 				end
+			},
+			{
+				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Help_up.png',
+				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Help_down.png',
+				onRelease = function()
+					local screenRect = display.newRect(0, 0, screenW, screenH);
+					screenRect.x = display.contentCenterX;
+					screenRect.y = display.contentCenterY;
+					screenRect:setFillColor(0, 0, 0, 0.75);
+					screenRect:addEventListener('touch', function() return true; end);
+					screenRect:addEventListener('tap', function() return true; end);
+					local webView = native.newWebView(0, 0, screenW - 100, screenH - 55);
+					webView.x = display.contentCenterX;
+					webView.y = display.contentCenterY + 20;
+					webView:request("Help/GENU_FRC_WebOverlay_Help_Main.html", system.DocumentsDirectory);
+
+					local closeButton = ui.button.new({
+						imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						imageDown = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						width = 50,
+						height = 50,
+						onRelease = function(event)
+							local self = event.target;
+							webView:removeSelf(); webView = nil;
+							self:removeSelf();
+							screenRect:removeSelf(); screenRect = nil;
+						end
+					});
+					closeButton.x = 5 + (closeButton.contentWidth * 0.5) - ((screenW - display.contentWidth) * 0.5);
+					closeButton.y = 5 + (closeButton.contentHeight * 0.5) - ((screenH - display.contentHeight) * 0.5);
+					webView.closeButton = closeButton;
+				end
 			}
 		}
 	});
@@ -174,6 +226,7 @@ function scene.enterScene(self, event)
 
 	native.setActivityIndicator(false);
 
+--[[
 	-- now let's animate everything!
 	if introAnimationSequences then
 		for i=1, introAnimationSequences.numChildren do
@@ -198,9 +251,34 @@ function scene.enterScene(self, event)
 			end
 		end
 	end
+	--]]
+	-- alternate approach using a webview
+	local screenW, screenH = FRC_Layout.getScreenDimensions();
+	local xScale = screenW / 1152;
+	local yScale = screenH / 768;
+	local webviewProps = {};
+	if (xScale > yScale) then
+		webviewProps.xScale = xScale;
+		webviewProps.yScale = xScale;
+	else
+		webviewProps.xScale = yScale;
+		webviewProps.yScale = yScale;
+	end
+	local webviewTop = 0;
+	local webviewLeft = 0;
+	local webviewWidth = 921 * webviewProps.xScale;
+	local webviewHeight = 615 * webviewProps.yScale;
+	braineryWebview = native.newWebView(0, 0, webviewWidth, webviewHeight);
+	braineryWebview.x = display.contentCenterX;
+	braineryWebview.y = display.contentCenterY;
+	braineryWebview:request("Help/GENU_FRC_WebOverlay_Brainery.html", system.DocumentsDirectory);
 end
 
 function scene.exitScene(self, event)
+	if braineryWebview then
+		braineryWebview:removeSelf();
+		braineryWebview = nil;
+	end
 	-- we need to clear the animations from the screen
 	if (introAnimationSequences and introAnimationSequences.numChildren) then
 		for i=1, introAnimationSequences.numChildren do

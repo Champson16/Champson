@@ -69,9 +69,9 @@ function scene.createScene(self, event)
 			FRC_AudioManager:findGroup("ambientMusic"):pause();
 		end
 		local videoData = {
-		HD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_HD.mp4',
+		HD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_HD.m4v',
 		HD_VIDEO_SIZE = { width = 1024, height = 768 },
-		SD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_SD.mp4',
+		SD_VIDEO_PATH = videoBase .. 'GENU_DrGerardRoberts_GenUwinHealthMission_SD.m4v',
 		SD_VIDEO_SIZE = { width = 512, height = 384 },
 		VIDEO_SCALE = 'FULLSCREEN',
 		VIDEO_LENGTH = 62000 };
@@ -95,7 +95,7 @@ function scene.createScene(self, event)
 		SD_VIDEO_PATH = videoBase .. 'GENU_Auditorium_IntroAnim_SD.m4v',
 		SD_VIDEO_SIZE = { width = 512, height = 384 },
 		VIDEO_SCALE = 'FULLSCREEN',
-		VIDEO_LENGTH = 30323 };
+		VIDEO_LENGTH = 30367 };
 
 		videoPlayer = FRC_Video.new(view, videoData);
 		if videoPlayer then
@@ -327,6 +327,38 @@ function scene.createScene(self, event)
 							local self = event.target;
 							webView:removeSelf(); webView = nil;
 							self:removeSelf(); closeButton = nil;
+							screenRect:removeSelf(); screenRect = nil;
+						end
+					});
+					closeButton.x = 5 + (closeButton.contentWidth * 0.5) - ((screenW - display.contentWidth) * 0.5);
+					closeButton.y = 5 + (closeButton.contentHeight * 0.5) - ((screenH - display.contentHeight) * 0.5);
+					webView.closeButton = closeButton;
+				end
+			},
+			{
+				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Help_up.png',
+				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Help_down.png',
+				onRelease = function()
+					local screenRect = display.newRect(0, 0, screenW, screenH);
+					screenRect.x = display.contentCenterX;
+					screenRect.y = display.contentCenterY;
+					screenRect:setFillColor(0, 0, 0, 0.75);
+					screenRect:addEventListener('touch', function() return true; end);
+					screenRect:addEventListener('tap', function() return true; end);
+					local webView = native.newWebView(0, 0, screenW - 100, screenH - 55);
+					webView.x = display.contentCenterX;
+					webView.y = display.contentCenterY + 20;
+					webView:request("Help/GENU_FRC_WebOverlay_Help_Main.html", system.DocumentsDirectory);
+
+					local closeButton = ui.button.new({
+						imageUp = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						imageDown = imageBase .. 'GENU_Home_global_LandingPage_CloseButton.png',
+						width = 50,
+						height = 50,
+						onRelease = function(event)
+							local self = event.target;
+							webView:removeSelf(); webView = nil;
+							self:removeSelf();
 							screenRect:removeSelf(); screenRect = nil;
 						end
 					});
