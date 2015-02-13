@@ -1,9 +1,0 @@
-<Animations>
-  <Animation name="GENU_Animation_global_Brainery_b" frameCount="60">
-    <Part name="GENU_Brainery_en_ComingSoonSpeechBubble">
-      <Frame x="-270.00" y="168.00" scaleX="0.063" scaleY="0.119" index="57"/>
-      <Frame x="-163.25" y="182.45" scaleX="0.431" scaleY="0.459" index="58"/>
-      <Frame x="-56.45" y="196.90" scaleX="0.799" scaleY="0.799" index="59"/>
-    </Part>
-  </Animation>
-</Animations>

@@ -330,7 +330,7 @@ end
 -- subscene storybook text display by default
 _G.storybookTextContainerDisplayMode = "subscene";
 
-display.setDefault('background', 0, 0, 0, 1.0);
+display.setDefault('background', 0.004, 0.196, 0.125, 1.0); -- 0, 0, 0, 1.0);
 display.setDefault( "textureWrapX", "clampToEdge" );
 display.setDefault( "textureWrapY", "clampToEdge" );
 math.randomseed( os.time() );  -- make math.random() more random

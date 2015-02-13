@@ -1,0 +1,66 @@
+<Animations>
+  <Animation name="GENU_Animation_global_Brainery_idle_h" frameCount="60">
+    <Part name="GENU_Animation_global_BraineryBackground">
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="0"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="1"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="2"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="3"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="4"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="5"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="6"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="7"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="8"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="9"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="10"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="11"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="12"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="13"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="14"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="15"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="16"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="17"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="18"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="19"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="20"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="21"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="22"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="23"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="24"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="25"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="26"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="27"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="28"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="29"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="30"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="31"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="32"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="33"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="34"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="35"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="36"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="37"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="38"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="39"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="40"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="41"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="42"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="43"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="44"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="45"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="46"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="47"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="48"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="49"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="50"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="51"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="52"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="53"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="54"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="55"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="56"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="57"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="58"/>
+      <Frame y="0.05" scaleX="0.799" scaleY="0.799" index="59"/>
+    </Part>
+  </Animation>
+</Animations>

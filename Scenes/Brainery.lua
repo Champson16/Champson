@@ -29,6 +29,10 @@ function scene.createScene(self, event)
 	-- SET UP ANIMATIONS
 
 	local introAnimationFiles = {
+	"GENU_Animation_global_Brainery_idle_h.xml",
+	"GENU_Animation_global_Brainery_idle_g.xml",
+	"GENU_Animation_global_Brainery_idle_f.xml",
+	"GENU_Animation_global_Brainery_idle_e.xml",
 	"GENU_Animation_global_Brainery_idle_d.xml",
 	"GENU_Animation_global_Brainery_idle_c.xml",
 	"GENU_Animation_global_Brainery_idle_b.xml",
@@ -52,8 +56,8 @@ function scene.createScene(self, event)
 	bgGroup.anchorX = 0.5;
 	bgGroup.anchorY = 0.5;
 
-	bgGroup.x = 0; -- display.contentCenterX;
-	bgGroup.y = 0; -- display.contentCenterY;
+	bgGroup.x = display.contentCenterX;
+	bgGroup.y = display.contentCenterY;
 	view:insert(bgGroup);
 
 	-- TEST addition to add background image
@@ -66,7 +70,7 @@ function scene.createScene(self, event)
 	bg.x = display.contentCenterX;
 	bg.y = display.contentCenterY;
 	view:insert(bg);
-	
+
 	--[[ local bgImage = display.newImageRect(animationImageBase .. 'GENU_Animation_ComingSoonDialogueFrame.png', 1152, 768);
 	bgImage.anchorX = 0.5;
 	bgImage.anchorY = 0.5;
@@ -80,8 +84,8 @@ function scene.createScene(self, event)
 		imageDown = imageBase .. 'GENU_Button_global_Ok_down.png',
 		width = 213,
 		height = 74,
-		x = 900 - 576;
-		y = 628 - 384;
+		x = 940 - 576;
+		y = 654 - 384;
 		onRelease = function()
 			storyboard.gotoScene('Scenes.Home', { effect="crossFade", time="250" });
 		end
@@ -226,7 +230,6 @@ function scene.enterScene(self, event)
 
 	native.setActivityIndicator(false);
 
---[[
 	-- now let's animate everything!
 	if introAnimationSequences then
 		for i=1, introAnimationSequences.numChildren do
@@ -251,7 +254,7 @@ function scene.enterScene(self, event)
 			end
 		end
 	end
-	--]]
+	--[[
 	-- alternate approach using a webview
 	local screenW, screenH = FRC_Layout.getScreenDimensions();
 	local xScale = screenW / 1152;
@@ -272,6 +275,7 @@ function scene.enterScene(self, event)
 	braineryWebview.x = display.contentCenterX;
 	braineryWebview.y = display.contentCenterY;
 	braineryWebview:request("Help/GENU_FRC_WebOverlay_Brainery.html", system.DocumentsDirectory);
+	--]]
 end
 
 function scene.exitScene(self, event)
