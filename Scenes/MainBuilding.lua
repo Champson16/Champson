@@ -6,6 +6,8 @@ local FRC_SettingsBar = require('FRC_Modules.FRC_SettingsBar.FRC_SettingsBar');
 local FRC_AudioManager = require('FRC_Modules.FRC_AudioManager.FRC_AudioManager');
 local FRC_AppSettings = require('FRC_Modules.FRC_AppSettings.FRC_AppSettings');
 local FRC_Video = require('FRC_Modules.FRC_Video.FRC_Video');
+local analytics = import("analytics");
+
 local math_random = math.random;
 
 local scene = storyboard.newScene();
@@ -114,6 +116,7 @@ function scene.createScene(self, event)
 		x = 524 - 576,
 		y = 293 - 368,
 		onRelease = function()
+			analytics.logEvent("GENU.MainBuilding.Auditorium");
 			-- we need to cover the screen with a background, new video playback buttons and then respond to the button
 			auditoriumBackground.alpha = 1; -- show it
 			gerardVideoButton.alpha = 1;
@@ -132,6 +135,7 @@ function scene.createScene(self, event)
 		x = 798 - 576,
 		y = 310 - 368,
 		onRelease = function()
+			analytics.logEvent("GENU.MainBuilding.Library");
 			libraryBackground.alpha = 1; -- show it
 			uOfChewCastButton.alpha = 1;
 			tasteeTownCastButton.alpha = 1;
@@ -155,6 +159,7 @@ function scene.createScene(self, event)
 		x = 364 - 576,
 		y = 363 - 368,
 		onRelease = function()
+			analytics.logEvent("GENU.Auditorium.GerardVideo");
 			playGerardVideo();
 		end
 	});
@@ -171,6 +176,7 @@ function scene.createScene(self, event)
 		x = 787 - 576,
 		y = 363 - 368,
 		onRelease = function()
+			analytics.logEvent("GENU.Auditorium.UOfChewVideo");
 			playUofChewVideo();
 		end
 	});
@@ -194,6 +200,7 @@ function scene.createScene(self, event)
 		x = 340 - 576,
 		y = 414 - 368,
 		onRelease = function()
+			analytics.logEvent("GENU.Library.UofChewCast");
 			-- show HTML
 			local screenRect = display.newRect(0, 0, screenW, screenH);
 			screenRect.x = display.contentCenterX;
@@ -238,6 +245,7 @@ function scene.createScene(self, event)
 		x = 813 - 576,
 		y = 414 - 368,
 		onRelease = function()
+			analytics.logEvent("GENU.Library.TasteeTownCast");
 			-- show HTML
 			local screenRect = display.newRect(0, 0, screenW, screenH);
 			screenRect.x = display.contentCenterX;

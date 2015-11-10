@@ -6,6 +6,7 @@ local FRC_SettingsBar = require('FRC_Modules.FRC_SettingsBar.FRC_SettingsBar');
 local FRC_AnimationManager = require('FRC_Modules.FRC_AnimationManager.FRC_AnimationManager');
 local FRC_AudioManager = require('FRC_Modules.FRC_AudioManager.FRC_AudioManager');
 local FRC_AppSettings = require('FRC_Modules.FRC_AppSettings.FRC_AppSettings');
+local analytics = import("analytics");
 local math_random = math.random;
 
 local animationSequences = {};
@@ -153,6 +154,7 @@ function scene.createScene(self, event)
 			scene.removeControls();
 			scene.stopThemeMusic();
 			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Fishery'); end, 1);
+			analytics.logEvent("GENU.Scenes.Fishery");
 			storyboard.gotoScene('Scenes.Fishery', { effect="crossFade", time="250" });
 		end
 	});
@@ -175,6 +177,7 @@ function scene.createScene(self, event)
 			scene.removeControls();
 			scene.stopThemeMusic();
 			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Makery'); end, 1);
+			analytics.logEvent("GENU.Scenes.Makery");
 			storyboard.gotoScene('Scenes.Makery', { effect="crossFade", time="250" });
 		end
 	});
@@ -197,6 +200,7 @@ function scene.createScene(self, event)
 			scene.removeControls();
 			scene.stopThemeMusic();
 			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Sugary'); end, 1);
+			analytics.logEvent("GENU.Scenes.Sugary");
 			storyboard.gotoScene('Scenes.Sugary', { effect="crossFade", time="250" });
 		end
 	});
@@ -218,6 +222,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
+			analytics.logEvent("GENU.Scenes.JigsawPuzzle");
 			storyboard.gotoScene('Scenes.JigsawPuzzle', { effect="crossFade", time="250" });
 		end
 	});
@@ -241,6 +246,7 @@ function scene.createScene(self, event)
 			scene.stopThemeMusic();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
 			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.Brainery'); end, 1);
+			analytics.logEvent("GENU.Scenes.Brainery");
 			storyboard.gotoScene('Scenes.Brainery', { effect="crossFade", time="250" });
 		end
 	});
@@ -263,6 +269,7 @@ function scene.createScene(self, event)
 			scene.removeControls();
 			scene.stopThemeMusic();
 			-- timer.performWithDelay(1, function() storyboard.gotoScene('Scenes.TasteeTown'); end, 1);
+			analytics.logEvent("GENU.Scenes.TasteeTown");
 			storyboard.gotoScene('Scenes.TasteeTown', { effect="crossFade", time="250" });
 		end
 	});
@@ -281,6 +288,7 @@ function scene.createScene(self, event)
 		x = 574 - 576;
 		y = 417 - 384;
 		onRelease = function()
+			analytics.logEvent("GENU.Recipes");
 			local screenRect = display.newRect(0, 0, screenW, screenH);
 			screenRect.x = display.contentCenterX;
 			screenRect.y = display.contentCenterY;
@@ -328,6 +336,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			-- scene.stopThemeMusic();
+			analytics.logEvent("GENU.Scenes.MainBuilding");
 			storyboard.gotoScene('Scenes.MainBuilding', { effect="crossFade", time="250" });
 		end
 	});
@@ -349,6 +358,7 @@ function scene.createScene(self, event)
 			if scene.buttonIsActive then return; end
 			scene.removeControls();
 			-- scene.stopThemeMusic();
+			analytics.logEvent("GENU.Scenes.Bodinator");
 			storyboard.gotoScene('Scenes.Bodinator', { effect="crossFade", time="250" });
 		end
 	});
@@ -371,6 +381,7 @@ function scene.createScene(self, event)
 			scene.removeControls();
 			scene.stopThemeMusic();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
+			analytics.logEvent("GENU.Scenes.MemoryGame");
 			storyboard.gotoScene('Scenes.MemoryGame', { effect="crossFade", time="250" });
 		end
 	});
@@ -393,6 +404,7 @@ function scene.createScene(self, event)
 			scene.removeControls();
 			if (not _G.ANDROID_DEVICE) then native.setActivityIndicator(true); end
 			-- timer.performWithDelay(250, function() storyboard.gotoScene('Scenes.ArtCenter'); end, 1);
+			analytics.logEvent("GENU.Scenes.ArtCenter");
 			storyboard.gotoScene('Scenes.ArtCenter', { effect="crossFade", time="250" });
 		end
 	});
@@ -453,6 +465,7 @@ function scene.createScene(self, event)
 				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Discover_up.png',
 				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Discover_down.png',
 				onRelease = function(e)
+					analytics.logEvent("GENU.GenuWinHealth.com");
 					local screenRect = display.newRect(0, 0, screenW, screenH);
 					screenRect.x = display.contentCenterX;
 					screenRect.y = display.contentCenterY;
@@ -487,6 +500,7 @@ function scene.createScene(self, event)
 				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_FRC_down.png',
 				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_FRC_up.png',
 				onRelease = function(e)
+					analytics.logEvent("GENU.FatRedCouch.com");
 					local screenRect = display.newRect(0, 0, screenW, screenH);
 					screenRect.x = display.contentCenterX;
 					screenRect.y = display.contentCenterY;
@@ -521,6 +535,7 @@ function scene.createScene(self, event)
 				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_About_up.png',
 				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_About_down.png',
 				onRelease = function(e)
+					analytics.logEvent("GENU.About");
 					local screenRect = display.newRect(0, 0, screenW, screenH);
 					screenRect.x = display.contentCenterX;
 					screenRect.y = display.contentCenterY;
@@ -555,6 +570,7 @@ function scene.createScene(self, event)
 				imageUp = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Help_up.png',
 				imageDown = 'FRC_Assets/FRC_ActionBar/Images/FRC_ActionBar_Icon_Help_down.png',
 				onRelease = function()
+					analytics.logEvent("GENU.Help");
 					local screenRect = display.newRect(0, 0, screenW, screenH);
 					screenRect.x = display.contentCenterX;
 					screenRect.y = display.contentCenterY;
